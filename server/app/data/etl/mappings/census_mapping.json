@@ -1,0 +1,25 @@
+{
+  "file_format": "excel",
+  "read_kwargs": {
+    "sheet_name": 0,
+    "skiprows": 4
+  },
+  "column_rename": {
+    "State/UT": "state",
+    "District": "district",
+    "Rural/Urban": "urban_rural",
+    "Total Population": "household_size"
+  },
+  "value_recodes": {
+    "urban_rural": {
+      "Rural": "rural",
+      "Urban": "urban",
+      "Total": "urban"
+    }
+  },
+  "numeric_fields": ["household_size"],
+  "constant_fields": {
+    "source_dataset": "census",
+    "source_year": 2011
+  }
+}

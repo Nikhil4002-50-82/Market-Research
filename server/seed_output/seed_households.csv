@@ -1,0 +1,1001 @@
+id,state,district,urban_rural,income_band,household_size,source_dataset,source_year
+1,Karnataka,district_0,rural,25k-50k,2,seed_synthetic,2026
+2,West Bengal,district_1,rural,100k+,1,seed_synthetic,2026
+3,Tamil Nadu,district_2,rural,10k-25k,5,seed_synthetic,2026
+4,Uttar Pradesh,district_3,rural,10k-25k,5,seed_synthetic,2026
+5,Uttar Pradesh,district_4,rural,50k-100k,6,seed_synthetic,2026
+6,Bihar,district_5,rural,10k-25k,7,seed_synthetic,2026
+7,Karnataka,district_6,urban,25k-50k,4,seed_synthetic,2026
+8,West Bengal,district_7,rural,10k-25k,6,seed_synthetic,2026
+9,Maharashtra,district_8,rural,<10k,6,seed_synthetic,2026
+10,Karnataka,district_9,urban,25k-50k,2,seed_synthetic,2026
+11,Tamil Nadu,district_10,urban,<10k,6,seed_synthetic,2026
+12,Bihar,district_11,rural,<10k,1,seed_synthetic,2026
+13,West Bengal,district_12,urban,25k-50k,5,seed_synthetic,2026
+14,West Bengal,district_13,urban,25k-50k,7,seed_synthetic,2026
+15,West Bengal,district_14,urban,50k-100k,5,seed_synthetic,2026
+16,West Bengal,district_15,urban,10k-25k,7,seed_synthetic,2026
+17,Tamil Nadu,district_16,urban,<10k,1,seed_synthetic,2026
+18,Karnataka,district_17,rural,100k+,4,seed_synthetic,2026
+19,Bihar,district_18,urban,<10k,6,seed_synthetic,2026
+20,Uttar Pradesh,district_19,rural,<10k,5,seed_synthetic,2026
+21,Tamil Nadu,district_20,rural,10k-25k,7,seed_synthetic,2026
+22,Uttar Pradesh,district_21,rural,10k-25k,4,seed_synthetic,2026
+23,Maharashtra,district_22,urban,50k-100k,5,seed_synthetic,2026
+24,Bihar,district_23,rural,25k-50k,3,seed_synthetic,2026
+25,West Bengal,district_24,urban,25k-50k,7,seed_synthetic,2026
+26,Tamil Nadu,district_25,rural,<10k,1,seed_synthetic,2026
+27,Uttar Pradesh,district_26,rural,10k-25k,2,seed_synthetic,2026
+28,West Bengal,district_27,rural,10k-25k,1,seed_synthetic,2026
+29,Tamil Nadu,district_28,rural,<10k,5,seed_synthetic,2026
+30,Uttar Pradesh,district_29,urban,10k-25k,2,seed_synthetic,2026
+31,Uttar Pradesh,district_30,rural,10k-25k,3,seed_synthetic,2026
+32,Maharashtra,district_31,rural,<10k,6,seed_synthetic,2026
+33,Karnataka,district_32,rural,25k-50k,3,seed_synthetic,2026
+34,Tamil Nadu,district_33,rural,25k-50k,2,seed_synthetic,2026
+35,Bihar,district_34,urban,<10k,1,seed_synthetic,2026
+36,Karnataka,district_35,urban,10k-25k,2,seed_synthetic,2026
+37,Bihar,district_36,rural,25k-50k,7,seed_synthetic,2026
+38,West Bengal,district_37,urban,25k-50k,4,seed_synthetic,2026
+39,Maharashtra,district_38,urban,50k-100k,7,seed_synthetic,2026
+40,Tamil Nadu,district_39,rural,10k-25k,2,seed_synthetic,2026
+41,Karnataka,district_40,rural,50k-100k,3,seed_synthetic,2026
+42,West Bengal,district_41,rural,<10k,2,seed_synthetic,2026
+43,West Bengal,district_42,rural,10k-25k,3,seed_synthetic,2026
+44,Uttar Pradesh,district_43,rural,<10k,4,seed_synthetic,2026
+45,Karnataka,district_44,urban,10k-25k,6,seed_synthetic,2026
+46,Bihar,district_45,rural,10k-25k,3,seed_synthetic,2026
+47,Uttar Pradesh,district_46,rural,<10k,6,seed_synthetic,2026
+48,Bihar,district_47,urban,25k-50k,5,seed_synthetic,2026
+49,West Bengal,district_48,rural,10k-25k,3,seed_synthetic,2026
+50,West Bengal,district_49,rural,10k-25k,7,seed_synthetic,2026
+51,West Bengal,district_0,rural,<10k,4,seed_synthetic,2026
+52,Maharashtra,district_1,urban,10k-25k,2,seed_synthetic,2026
+53,Uttar Pradesh,district_2,urban,10k-25k,7,seed_synthetic,2026
+54,Uttar Pradesh,district_3,rural,10k-25k,7,seed_synthetic,2026
+55,Uttar Pradesh,district_4,urban,<10k,1,seed_synthetic,2026
+56,Karnataka,district_5,urban,25k-50k,7,seed_synthetic,2026
+57,Tamil Nadu,district_6,urban,50k-100k,7,seed_synthetic,2026
+58,Karnataka,district_7,rural,10k-25k,6,seed_synthetic,2026
+59,West Bengal,district_8,rural,25k-50k,2,seed_synthetic,2026
+60,West Bengal,district_9,rural,50k-100k,5,seed_synthetic,2026
+61,Bihar,district_10,urban,100k+,4,seed_synthetic,2026
+62,West Bengal,district_11,urban,25k-50k,5,seed_synthetic,2026
+63,Uttar Pradesh,district_12,rural,50k-100k,5,seed_synthetic,2026
+64,Bihar,district_13,rural,50k-100k,5,seed_synthetic,2026
+65,Uttar Pradesh,district_14,rural,25k-50k,4,seed_synthetic,2026
+66,Maharashtra,district_15,rural,10k-25k,5,seed_synthetic,2026
+67,Bihar,district_16,rural,<10k,4,seed_synthetic,2026
+68,Uttar Pradesh,district_17,urban,<10k,1,seed_synthetic,2026
+69,Karnataka,district_18,rural,10k-25k,1,seed_synthetic,2026
+70,Uttar Pradesh,district_19,rural,10k-25k,7,seed_synthetic,2026
+71,West Bengal,district_20,urban,10k-25k,7,seed_synthetic,2026
+72,Maharashtra,district_21,rural,25k-50k,5,seed_synthetic,2026
+73,Uttar Pradesh,district_22,rural,25k-50k,2,seed_synthetic,2026
+74,Karnataka,district_23,rural,50k-100k,6,seed_synthetic,2026
+75,West Bengal,district_24,rural,<10k,2,seed_synthetic,2026
+76,Uttar Pradesh,district_25,rural,<10k,3,seed_synthetic,2026
+77,Maharashtra,district_26,rural,25k-50k,3,seed_synthetic,2026
+78,Maharashtra,district_27,rural,50k-100k,1,seed_synthetic,2026
+79,Tamil Nadu,district_28,rural,100k+,6,seed_synthetic,2026
+80,West Bengal,district_29,urban,50k-100k,4,seed_synthetic,2026
+81,Bihar,district_30,rural,50k-100k,3,seed_synthetic,2026
+82,Uttar Pradesh,district_31,rural,10k-25k,4,seed_synthetic,2026
+83,Karnataka,district_32,urban,10k-25k,1,seed_synthetic,2026
+84,West Bengal,district_33,rural,10k-25k,4,seed_synthetic,2026
+85,Tamil Nadu,district_34,rural,25k-50k,4,seed_synthetic,2026
+86,West Bengal,district_35,rural,50k-100k,3,seed_synthetic,2026
+87,Karnataka,district_36,urban,10k-25k,6,seed_synthetic,2026
+88,Maharashtra,district_37,urban,25k-50k,2,seed_synthetic,2026
+89,West Bengal,district_38,urban,10k-25k,1,seed_synthetic,2026
+90,West Bengal,district_39,urban,<10k,4,seed_synthetic,2026
+91,Uttar Pradesh,district_40,rural,<10k,7,seed_synthetic,2026
+92,West Bengal,district_41,rural,<10k,3,seed_synthetic,2026
+93,Bihar,district_42,urban,50k-100k,1,seed_synthetic,2026
+94,Uttar Pradesh,district_43,rural,10k-25k,7,seed_synthetic,2026
+95,Bihar,district_44,urban,50k-100k,4,seed_synthetic,2026
+96,Maharashtra,district_45,urban,25k-50k,2,seed_synthetic,2026
+97,Maharashtra,district_46,rural,<10k,5,seed_synthetic,2026
+98,West Bengal,district_47,rural,<10k,3,seed_synthetic,2026
+99,Tamil Nadu,district_48,rural,50k-100k,7,seed_synthetic,2026
+100,Karnataka,district_49,rural,10k-25k,3,seed_synthetic,2026
+101,West Bengal,district_0,rural,50k-100k,4,seed_synthetic,2026
+102,Maharashtra,district_1,rural,<10k,4,seed_synthetic,2026
+103,West Bengal,district_2,rural,25k-50k,2,seed_synthetic,2026
+104,Karnataka,district_3,rural,50k-100k,4,seed_synthetic,2026
+105,West Bengal,district_4,rural,<10k,1,seed_synthetic,2026
+106,West Bengal,district_5,rural,10k-25k,5,seed_synthetic,2026
+107,West Bengal,district_6,rural,100k+,6,seed_synthetic,2026
+108,Tamil Nadu,district_7,urban,10k-25k,7,seed_synthetic,2026
+109,Uttar Pradesh,district_8,rural,10k-25k,3,seed_synthetic,2026
+110,West Bengal,district_9,rural,10k-25k,2,seed_synthetic,2026
+111,Maharashtra,district_10,rural,10k-25k,4,seed_synthetic,2026
+112,West Bengal,district_11,rural,25k-50k,5,seed_synthetic,2026
+113,Tamil Nadu,district_12,rural,25k-50k,7,seed_synthetic,2026
+114,Uttar Pradesh,district_13,rural,10k-25k,1,seed_synthetic,2026
+115,Tamil Nadu,district_14,urban,50k-100k,2,seed_synthetic,2026
+116,Tamil Nadu,district_15,rural,<10k,2,seed_synthetic,2026
+117,Karnataka,district_16,rural,<10k,2,seed_synthetic,2026
+118,Karnataka,district_17,urban,25k-50k,4,seed_synthetic,2026
+119,Maharashtra,district_18,urban,100k+,7,seed_synthetic,2026
+120,Karnataka,district_19,urban,<10k,1,seed_synthetic,2026
+121,Uttar Pradesh,district_20,rural,<10k,6,seed_synthetic,2026
+122,West Bengal,district_21,rural,10k-25k,5,seed_synthetic,2026
+123,Tamil Nadu,district_22,rural,50k-100k,5,seed_synthetic,2026
+124,Uttar Pradesh,district_23,rural,<10k,5,seed_synthetic,2026
+125,Bihar,district_24,rural,10k-25k,1,seed_synthetic,2026
+126,Tamil Nadu,district_25,rural,25k-50k,6,seed_synthetic,2026
+127,Karnataka,district_26,rural,10k-25k,2,seed_synthetic,2026
+128,West Bengal,district_27,urban,<10k,4,seed_synthetic,2026
+129,Tamil Nadu,district_28,rural,<10k,5,seed_synthetic,2026
+130,Tamil Nadu,district_29,rural,10k-25k,5,seed_synthetic,2026
+131,Tamil Nadu,district_30,rural,10k-25k,3,seed_synthetic,2026
+132,Tamil Nadu,district_31,rural,50k-100k,3,seed_synthetic,2026
+133,Karnataka,district_32,urban,25k-50k,4,seed_synthetic,2026
+134,Tamil Nadu,district_33,rural,25k-50k,1,seed_synthetic,2026
+135,West Bengal,district_34,urban,100k+,6,seed_synthetic,2026
+136,Maharashtra,district_35,urban,10k-25k,1,seed_synthetic,2026
+137,Tamil Nadu,district_36,rural,10k-25k,4,seed_synthetic,2026
+138,Karnataka,district_37,rural,50k-100k,5,seed_synthetic,2026
+139,Uttar Pradesh,district_38,rural,<10k,1,seed_synthetic,2026
+140,Uttar Pradesh,district_39,rural,25k-50k,7,seed_synthetic,2026
+141,Bihar,district_40,rural,25k-50k,3,seed_synthetic,2026
+142,Maharashtra,district_41,rural,<10k,1,seed_synthetic,2026
+143,Maharashtra,district_42,urban,10k-25k,5,seed_synthetic,2026
+144,Uttar Pradesh,district_43,urban,<10k,4,seed_synthetic,2026
+145,Bihar,district_44,rural,<10k,5,seed_synthetic,2026
+146,Bihar,district_45,rural,10k-25k,6,seed_synthetic,2026
+147,Karnataka,district_46,urban,10k-25k,4,seed_synthetic,2026
+148,Maharashtra,district_47,rural,25k-50k,6,seed_synthetic,2026
+149,West Bengal,district_48,rural,50k-100k,3,seed_synthetic,2026
+150,Karnataka,district_49,urban,50k-100k,4,seed_synthetic,2026
+151,Bihar,district_0,rural,10k-25k,2,seed_synthetic,2026
+152,Maharashtra,district_1,rural,10k-25k,5,seed_synthetic,2026
+153,Bihar,district_2,rural,10k-25k,2,seed_synthetic,2026
+154,Maharashtra,district_3,urban,<10k,5,seed_synthetic,2026
+155,Uttar Pradesh,district_4,rural,50k-100k,6,seed_synthetic,2026
+156,Tamil Nadu,district_5,urban,10k-25k,7,seed_synthetic,2026
+157,Karnataka,district_6,rural,<10k,7,seed_synthetic,2026
+158,Tamil Nadu,district_7,urban,50k-100k,1,seed_synthetic,2026
+159,Tamil Nadu,district_8,rural,10k-25k,1,seed_synthetic,2026
+160,West Bengal,district_9,rural,<10k,7,seed_synthetic,2026
+161,Bihar,district_10,urban,<10k,3,seed_synthetic,2026
+162,Tamil Nadu,district_11,rural,25k-50k,1,seed_synthetic,2026
+163,Uttar Pradesh,district_12,urban,25k-50k,3,seed_synthetic,2026
+164,Uttar Pradesh,district_13,urban,<10k,6,seed_synthetic,2026
+165,Uttar Pradesh,district_14,urban,50k-100k,3,seed_synthetic,2026
+166,West Bengal,district_15,rural,50k-100k,1,seed_synthetic,2026
+167,Maharashtra,district_16,rural,50k-100k,6,seed_synthetic,2026
+168,Maharashtra,district_17,rural,<10k,2,seed_synthetic,2026
+169,Uttar Pradesh,district_18,urban,<10k,3,seed_synthetic,2026
+170,Karnataka,district_19,rural,50k-100k,1,seed_synthetic,2026
+171,Karnataka,district_20,urban,10k-25k,5,seed_synthetic,2026
+172,Karnataka,district_21,rural,25k-50k,4,seed_synthetic,2026
+173,West Bengal,district_22,rural,25k-50k,7,seed_synthetic,2026
+174,West Bengal,district_23,rural,<10k,3,seed_synthetic,2026
+175,West Bengal,district_24,rural,25k-50k,2,seed_synthetic,2026
+176,Uttar Pradesh,district_25,rural,50k-100k,2,seed_synthetic,2026
+177,West Bengal,district_26,rural,25k-50k,2,seed_synthetic,2026
+178,Karnataka,district_27,rural,10k-25k,4,seed_synthetic,2026
+179,Bihar,district_28,urban,50k-100k,1,seed_synthetic,2026
+180,Tamil Nadu,district_29,rural,10k-25k,3,seed_synthetic,2026
+181,Bihar,district_30,urban,25k-50k,6,seed_synthetic,2026
+182,Karnataka,district_31,urban,50k-100k,6,seed_synthetic,2026
+183,Uttar Pradesh,district_32,urban,25k-50k,5,seed_synthetic,2026
+184,West Bengal,district_33,rural,10k-25k,7,seed_synthetic,2026
+185,Uttar Pradesh,district_34,rural,<10k,6,seed_synthetic,2026
+186,Uttar Pradesh,district_35,urban,<10k,5,seed_synthetic,2026
+187,Karnataka,district_36,rural,10k-25k,7,seed_synthetic,2026
+188,Uttar Pradesh,district_37,rural,10k-25k,1,seed_synthetic,2026
+189,Maharashtra,district_38,rural,25k-50k,6,seed_synthetic,2026
+190,Maharashtra,district_39,rural,10k-25k,3,seed_synthetic,2026
+191,West Bengal,district_40,urban,25k-50k,6,seed_synthetic,2026
+192,Tamil Nadu,district_41,rural,50k-100k,7,seed_synthetic,2026
+193,Tamil Nadu,district_42,urban,<10k,4,seed_synthetic,2026
+194,Uttar Pradesh,district_43,urban,25k-50k,1,seed_synthetic,2026
+195,Bihar,district_44,rural,25k-50k,3,seed_synthetic,2026
+196,Karnataka,district_45,rural,10k-25k,3,seed_synthetic,2026
+197,Uttar Pradesh,district_46,rural,<10k,7,seed_synthetic,2026
+198,Karnataka,district_47,rural,25k-50k,7,seed_synthetic,2026
+199,Uttar Pradesh,district_48,rural,100k+,4,seed_synthetic,2026
+200,Bihar,district_49,urban,25k-50k,7,seed_synthetic,2026
+201,Uttar Pradesh,district_0,urban,50k-100k,4,seed_synthetic,2026
+202,Bihar,district_1,urban,100k+,3,seed_synthetic,2026
+203,Uttar Pradesh,district_2,urban,10k-25k,6,seed_synthetic,2026
+204,West Bengal,district_3,rural,25k-50k,5,seed_synthetic,2026
+205,Uttar Pradesh,district_4,urban,10k-25k,4,seed_synthetic,2026
+206,Maharashtra,district_5,rural,100k+,4,seed_synthetic,2026
+207,West Bengal,district_6,rural,<10k,5,seed_synthetic,2026
+208,Bihar,district_7,rural,10k-25k,6,seed_synthetic,2026
+209,Maharashtra,district_8,rural,50k-100k,4,seed_synthetic,2026
+210,West Bengal,district_9,rural,10k-25k,1,seed_synthetic,2026
+211,Maharashtra,district_10,rural,25k-50k,1,seed_synthetic,2026
+212,West Bengal,district_11,rural,10k-25k,2,seed_synthetic,2026
+213,West Bengal,district_12,rural,100k+,4,seed_synthetic,2026
+214,Uttar Pradesh,district_13,rural,50k-100k,5,seed_synthetic,2026
+215,West Bengal,district_14,rural,10k-25k,6,seed_synthetic,2026
+216,Maharashtra,district_15,urban,25k-50k,2,seed_synthetic,2026
+217,Karnataka,district_16,rural,10k-25k,6,seed_synthetic,2026
+218,Karnataka,district_17,urban,25k-50k,5,seed_synthetic,2026
+219,Uttar Pradesh,district_18,rural,25k-50k,1,seed_synthetic,2026
+220,Bihar,district_19,rural,50k-100k,3,seed_synthetic,2026
+221,Karnataka,district_20,rural,<10k,3,seed_synthetic,2026
+222,Uttar Pradesh,district_21,rural,<10k,7,seed_synthetic,2026
+223,West Bengal,district_22,urban,25k-50k,7,seed_synthetic,2026
+224,Maharashtra,district_23,rural,25k-50k,6,seed_synthetic,2026
+225,West Bengal,district_24,urban,10k-25k,4,seed_synthetic,2026
+226,Maharashtra,district_25,urban,<10k,4,seed_synthetic,2026
+227,West Bengal,district_26,urban,10k-25k,3,seed_synthetic,2026
+228,Tamil Nadu,district_27,urban,50k-100k,6,seed_synthetic,2026
+229,Tamil Nadu,district_28,rural,<10k,1,seed_synthetic,2026
+230,Maharashtra,district_29,rural,10k-25k,2,seed_synthetic,2026
+231,Uttar Pradesh,district_30,urban,50k-100k,1,seed_synthetic,2026
+232,Bihar,district_31,urban,<10k,4,seed_synthetic,2026
+233,Karnataka,district_32,urban,25k-50k,3,seed_synthetic,2026
+234,West Bengal,district_33,rural,10k-25k,2,seed_synthetic,2026
+235,Uttar Pradesh,district_34,urban,50k-100k,3,seed_synthetic,2026
+236,West Bengal,district_35,rural,25k-50k,7,seed_synthetic,2026
+237,Tamil Nadu,district_36,urban,50k-100k,4,seed_synthetic,2026
+238,Uttar Pradesh,district_37,urban,<10k,6,seed_synthetic,2026
+239,Maharashtra,district_38,rural,10k-25k,7,seed_synthetic,2026
+240,Tamil Nadu,district_39,rural,25k-50k,7,seed_synthetic,2026
+241,Karnataka,district_40,urban,<10k,3,seed_synthetic,2026
+242,Tamil Nadu,district_41,urban,<10k,7,seed_synthetic,2026
+243,Karnataka,district_42,rural,<10k,7,seed_synthetic,2026
+244,Tamil Nadu,district_43,urban,100k+,7,seed_synthetic,2026
+245,Tamil Nadu,district_44,rural,25k-50k,3,seed_synthetic,2026
+246,Karnataka,district_45,rural,25k-50k,2,seed_synthetic,2026
+247,West Bengal,district_46,urban,25k-50k,5,seed_synthetic,2026
+248,Uttar Pradesh,district_47,rural,10k-25k,7,seed_synthetic,2026
+249,West Bengal,district_48,rural,10k-25k,7,seed_synthetic,2026
+250,Karnataka,district_49,rural,10k-25k,4,seed_synthetic,2026
+251,Maharashtra,district_0,urban,25k-50k,2,seed_synthetic,2026
+252,Uttar Pradesh,district_1,urban,<10k,3,seed_synthetic,2026
+253,Maharashtra,district_2,urban,50k-100k,5,seed_synthetic,2026
+254,Maharashtra,district_3,rural,50k-100k,4,seed_synthetic,2026
+255,Tamil Nadu,district_4,rural,10k-25k,3,seed_synthetic,2026
+256,Karnataka,district_5,urban,25k-50k,3,seed_synthetic,2026
+257,West Bengal,district_6,urban,<10k,1,seed_synthetic,2026
+258,Karnataka,district_7,rural,100k+,3,seed_synthetic,2026
+259,Maharashtra,district_8,urban,50k-100k,5,seed_synthetic,2026
+260,Tamil Nadu,district_9,rural,50k-100k,2,seed_synthetic,2026
+261,West Bengal,district_10,rural,10k-25k,7,seed_synthetic,2026
+262,Maharashtra,district_11,urban,<10k,1,seed_synthetic,2026
+263,Maharashtra,district_12,urban,<10k,5,seed_synthetic,2026
+264,Bihar,district_13,urban,<10k,4,seed_synthetic,2026
+265,Bihar,district_14,rural,<10k,6,seed_synthetic,2026
+266,Tamil Nadu,district_15,urban,<10k,7,seed_synthetic,2026
+267,Uttar Pradesh,district_16,urban,100k+,4,seed_synthetic,2026
+268,Uttar Pradesh,district_17,urban,<10k,5,seed_synthetic,2026
+269,Tamil Nadu,district_18,urban,<10k,5,seed_synthetic,2026
+270,Tamil Nadu,district_19,rural,50k-100k,4,seed_synthetic,2026
+271,Maharashtra,district_20,urban,25k-50k,2,seed_synthetic,2026
+272,Karnataka,district_21,rural,25k-50k,4,seed_synthetic,2026
+273,Karnataka,district_22,rural,25k-50k,2,seed_synthetic,2026
+274,Bihar,district_23,rural,50k-100k,4,seed_synthetic,2026
+275,Uttar Pradesh,district_24,urban,25k-50k,5,seed_synthetic,2026
+276,Uttar Pradesh,district_25,rural,10k-25k,2,seed_synthetic,2026
+277,Uttar Pradesh,district_26,rural,25k-50k,2,seed_synthetic,2026
+278,West Bengal,district_27,urban,10k-25k,6,seed_synthetic,2026
+279,Karnataka,district_28,rural,10k-25k,3,seed_synthetic,2026
+280,Karnataka,district_29,rural,10k-25k,2,seed_synthetic,2026
+281,Maharashtra,district_30,urban,<10k,5,seed_synthetic,2026
+282,Uttar Pradesh,district_31,rural,25k-50k,6,seed_synthetic,2026
+283,West Bengal,district_32,rural,10k-25k,6,seed_synthetic,2026
+284,Uttar Pradesh,district_33,rural,<10k,6,seed_synthetic,2026
+285,Uttar Pradesh,district_34,rural,<10k,7,seed_synthetic,2026
+286,Bihar,district_35,rural,50k-100k,5,seed_synthetic,2026
+287,Karnataka,district_36,rural,10k-25k,3,seed_synthetic,2026
+288,Tamil Nadu,district_37,urban,25k-50k,7,seed_synthetic,2026
+289,Tamil Nadu,district_38,rural,50k-100k,2,seed_synthetic,2026
+290,Uttar Pradesh,district_39,rural,<10k,3,seed_synthetic,2026
+291,West Bengal,district_40,urban,25k-50k,6,seed_synthetic,2026
+292,Maharashtra,district_41,rural,10k-25k,7,seed_synthetic,2026
+293,Bihar,district_42,urban,<10k,3,seed_synthetic,2026
+294,Maharashtra,district_43,urban,25k-50k,6,seed_synthetic,2026
+295,Tamil Nadu,district_44,urban,50k-100k,7,seed_synthetic,2026
+296,Tamil Nadu,district_45,urban,10k-25k,6,seed_synthetic,2026
+297,Bihar,district_46,urban,25k-50k,1,seed_synthetic,2026
+298,Uttar Pradesh,district_47,urban,10k-25k,5,seed_synthetic,2026
+299,Maharashtra,district_48,rural,25k-50k,2,seed_synthetic,2026
+300,Karnataka,district_49,rural,25k-50k,6,seed_synthetic,2026
+301,Uttar Pradesh,district_0,rural,25k-50k,1,seed_synthetic,2026
+302,West Bengal,district_1,urban,25k-50k,7,seed_synthetic,2026
+303,Karnataka,district_2,rural,<10k,2,seed_synthetic,2026
+304,Bihar,district_3,rural,25k-50k,3,seed_synthetic,2026
+305,Tamil Nadu,district_4,urban,25k-50k,2,seed_synthetic,2026
+306,Karnataka,district_5,urban,25k-50k,6,seed_synthetic,2026
+307,Maharashtra,district_6,rural,<10k,3,seed_synthetic,2026
+308,Tamil Nadu,district_7,urban,10k-25k,6,seed_synthetic,2026
+309,Maharashtra,district_8,rural,10k-25k,1,seed_synthetic,2026
+310,Karnataka,district_9,rural,<10k,4,seed_synthetic,2026
+311,Tamil Nadu,district_10,urban,<10k,7,seed_synthetic,2026
+312,West Bengal,district_11,urban,10k-25k,7,seed_synthetic,2026
+313,Karnataka,district_12,rural,25k-50k,2,seed_synthetic,2026
+314,Maharashtra,district_13,rural,<10k,3,seed_synthetic,2026
+315,Maharashtra,district_14,urban,50k-100k,3,seed_synthetic,2026
+316,Tamil Nadu,district_15,rural,10k-25k,4,seed_synthetic,2026
+317,West Bengal,district_16,rural,25k-50k,4,seed_synthetic,2026
+318,West Bengal,district_17,rural,10k-25k,1,seed_synthetic,2026
+319,Bihar,district_18,rural,10k-25k,6,seed_synthetic,2026
+320,West Bengal,district_19,urban,25k-50k,2,seed_synthetic,2026
+321,Maharashtra,district_20,urban,50k-100k,3,seed_synthetic,2026
+322,Karnataka,district_21,rural,10k-25k,6,seed_synthetic,2026
+323,Tamil Nadu,district_22,urban,10k-25k,5,seed_synthetic,2026
+324,Bihar,district_23,rural,25k-50k,3,seed_synthetic,2026
+325,Bihar,district_24,rural,25k-50k,7,seed_synthetic,2026
+326,Maharashtra,district_25,urban,<10k,3,seed_synthetic,2026
+327,Maharashtra,district_26,rural,10k-25k,4,seed_synthetic,2026
+328,Karnataka,district_27,urban,10k-25k,2,seed_synthetic,2026
+329,Karnataka,district_28,rural,50k-100k,2,seed_synthetic,2026
+330,Tamil Nadu,district_29,urban,10k-25k,4,seed_synthetic,2026
+331,Tamil Nadu,district_30,rural,10k-25k,4,seed_synthetic,2026
+332,Uttar Pradesh,district_31,rural,100k+,6,seed_synthetic,2026
+333,Maharashtra,district_32,rural,10k-25k,3,seed_synthetic,2026
+334,West Bengal,district_33,rural,<10k,7,seed_synthetic,2026
+335,Uttar Pradesh,district_34,rural,<10k,5,seed_synthetic,2026
+336,West Bengal,district_35,rural,<10k,1,seed_synthetic,2026
+337,Bihar,district_36,rural,<10k,6,seed_synthetic,2026
+338,Maharashtra,district_37,rural,10k-25k,5,seed_synthetic,2026
+339,Maharashtra,district_38,rural,25k-50k,3,seed_synthetic,2026
+340,Bihar,district_39,rural,25k-50k,4,seed_synthetic,2026
+341,Tamil Nadu,district_40,urban,<10k,3,seed_synthetic,2026
+342,Maharashtra,district_41,rural,25k-50k,5,seed_synthetic,2026
+343,Tamil Nadu,district_42,rural,<10k,4,seed_synthetic,2026
+344,Tamil Nadu,district_43,rural,50k-100k,4,seed_synthetic,2026
+345,Bihar,district_44,urban,<10k,2,seed_synthetic,2026
+346,Maharashtra,district_45,rural,25k-50k,3,seed_synthetic,2026
+347,Bihar,district_46,rural,10k-25k,4,seed_synthetic,2026
+348,Bihar,district_47,rural,25k-50k,4,seed_synthetic,2026
+349,Maharashtra,district_48,urban,10k-25k,3,seed_synthetic,2026
+350,Karnataka,district_49,rural,25k-50k,5,seed_synthetic,2026
+351,Tamil Nadu,district_0,urban,<10k,2,seed_synthetic,2026
+352,Karnataka,district_1,urban,50k-100k,4,seed_synthetic,2026
+353,Maharashtra,district_2,rural,10k-25k,1,seed_synthetic,2026
+354,Uttar Pradesh,district_3,rural,25k-50k,4,seed_synthetic,2026
+355,Bihar,district_4,urban,50k-100k,6,seed_synthetic,2026
+356,Bihar,district_5,rural,100k+,6,seed_synthetic,2026
+357,Karnataka,district_6,rural,<10k,5,seed_synthetic,2026
+358,Bihar,district_7,rural,10k-25k,6,seed_synthetic,2026
+359,Karnataka,district_8,rural,10k-25k,1,seed_synthetic,2026
+360,West Bengal,district_9,rural,10k-25k,3,seed_synthetic,2026
+361,Bihar,district_10,rural,25k-50k,5,seed_synthetic,2026
+362,Bihar,district_11,rural,100k+,6,seed_synthetic,2026
+363,Maharashtra,district_12,rural,100k+,5,seed_synthetic,2026
+364,Bihar,district_13,rural,10k-25k,6,seed_synthetic,2026
+365,Karnataka,district_14,urban,25k-50k,2,seed_synthetic,2026
+366,Tamil Nadu,district_15,rural,50k-100k,2,seed_synthetic,2026
+367,Uttar Pradesh,district_16,rural,50k-100k,1,seed_synthetic,2026
+368,Maharashtra,district_17,rural,<10k,5,seed_synthetic,2026
+369,Karnataka,district_18,urban,10k-25k,5,seed_synthetic,2026
+370,West Bengal,district_19,urban,50k-100k,2,seed_synthetic,2026
+371,Uttar Pradesh,district_20,rural,10k-25k,6,seed_synthetic,2026
+372,Tamil Nadu,district_21,urban,10k-25k,6,seed_synthetic,2026
+373,Uttar Pradesh,district_22,rural,100k+,3,seed_synthetic,2026
+374,Uttar Pradesh,district_23,rural,100k+,2,seed_synthetic,2026
+375,Bihar,district_24,rural,50k-100k,6,seed_synthetic,2026
+376,Karnataka,district_25,rural,25k-50k,5,seed_synthetic,2026
+377,West Bengal,district_26,rural,10k-25k,2,seed_synthetic,2026
+378,West Bengal,district_27,urban,10k-25k,2,seed_synthetic,2026
+379,Uttar Pradesh,district_28,rural,10k-25k,4,seed_synthetic,2026
+380,Maharashtra,district_29,rural,25k-50k,4,seed_synthetic,2026
+381,Karnataka,district_30,rural,10k-25k,2,seed_synthetic,2026
+382,Bihar,district_31,rural,25k-50k,7,seed_synthetic,2026
+383,Bihar,district_32,rural,10k-25k,3,seed_synthetic,2026
+384,Maharashtra,district_33,rural,25k-50k,3,seed_synthetic,2026
+385,Karnataka,district_34,urban,10k-25k,1,seed_synthetic,2026
+386,Karnataka,district_35,rural,10k-25k,7,seed_synthetic,2026
+387,Karnataka,district_36,rural,<10k,2,seed_synthetic,2026
+388,West Bengal,district_37,urban,<10k,7,seed_synthetic,2026
+389,Bihar,district_38,urban,50k-100k,4,seed_synthetic,2026
+390,Karnataka,district_39,rural,10k-25k,7,seed_synthetic,2026
+391,West Bengal,district_40,urban,<10k,2,seed_synthetic,2026
+392,Maharashtra,district_41,rural,25k-50k,2,seed_synthetic,2026
+393,Uttar Pradesh,district_42,urban,25k-50k,6,seed_synthetic,2026
+394,Tamil Nadu,district_43,urban,<10k,6,seed_synthetic,2026
+395,West Bengal,district_44,rural,10k-25k,4,seed_synthetic,2026
+396,Bihar,district_45,rural,<10k,1,seed_synthetic,2026
+397,Karnataka,district_46,urban,25k-50k,7,seed_synthetic,2026
+398,Maharashtra,district_47,urban,10k-25k,3,seed_synthetic,2026
+399,Maharashtra,district_48,urban,<10k,7,seed_synthetic,2026
+400,Maharashtra,district_49,rural,<10k,7,seed_synthetic,2026
+401,Bihar,district_0,rural,25k-50k,6,seed_synthetic,2026
+402,West Bengal,district_1,urban,<10k,5,seed_synthetic,2026
+403,Maharashtra,district_2,urban,50k-100k,5,seed_synthetic,2026
+404,Bihar,district_3,rural,<10k,4,seed_synthetic,2026
+405,Uttar Pradesh,district_4,rural,25k-50k,1,seed_synthetic,2026
+406,Tamil Nadu,district_5,rural,10k-25k,3,seed_synthetic,2026
+407,Uttar Pradesh,district_6,rural,10k-25k,6,seed_synthetic,2026
+408,Karnataka,district_7,urban,<10k,6,seed_synthetic,2026
+409,Bihar,district_8,urban,50k-100k,4,seed_synthetic,2026
+410,Karnataka,district_9,urban,50k-100k,5,seed_synthetic,2026
+411,Maharashtra,district_10,rural,<10k,1,seed_synthetic,2026
+412,Maharashtra,district_11,rural,<10k,4,seed_synthetic,2026
+413,Maharashtra,district_12,rural,50k-100k,4,seed_synthetic,2026
+414,Karnataka,district_13,rural,10k-25k,7,seed_synthetic,2026
+415,Karnataka,district_14,rural,<10k,3,seed_synthetic,2026
+416,West Bengal,district_15,rural,<10k,2,seed_synthetic,2026
+417,Bihar,district_16,urban,25k-50k,3,seed_synthetic,2026
+418,Karnataka,district_17,urban,25k-50k,2,seed_synthetic,2026
+419,Maharashtra,district_18,urban,25k-50k,4,seed_synthetic,2026
+420,Tamil Nadu,district_19,rural,100k+,5,seed_synthetic,2026
+421,Bihar,district_20,urban,10k-25k,6,seed_synthetic,2026
+422,West Bengal,district_21,rural,10k-25k,7,seed_synthetic,2026
+423,West Bengal,district_22,rural,10k-25k,1,seed_synthetic,2026
+424,Tamil Nadu,district_23,rural,10k-25k,2,seed_synthetic,2026
+425,Uttar Pradesh,district_24,urban,<10k,3,seed_synthetic,2026
+426,Maharashtra,district_25,urban,<10k,2,seed_synthetic,2026
+427,Bihar,district_26,urban,10k-25k,6,seed_synthetic,2026
+428,West Bengal,district_27,rural,25k-50k,1,seed_synthetic,2026
+429,Karnataka,district_28,rural,<10k,1,seed_synthetic,2026
+430,West Bengal,district_29,rural,10k-25k,7,seed_synthetic,2026
+431,Karnataka,district_30,urban,25k-50k,7,seed_synthetic,2026
+432,West Bengal,district_31,rural,25k-50k,2,seed_synthetic,2026
+433,West Bengal,district_32,rural,25k-50k,3,seed_synthetic,2026
+434,Karnataka,district_33,rural,50k-100k,4,seed_synthetic,2026
+435,Uttar Pradesh,district_34,rural,25k-50k,4,seed_synthetic,2026
+436,Karnataka,district_35,urban,<10k,7,seed_synthetic,2026
+437,Tamil Nadu,district_36,rural,10k-25k,3,seed_synthetic,2026
+438,Bihar,district_37,urban,25k-50k,1,seed_synthetic,2026
+439,Karnataka,district_38,rural,<10k,3,seed_synthetic,2026
+440,Uttar Pradesh,district_39,urban,<10k,4,seed_synthetic,2026
+441,Bihar,district_40,urban,<10k,4,seed_synthetic,2026
+442,Maharashtra,district_41,rural,10k-25k,4,seed_synthetic,2026
+443,Karnataka,district_42,urban,10k-25k,7,seed_synthetic,2026
+444,Uttar Pradesh,district_43,rural,<10k,6,seed_synthetic,2026
+445,Tamil Nadu,district_44,rural,50k-100k,2,seed_synthetic,2026
+446,Tamil Nadu,district_45,urban,50k-100k,3,seed_synthetic,2026
+447,Maharashtra,district_46,rural,<10k,5,seed_synthetic,2026
+448,Bihar,district_47,rural,50k-100k,3,seed_synthetic,2026
+449,Tamil Nadu,district_48,rural,<10k,3,seed_synthetic,2026
+450,Maharashtra,district_49,urban,50k-100k,2,seed_synthetic,2026
+451,Bihar,district_0,rural,100k+,2,seed_synthetic,2026
+452,Bihar,district_1,urban,<10k,6,seed_synthetic,2026
+453,Uttar Pradesh,district_2,urban,25k-50k,6,seed_synthetic,2026
+454,Karnataka,district_3,urban,100k+,6,seed_synthetic,2026
+455,Tamil Nadu,district_4,rural,50k-100k,3,seed_synthetic,2026
+456,Tamil Nadu,district_5,rural,100k+,1,seed_synthetic,2026
+457,Karnataka,district_6,rural,25k-50k,2,seed_synthetic,2026
+458,Tamil Nadu,district_7,rural,<10k,3,seed_synthetic,2026
+459,Bihar,district_8,rural,50k-100k,4,seed_synthetic,2026
+460,Karnataka,district_9,rural,25k-50k,7,seed_synthetic,2026
+461,West Bengal,district_10,rural,25k-50k,7,seed_synthetic,2026
+462,Karnataka,district_11,rural,10k-25k,1,seed_synthetic,2026
+463,West Bengal,district_12,urban,25k-50k,5,seed_synthetic,2026
+464,Uttar Pradesh,district_13,urban,<10k,3,seed_synthetic,2026
+465,Karnataka,district_14,rural,25k-50k,2,seed_synthetic,2026
+466,Bihar,district_15,rural,<10k,4,seed_synthetic,2026
+467,Karnataka,district_16,rural,25k-50k,1,seed_synthetic,2026
+468,Tamil Nadu,district_17,urban,50k-100k,3,seed_synthetic,2026
+469,Maharashtra,district_18,rural,10k-25k,4,seed_synthetic,2026
+470,Bihar,district_19,urban,10k-25k,2,seed_synthetic,2026
+471,West Bengal,district_20,urban,10k-25k,5,seed_synthetic,2026
+472,West Bengal,district_21,urban,100k+,4,seed_synthetic,2026
+473,Uttar Pradesh,district_22,urban,25k-50k,6,seed_synthetic,2026
+474,Uttar Pradesh,district_23,rural,10k-25k,2,seed_synthetic,2026
+475,Tamil Nadu,district_24,urban,<10k,1,seed_synthetic,2026
+476,West Bengal,district_25,rural,<10k,4,seed_synthetic,2026
+477,Bihar,district_26,rural,10k-25k,2,seed_synthetic,2026
+478,Karnataka,district_27,rural,50k-100k,5,seed_synthetic,2026
+479,Tamil Nadu,district_28,rural,25k-50k,1,seed_synthetic,2026
+480,Karnataka,district_29,urban,<10k,5,seed_synthetic,2026
+481,Maharashtra,district_30,rural,50k-100k,7,seed_synthetic,2026
+482,West Bengal,district_31,rural,10k-25k,1,seed_synthetic,2026
+483,Maharashtra,district_32,rural,50k-100k,3,seed_synthetic,2026
+484,West Bengal,district_33,rural,<10k,6,seed_synthetic,2026
+485,Uttar Pradesh,district_34,urban,25k-50k,4,seed_synthetic,2026
+486,Maharashtra,district_35,rural,50k-100k,2,seed_synthetic,2026
+487,Uttar Pradesh,district_36,urban,10k-25k,2,seed_synthetic,2026
+488,Tamil Nadu,district_37,urban,25k-50k,6,seed_synthetic,2026
+489,West Bengal,district_38,urban,100k+,7,seed_synthetic,2026
+490,Tamil Nadu,district_39,rural,<10k,3,seed_synthetic,2026
+491,Bihar,district_40,rural,<10k,4,seed_synthetic,2026
+492,Bihar,district_41,rural,25k-50k,6,seed_synthetic,2026
+493,West Bengal,district_42,rural,10k-25k,2,seed_synthetic,2026
+494,Tamil Nadu,district_43,urban,<10k,2,seed_synthetic,2026
+495,Maharashtra,district_44,rural,10k-25k,6,seed_synthetic,2026
+496,Uttar Pradesh,district_45,rural,25k-50k,2,seed_synthetic,2026
+497,Karnataka,district_46,rural,10k-25k,6,seed_synthetic,2026
+498,Uttar Pradesh,district_47,urban,10k-25k,4,seed_synthetic,2026
+499,Bihar,district_48,rural,50k-100k,7,seed_synthetic,2026
+500,Uttar Pradesh,district_49,urban,10k-25k,1,seed_synthetic,2026
+501,Karnataka,district_0,urban,50k-100k,7,seed_synthetic,2026
+502,Tamil Nadu,district_1,rural,10k-25k,2,seed_synthetic,2026
+503,Bihar,district_2,urban,100k+,1,seed_synthetic,2026
+504,Bihar,district_3,urban,25k-50k,6,seed_synthetic,2026
+505,Maharashtra,district_4,rural,<10k,4,seed_synthetic,2026
+506,Uttar Pradesh,district_5,rural,50k-100k,6,seed_synthetic,2026
+507,Tamil Nadu,district_6,rural,10k-25k,1,seed_synthetic,2026
+508,Maharashtra,district_7,urban,<10k,1,seed_synthetic,2026
+509,Maharashtra,district_8,rural,<10k,4,seed_synthetic,2026
+510,Maharashtra,district_9,rural,25k-50k,7,seed_synthetic,2026
+511,Bihar,district_10,rural,<10k,3,seed_synthetic,2026
+512,West Bengal,district_11,rural,10k-25k,6,seed_synthetic,2026
+513,Bihar,district_12,rural,<10k,7,seed_synthetic,2026
+514,West Bengal,district_13,rural,10k-25k,7,seed_synthetic,2026
+515,Bihar,district_14,urban,10k-25k,4,seed_synthetic,2026
+516,Karnataka,district_15,urban,10k-25k,5,seed_synthetic,2026
+517,Bihar,district_16,rural,10k-25k,4,seed_synthetic,2026
+518,Karnataka,district_17,rural,<10k,5,seed_synthetic,2026
+519,Uttar Pradesh,district_18,urban,25k-50k,4,seed_synthetic,2026
+520,Tamil Nadu,district_19,rural,10k-25k,4,seed_synthetic,2026
+521,Uttar Pradesh,district_20,rural,25k-50k,4,seed_synthetic,2026
+522,Karnataka,district_21,rural,<10k,5,seed_synthetic,2026
+523,Maharashtra,district_22,rural,<10k,6,seed_synthetic,2026
+524,West Bengal,district_23,rural,<10k,7,seed_synthetic,2026
+525,Maharashtra,district_24,rural,10k-25k,5,seed_synthetic,2026
+526,Maharashtra,district_25,urban,10k-25k,1,seed_synthetic,2026
+527,Bihar,district_26,rural,50k-100k,5,seed_synthetic,2026
+528,Karnataka,district_27,rural,10k-25k,3,seed_synthetic,2026
+529,Bihar,district_28,rural,10k-25k,1,seed_synthetic,2026
+530,Bihar,district_29,rural,25k-50k,1,seed_synthetic,2026
+531,Tamil Nadu,district_30,rural,<10k,5,seed_synthetic,2026
+532,Karnataka,district_31,rural,10k-25k,7,seed_synthetic,2026
+533,Karnataka,district_32,rural,10k-25k,4,seed_synthetic,2026
+534,Maharashtra,district_33,rural,10k-25k,4,seed_synthetic,2026
+535,Tamil Nadu,district_34,rural,<10k,1,seed_synthetic,2026
+536,Karnataka,district_35,rural,25k-50k,5,seed_synthetic,2026
+537,Uttar Pradesh,district_36,urban,50k-100k,1,seed_synthetic,2026
+538,Karnataka,district_37,rural,<10k,6,seed_synthetic,2026
+539,Tamil Nadu,district_38,rural,25k-50k,6,seed_synthetic,2026
+540,Karnataka,district_39,urban,25k-50k,7,seed_synthetic,2026
+541,West Bengal,district_40,urban,10k-25k,2,seed_synthetic,2026
+542,Karnataka,district_41,rural,25k-50k,2,seed_synthetic,2026
+543,Maharashtra,district_42,rural,25k-50k,3,seed_synthetic,2026
+544,Maharashtra,district_43,rural,50k-100k,6,seed_synthetic,2026
+545,West Bengal,district_44,urban,100k+,2,seed_synthetic,2026
+546,Karnataka,district_45,urban,<10k,7,seed_synthetic,2026
+547,Uttar Pradesh,district_46,urban,10k-25k,2,seed_synthetic,2026
+548,Tamil Nadu,district_47,rural,10k-25k,1,seed_synthetic,2026
+549,Tamil Nadu,district_48,rural,<10k,2,seed_synthetic,2026
+550,West Bengal,district_49,urban,10k-25k,6,seed_synthetic,2026
+551,West Bengal,district_0,rural,100k+,5,seed_synthetic,2026
+552,Uttar Pradesh,district_1,urban,<10k,3,seed_synthetic,2026
+553,West Bengal,district_2,urban,10k-25k,5,seed_synthetic,2026
+554,Maharashtra,district_3,urban,50k-100k,5,seed_synthetic,2026
+555,Bihar,district_4,urban,10k-25k,4,seed_synthetic,2026
+556,Tamil Nadu,district_5,rural,10k-25k,4,seed_synthetic,2026
+557,West Bengal,district_6,rural,100k+,1,seed_synthetic,2026
+558,Bihar,district_7,urban,10k-25k,2,seed_synthetic,2026
+559,West Bengal,district_8,rural,<10k,4,seed_synthetic,2026
+560,Bihar,district_9,rural,<10k,1,seed_synthetic,2026
+561,Tamil Nadu,district_10,rural,50k-100k,4,seed_synthetic,2026
+562,Karnataka,district_11,rural,10k-25k,1,seed_synthetic,2026
+563,Uttar Pradesh,district_12,urban,10k-25k,6,seed_synthetic,2026
+564,Maharashtra,district_13,rural,<10k,1,seed_synthetic,2026
+565,Bihar,district_14,urban,10k-25k,1,seed_synthetic,2026
+566,Maharashtra,district_15,rural,50k-100k,5,seed_synthetic,2026
+567,Maharashtra,district_16,rural,10k-25k,2,seed_synthetic,2026
+568,Maharashtra,district_17,rural,100k+,3,seed_synthetic,2026
+569,Tamil Nadu,district_18,urban,10k-25k,3,seed_synthetic,2026
+570,Tamil Nadu,district_19,rural,10k-25k,2,seed_synthetic,2026
+571,Bihar,district_20,rural,50k-100k,6,seed_synthetic,2026
+572,Uttar Pradesh,district_21,rural,10k-25k,5,seed_synthetic,2026
+573,Maharashtra,district_22,rural,10k-25k,2,seed_synthetic,2026
+574,Karnataka,district_23,rural,50k-100k,5,seed_synthetic,2026
+575,Karnataka,district_24,rural,10k-25k,5,seed_synthetic,2026
+576,Uttar Pradesh,district_25,urban,10k-25k,4,seed_synthetic,2026
+577,Bihar,district_26,rural,100k+,5,seed_synthetic,2026
+578,Tamil Nadu,district_27,rural,<10k,7,seed_synthetic,2026
+579,Bihar,district_28,rural,10k-25k,4,seed_synthetic,2026
+580,Karnataka,district_29,urban,<10k,3,seed_synthetic,2026
+581,Karnataka,district_30,urban,10k-25k,4,seed_synthetic,2026
+582,Bihar,district_31,rural,<10k,6,seed_synthetic,2026
+583,Karnataka,district_32,rural,25k-50k,5,seed_synthetic,2026
+584,Karnataka,district_33,rural,<10k,1,seed_synthetic,2026
+585,Uttar Pradesh,district_34,rural,25k-50k,4,seed_synthetic,2026
+586,Bihar,district_35,rural,10k-25k,6,seed_synthetic,2026
+587,West Bengal,district_36,rural,10k-25k,2,seed_synthetic,2026
+588,Karnataka,district_37,rural,10k-25k,7,seed_synthetic,2026
+589,Bihar,district_38,rural,25k-50k,6,seed_synthetic,2026
+590,Bihar,district_39,rural,10k-25k,6,seed_synthetic,2026
+591,West Bengal,district_40,urban,10k-25k,1,seed_synthetic,2026
+592,Bihar,district_41,rural,50k-100k,5,seed_synthetic,2026
+593,Maharashtra,district_42,urban,25k-50k,4,seed_synthetic,2026
+594,Bihar,district_43,urban,<10k,5,seed_synthetic,2026
+595,Maharashtra,district_44,rural,50k-100k,6,seed_synthetic,2026
+596,West Bengal,district_45,rural,10k-25k,3,seed_synthetic,2026
+597,Tamil Nadu,district_46,urban,<10k,4,seed_synthetic,2026
+598,West Bengal,district_47,rural,10k-25k,5,seed_synthetic,2026
+599,Tamil Nadu,district_48,rural,<10k,6,seed_synthetic,2026
+600,Tamil Nadu,district_49,urban,<10k,6,seed_synthetic,2026
+601,Tamil Nadu,district_0,urban,25k-50k,3,seed_synthetic,2026
+602,West Bengal,district_1,urban,<10k,7,seed_synthetic,2026
+603,West Bengal,district_2,rural,50k-100k,1,seed_synthetic,2026
+604,Karnataka,district_3,rural,50k-100k,4,seed_synthetic,2026
+605,West Bengal,district_4,urban,25k-50k,5,seed_synthetic,2026
+606,Tamil Nadu,district_5,rural,25k-50k,1,seed_synthetic,2026
+607,Maharashtra,district_6,urban,25k-50k,4,seed_synthetic,2026
+608,Tamil Nadu,district_7,rural,100k+,5,seed_synthetic,2026
+609,Bihar,district_8,rural,10k-25k,5,seed_synthetic,2026
+610,Bihar,district_9,urban,<10k,1,seed_synthetic,2026
+611,Bihar,district_10,urban,10k-25k,2,seed_synthetic,2026
+612,Uttar Pradesh,district_11,rural,10k-25k,2,seed_synthetic,2026
+613,West Bengal,district_12,rural,<10k,5,seed_synthetic,2026
+614,Uttar Pradesh,district_13,rural,25k-50k,3,seed_synthetic,2026
+615,West Bengal,district_14,rural,<10k,5,seed_synthetic,2026
+616,Tamil Nadu,district_15,urban,50k-100k,6,seed_synthetic,2026
+617,Maharashtra,district_16,urban,10k-25k,6,seed_synthetic,2026
+618,Maharashtra,district_17,rural,<10k,2,seed_synthetic,2026
+619,Karnataka,district_18,urban,<10k,7,seed_synthetic,2026
+620,Karnataka,district_19,rural,<10k,2,seed_synthetic,2026
+621,Uttar Pradesh,district_20,rural,10k-25k,1,seed_synthetic,2026
+622,Uttar Pradesh,district_21,urban,<10k,1,seed_synthetic,2026
+623,Karnataka,district_22,rural,10k-25k,2,seed_synthetic,2026
+624,Uttar Pradesh,district_23,urban,<10k,7,seed_synthetic,2026
+625,Tamil Nadu,district_24,rural,10k-25k,2,seed_synthetic,2026
+626,Maharashtra,district_25,rural,10k-25k,5,seed_synthetic,2026
+627,Uttar Pradesh,district_26,rural,10k-25k,3,seed_synthetic,2026
+628,Uttar Pradesh,district_27,rural,10k-25k,1,seed_synthetic,2026
+629,Tamil Nadu,district_28,rural,<10k,4,seed_synthetic,2026
+630,Uttar Pradesh,district_29,rural,<10k,1,seed_synthetic,2026
+631,West Bengal,district_30,rural,<10k,4,seed_synthetic,2026
+632,Maharashtra,district_31,rural,25k-50k,4,seed_synthetic,2026
+633,Uttar Pradesh,district_32,urban,100k+,4,seed_synthetic,2026
+634,Uttar Pradesh,district_33,rural,50k-100k,2,seed_synthetic,2026
+635,Maharashtra,district_34,rural,10k-25k,6,seed_synthetic,2026
+636,West Bengal,district_35,urban,10k-25k,5,seed_synthetic,2026
+637,Maharashtra,district_36,rural,10k-25k,2,seed_synthetic,2026
+638,Maharashtra,district_37,rural,25k-50k,4,seed_synthetic,2026
+639,West Bengal,district_38,urban,25k-50k,1,seed_synthetic,2026
+640,Bihar,district_39,rural,50k-100k,7,seed_synthetic,2026
+641,West Bengal,district_40,rural,50k-100k,6,seed_synthetic,2026
+642,Bihar,district_41,rural,10k-25k,3,seed_synthetic,2026
+643,Bihar,district_42,rural,25k-50k,5,seed_synthetic,2026
+644,Uttar Pradesh,district_43,rural,50k-100k,5,seed_synthetic,2026
+645,West Bengal,district_44,rural,10k-25k,5,seed_synthetic,2026
+646,Maharashtra,district_45,urban,50k-100k,1,seed_synthetic,2026
+647,Uttar Pradesh,district_46,rural,<10k,7,seed_synthetic,2026
+648,Tamil Nadu,district_47,rural,100k+,7,seed_synthetic,2026
+649,Bihar,district_48,rural,25k-50k,7,seed_synthetic,2026
+650,Bihar,district_49,rural,<10k,7,seed_synthetic,2026
+651,Uttar Pradesh,district_0,urban,25k-50k,7,seed_synthetic,2026
+652,Tamil Nadu,district_1,rural,<10k,6,seed_synthetic,2026
+653,Maharashtra,district_2,urban,25k-50k,1,seed_synthetic,2026
+654,West Bengal,district_3,urban,25k-50k,4,seed_synthetic,2026
+655,Tamil Nadu,district_4,rural,25k-50k,2,seed_synthetic,2026
+656,Tamil Nadu,district_5,urban,50k-100k,2,seed_synthetic,2026
+657,West Bengal,district_6,urban,<10k,6,seed_synthetic,2026
+658,Tamil Nadu,district_7,urban,10k-25k,6,seed_synthetic,2026
+659,Karnataka,district_8,rural,10k-25k,4,seed_synthetic,2026
+660,Maharashtra,district_9,rural,<10k,6,seed_synthetic,2026
+661,Maharashtra,district_10,urban,10k-25k,1,seed_synthetic,2026
+662,West Bengal,district_11,rural,10k-25k,2,seed_synthetic,2026
+663,Karnataka,district_12,rural,10k-25k,7,seed_synthetic,2026
+664,Maharashtra,district_13,urban,10k-25k,4,seed_synthetic,2026
+665,Tamil Nadu,district_14,urban,50k-100k,4,seed_synthetic,2026
+666,West Bengal,district_15,rural,10k-25k,4,seed_synthetic,2026
+667,Tamil Nadu,district_16,rural,50k-100k,2,seed_synthetic,2026
+668,Bihar,district_17,rural,10k-25k,6,seed_synthetic,2026
+669,Bihar,district_18,rural,10k-25k,6,seed_synthetic,2026
+670,Karnataka,district_19,urban,10k-25k,5,seed_synthetic,2026
+671,Bihar,district_20,rural,10k-25k,3,seed_synthetic,2026
+672,Tamil Nadu,district_21,rural,10k-25k,5,seed_synthetic,2026
+673,Tamil Nadu,district_22,urban,10k-25k,7,seed_synthetic,2026
+674,Karnataka,district_23,rural,<10k,5,seed_synthetic,2026
+675,Tamil Nadu,district_24,rural,10k-25k,4,seed_synthetic,2026
+676,West Bengal,district_25,rural,25k-50k,2,seed_synthetic,2026
+677,Tamil Nadu,district_26,rural,10k-25k,4,seed_synthetic,2026
+678,Karnataka,district_27,rural,50k-100k,3,seed_synthetic,2026
+679,Tamil Nadu,district_28,urban,10k-25k,5,seed_synthetic,2026
+680,Bihar,district_29,urban,100k+,1,seed_synthetic,2026
+681,West Bengal,district_30,rural,25k-50k,2,seed_synthetic,2026
+682,Karnataka,district_31,urban,100k+,6,seed_synthetic,2026
+683,Bihar,district_32,urban,50k-100k,3,seed_synthetic,2026
+684,Bihar,district_33,urban,<10k,4,seed_synthetic,2026
+685,Maharashtra,district_34,urban,10k-25k,4,seed_synthetic,2026
+686,West Bengal,district_35,rural,<10k,4,seed_synthetic,2026
+687,Uttar Pradesh,district_36,rural,50k-100k,6,seed_synthetic,2026
+688,Tamil Nadu,district_37,rural,25k-50k,2,seed_synthetic,2026
+689,Uttar Pradesh,district_38,urban,10k-25k,6,seed_synthetic,2026
+690,West Bengal,district_39,rural,50k-100k,2,seed_synthetic,2026
+691,Bihar,district_40,rural,<10k,3,seed_synthetic,2026
+692,West Bengal,district_41,rural,25k-50k,5,seed_synthetic,2026
+693,Bihar,district_42,rural,25k-50k,7,seed_synthetic,2026
+694,Bihar,district_43,rural,<10k,2,seed_synthetic,2026
+695,Karnataka,district_44,rural,25k-50k,5,seed_synthetic,2026
+696,Maharashtra,district_45,urban,50k-100k,1,seed_synthetic,2026
+697,West Bengal,district_46,urban,<10k,1,seed_synthetic,2026
+698,Tamil Nadu,district_47,rural,10k-25k,6,seed_synthetic,2026
+699,Karnataka,district_48,urban,10k-25k,6,seed_synthetic,2026
+700,Karnataka,district_49,rural,25k-50k,3,seed_synthetic,2026
+701,Tamil Nadu,district_0,rural,<10k,5,seed_synthetic,2026
+702,Tamil Nadu,district_1,rural,50k-100k,3,seed_synthetic,2026
+703,Maharashtra,district_2,rural,50k-100k,2,seed_synthetic,2026
+704,Maharashtra,district_3,rural,<10k,4,seed_synthetic,2026
+705,Karnataka,district_4,urban,10k-25k,3,seed_synthetic,2026
+706,Tamil Nadu,district_5,urban,25k-50k,6,seed_synthetic,2026
+707,Karnataka,district_6,rural,25k-50k,3,seed_synthetic,2026
+708,Tamil Nadu,district_7,rural,10k-25k,3,seed_synthetic,2026
+709,Uttar Pradesh,district_8,urban,<10k,4,seed_synthetic,2026
+710,Uttar Pradesh,district_9,rural,<10k,6,seed_synthetic,2026
+711,West Bengal,district_10,rural,100k+,2,seed_synthetic,2026
+712,Tamil Nadu,district_11,rural,10k-25k,7,seed_synthetic,2026
+713,West Bengal,district_12,rural,50k-100k,4,seed_synthetic,2026
+714,West Bengal,district_13,rural,10k-25k,5,seed_synthetic,2026
+715,Bihar,district_14,urban,50k-100k,7,seed_synthetic,2026
+716,West Bengal,district_15,rural,<10k,4,seed_synthetic,2026
+717,Tamil Nadu,district_16,urban,<10k,2,seed_synthetic,2026
+718,Uttar Pradesh,district_17,rural,50k-100k,6,seed_synthetic,2026
+719,Maharashtra,district_18,rural,50k-100k,1,seed_synthetic,2026
+720,Tamil Nadu,district_19,urban,10k-25k,4,seed_synthetic,2026
+721,Karnataka,district_20,urban,10k-25k,7,seed_synthetic,2026
+722,Bihar,district_21,urban,10k-25k,3,seed_synthetic,2026
+723,Bihar,district_22,rural,10k-25k,5,seed_synthetic,2026
+724,Karnataka,district_23,rural,<10k,4,seed_synthetic,2026
+725,West Bengal,district_24,urban,50k-100k,2,seed_synthetic,2026
+726,Karnataka,district_25,rural,10k-25k,3,seed_synthetic,2026
+727,West Bengal,district_26,rural,25k-50k,4,seed_synthetic,2026
+728,Karnataka,district_27,rural,<10k,1,seed_synthetic,2026
+729,Uttar Pradesh,district_28,rural,<10k,3,seed_synthetic,2026
+730,Tamil Nadu,district_29,urban,25k-50k,3,seed_synthetic,2026
+731,West Bengal,district_30,urban,10k-25k,6,seed_synthetic,2026
+732,Uttar Pradesh,district_31,rural,25k-50k,1,seed_synthetic,2026
+733,Bihar,district_32,urban,<10k,6,seed_synthetic,2026
+734,West Bengal,district_33,rural,50k-100k,3,seed_synthetic,2026
+735,Maharashtra,district_34,urban,25k-50k,5,seed_synthetic,2026
+736,West Bengal,district_35,urban,50k-100k,4,seed_synthetic,2026
+737,West Bengal,district_36,urban,<10k,3,seed_synthetic,2026
+738,Uttar Pradesh,district_37,rural,10k-25k,7,seed_synthetic,2026
+739,West Bengal,district_38,urban,10k-25k,2,seed_synthetic,2026
+740,Bihar,district_39,urban,10k-25k,1,seed_synthetic,2026
+741,West Bengal,district_40,rural,10k-25k,6,seed_synthetic,2026
+742,West Bengal,district_41,urban,<10k,5,seed_synthetic,2026
+743,Tamil Nadu,district_42,rural,10k-25k,7,seed_synthetic,2026
+744,Maharashtra,district_43,urban,10k-25k,4,seed_synthetic,2026
+745,West Bengal,district_44,rural,10k-25k,1,seed_synthetic,2026
+746,Uttar Pradesh,district_45,urban,<10k,1,seed_synthetic,2026
+747,Tamil Nadu,district_46,rural,10k-25k,4,seed_synthetic,2026
+748,Maharashtra,district_47,urban,25k-50k,2,seed_synthetic,2026
+749,Maharashtra,district_48,rural,10k-25k,7,seed_synthetic,2026
+750,Karnataka,district_49,rural,10k-25k,1,seed_synthetic,2026
+751,Bihar,district_0,urban,10k-25k,7,seed_synthetic,2026
+752,Karnataka,district_1,urban,25k-50k,2,seed_synthetic,2026
+753,Karnataka,district_2,urban,10k-25k,1,seed_synthetic,2026
+754,Bihar,district_3,rural,25k-50k,2,seed_synthetic,2026
+755,Tamil Nadu,district_4,urban,100k+,2,seed_synthetic,2026
+756,Uttar Pradesh,district_5,rural,10k-25k,3,seed_synthetic,2026
+757,West Bengal,district_6,rural,50k-100k,3,seed_synthetic,2026
+758,Uttar Pradesh,district_7,rural,25k-50k,4,seed_synthetic,2026
+759,Karnataka,district_8,rural,<10k,4,seed_synthetic,2026
+760,West Bengal,district_9,rural,10k-25k,1,seed_synthetic,2026
+761,Maharashtra,district_10,urban,25k-50k,1,seed_synthetic,2026
+762,Tamil Nadu,district_11,rural,100k+,2,seed_synthetic,2026
+763,Bihar,district_12,urban,10k-25k,2,seed_synthetic,2026
+764,Bihar,district_13,rural,<10k,1,seed_synthetic,2026
+765,Uttar Pradesh,district_14,rural,25k-50k,3,seed_synthetic,2026
+766,West Bengal,district_15,rural,<10k,4,seed_synthetic,2026
+767,Tamil Nadu,district_16,urban,25k-50k,3,seed_synthetic,2026
+768,Uttar Pradesh,district_17,rural,10k-25k,3,seed_synthetic,2026
+769,Karnataka,district_18,rural,25k-50k,4,seed_synthetic,2026
+770,Uttar Pradesh,district_19,rural,50k-100k,4,seed_synthetic,2026
+771,Tamil Nadu,district_20,rural,25k-50k,3,seed_synthetic,2026
+772,Bihar,district_21,rural,25k-50k,2,seed_synthetic,2026
+773,Karnataka,district_22,rural,25k-50k,3,seed_synthetic,2026
+774,West Bengal,district_23,rural,50k-100k,1,seed_synthetic,2026
+775,Bihar,district_24,urban,50k-100k,4,seed_synthetic,2026
+776,Bihar,district_25,urban,<10k,7,seed_synthetic,2026
+777,Uttar Pradesh,district_26,urban,25k-50k,3,seed_synthetic,2026
+778,Karnataka,district_27,urban,<10k,1,seed_synthetic,2026
+779,Maharashtra,district_28,rural,50k-100k,5,seed_synthetic,2026
+780,Bihar,district_29,rural,25k-50k,1,seed_synthetic,2026
+781,Bihar,district_30,rural,10k-25k,2,seed_synthetic,2026
+782,Tamil Nadu,district_31,rural,<10k,2,seed_synthetic,2026
+783,Karnataka,district_32,rural,10k-25k,7,seed_synthetic,2026
+784,Karnataka,district_33,rural,25k-50k,7,seed_synthetic,2026
+785,Uttar Pradesh,district_34,rural,<10k,4,seed_synthetic,2026
+786,Tamil Nadu,district_35,rural,<10k,5,seed_synthetic,2026
+787,Karnataka,district_36,rural,50k-100k,5,seed_synthetic,2026
+788,West Bengal,district_37,urban,25k-50k,5,seed_synthetic,2026
+789,Tamil Nadu,district_38,rural,<10k,4,seed_synthetic,2026
+790,Karnataka,district_39,rural,10k-25k,7,seed_synthetic,2026
+791,Karnataka,district_40,rural,100k+,6,seed_synthetic,2026
+792,Uttar Pradesh,district_41,rural,25k-50k,1,seed_synthetic,2026
+793,West Bengal,district_42,rural,25k-50k,3,seed_synthetic,2026
+794,West Bengal,district_43,urban,10k-25k,7,seed_synthetic,2026
+795,Uttar Pradesh,district_44,urban,10k-25k,3,seed_synthetic,2026
+796,Maharashtra,district_45,rural,<10k,2,seed_synthetic,2026
+797,Bihar,district_46,urban,25k-50k,7,seed_synthetic,2026
+798,Uttar Pradesh,district_47,urban,<10k,5,seed_synthetic,2026
+799,Maharashtra,district_48,rural,<10k,4,seed_synthetic,2026
+800,Uttar Pradesh,district_49,rural,25k-50k,3,seed_synthetic,2026
+801,Karnataka,district_0,urban,50k-100k,1,seed_synthetic,2026
+802,Maharashtra,district_1,rural,25k-50k,3,seed_synthetic,2026
+803,Tamil Nadu,district_2,rural,10k-25k,4,seed_synthetic,2026
+804,Bihar,district_3,urban,10k-25k,7,seed_synthetic,2026
+805,West Bengal,district_4,rural,10k-25k,3,seed_synthetic,2026
+806,West Bengal,district_5,rural,10k-25k,2,seed_synthetic,2026
+807,Tamil Nadu,district_6,rural,10k-25k,3,seed_synthetic,2026
+808,Karnataka,district_7,rural,10k-25k,7,seed_synthetic,2026
+809,Uttar Pradesh,district_8,urban,25k-50k,4,seed_synthetic,2026
+810,Bihar,district_9,rural,50k-100k,3,seed_synthetic,2026
+811,Karnataka,district_10,rural,100k+,5,seed_synthetic,2026
+812,Bihar,district_11,rural,<10k,5,seed_synthetic,2026
+813,West Bengal,district_12,rural,10k-25k,3,seed_synthetic,2026
+814,Maharashtra,district_13,urban,<10k,7,seed_synthetic,2026
+815,West Bengal,district_14,urban,10k-25k,5,seed_synthetic,2026
+816,Bihar,district_15,rural,10k-25k,1,seed_synthetic,2026
+817,Karnataka,district_16,rural,<10k,3,seed_synthetic,2026
+818,Karnataka,district_17,urban,25k-50k,7,seed_synthetic,2026
+819,Tamil Nadu,district_18,rural,10k-25k,3,seed_synthetic,2026
+820,Bihar,district_19,rural,50k-100k,4,seed_synthetic,2026
+821,Karnataka,district_20,rural,<10k,5,seed_synthetic,2026
+822,Tamil Nadu,district_21,rural,<10k,5,seed_synthetic,2026
+823,Karnataka,district_22,urban,10k-25k,7,seed_synthetic,2026
+824,Tamil Nadu,district_23,rural,<10k,2,seed_synthetic,2026
+825,Tamil Nadu,district_24,urban,10k-25k,4,seed_synthetic,2026
+826,Karnataka,district_25,rural,100k+,4,seed_synthetic,2026
+827,West Bengal,district_26,rural,<10k,2,seed_synthetic,2026
+828,Bihar,district_27,rural,<10k,5,seed_synthetic,2026
+829,Bihar,district_28,urban,25k-50k,1,seed_synthetic,2026
+830,Karnataka,district_29,urban,10k-25k,4,seed_synthetic,2026
+831,Maharashtra,district_30,rural,25k-50k,3,seed_synthetic,2026
+832,Maharashtra,district_31,rural,10k-25k,2,seed_synthetic,2026
+833,Uttar Pradesh,district_32,rural,50k-100k,6,seed_synthetic,2026
+834,Karnataka,district_33,rural,<10k,2,seed_synthetic,2026
+835,Bihar,district_34,rural,10k-25k,2,seed_synthetic,2026
+836,West Bengal,district_35,rural,25k-50k,6,seed_synthetic,2026
+837,West Bengal,district_36,urban,50k-100k,7,seed_synthetic,2026
+838,Maharashtra,district_37,rural,10k-25k,1,seed_synthetic,2026
+839,Karnataka,district_38,rural,25k-50k,2,seed_synthetic,2026
+840,Bihar,district_39,rural,<10k,5,seed_synthetic,2026
+841,Maharashtra,district_40,urban,<10k,6,seed_synthetic,2026
+842,Tamil Nadu,district_41,rural,<10k,7,seed_synthetic,2026
+843,Bihar,district_42,rural,25k-50k,4,seed_synthetic,2026
+844,Karnataka,district_43,rural,10k-25k,1,seed_synthetic,2026
+845,Karnataka,district_44,rural,25k-50k,7,seed_synthetic,2026
+846,Karnataka,district_45,rural,<10k,2,seed_synthetic,2026
+847,Karnataka,district_46,rural,50k-100k,1,seed_synthetic,2026
+848,Karnataka,district_47,rural,50k-100k,5,seed_synthetic,2026
+849,West Bengal,district_48,rural,<10k,5,seed_synthetic,2026
+850,Tamil Nadu,district_49,urban,<10k,1,seed_synthetic,2026
+851,Bihar,district_0,rural,<10k,2,seed_synthetic,2026
+852,West Bengal,district_1,rural,50k-100k,5,seed_synthetic,2026
+853,Bihar,district_2,urban,<10k,2,seed_synthetic,2026
+854,Maharashtra,district_3,urban,10k-25k,5,seed_synthetic,2026
+855,Maharashtra,district_4,rural,10k-25k,3,seed_synthetic,2026
+856,Bihar,district_5,urban,25k-50k,5,seed_synthetic,2026
+857,Maharashtra,district_6,rural,10k-25k,4,seed_synthetic,2026
+858,Karnataka,district_7,rural,10k-25k,3,seed_synthetic,2026
+859,West Bengal,district_8,rural,100k+,3,seed_synthetic,2026
+860,West Bengal,district_9,urban,<10k,5,seed_synthetic,2026
+861,Bihar,district_10,rural,50k-100k,4,seed_synthetic,2026
+862,Bihar,district_11,rural,<10k,5,seed_synthetic,2026
+863,Karnataka,district_12,rural,10k-25k,5,seed_synthetic,2026
+864,West Bengal,district_13,urban,50k-100k,2,seed_synthetic,2026
+865,Bihar,district_14,rural,25k-50k,7,seed_synthetic,2026
+866,West Bengal,district_15,rural,25k-50k,4,seed_synthetic,2026
+867,West Bengal,district_16,urban,10k-25k,6,seed_synthetic,2026
+868,Bihar,district_17,urban,10k-25k,7,seed_synthetic,2026
+869,Uttar Pradesh,district_18,urban,10k-25k,7,seed_synthetic,2026
+870,Karnataka,district_19,urban,10k-25k,5,seed_synthetic,2026
+871,Uttar Pradesh,district_20,urban,10k-25k,6,seed_synthetic,2026
+872,Maharashtra,district_21,rural,10k-25k,4,seed_synthetic,2026
+873,Karnataka,district_22,rural,10k-25k,6,seed_synthetic,2026
+874,Karnataka,district_23,rural,10k-25k,3,seed_synthetic,2026
+875,West Bengal,district_24,rural,10k-25k,5,seed_synthetic,2026
+876,Tamil Nadu,district_25,urban,<10k,1,seed_synthetic,2026
+877,Tamil Nadu,district_26,rural,50k-100k,7,seed_synthetic,2026
+878,West Bengal,district_27,rural,25k-50k,2,seed_synthetic,2026
+879,Tamil Nadu,district_28,rural,<10k,5,seed_synthetic,2026
+880,Tamil Nadu,district_29,rural,25k-50k,1,seed_synthetic,2026
+881,Karnataka,district_30,rural,50k-100k,2,seed_synthetic,2026
+882,Bihar,district_31,urban,<10k,7,seed_synthetic,2026
+883,Uttar Pradesh,district_32,rural,<10k,6,seed_synthetic,2026
+884,Karnataka,district_33,rural,<10k,2,seed_synthetic,2026
+885,West Bengal,district_34,rural,<10k,1,seed_synthetic,2026
+886,West Bengal,district_35,urban,25k-50k,6,seed_synthetic,2026
+887,Karnataka,district_36,rural,100k+,7,seed_synthetic,2026
+888,Maharashtra,district_37,urban,<10k,2,seed_synthetic,2026
+889,Karnataka,district_38,rural,25k-50k,5,seed_synthetic,2026
+890,Maharashtra,district_39,urban,<10k,2,seed_synthetic,2026
+891,Karnataka,district_40,rural,25k-50k,6,seed_synthetic,2026
+892,West Bengal,district_41,rural,25k-50k,3,seed_synthetic,2026
+893,Tamil Nadu,district_42,urban,10k-25k,1,seed_synthetic,2026
+894,Bihar,district_43,urban,<10k,3,seed_synthetic,2026
+895,West Bengal,district_44,rural,25k-50k,4,seed_synthetic,2026
+896,Tamil Nadu,district_45,urban,100k+,6,seed_synthetic,2026
+897,Tamil Nadu,district_46,rural,10k-25k,1,seed_synthetic,2026
+898,Karnataka,district_47,rural,<10k,7,seed_synthetic,2026
+899,Karnataka,district_48,rural,<10k,5,seed_synthetic,2026
+900,Tamil Nadu,district_49,rural,25k-50k,7,seed_synthetic,2026
+901,Karnataka,district_0,rural,25k-50k,7,seed_synthetic,2026
+902,Karnataka,district_1,urban,25k-50k,2,seed_synthetic,2026
+903,Maharashtra,district_2,rural,25k-50k,1,seed_synthetic,2026
+904,Bihar,district_3,urban,50k-100k,6,seed_synthetic,2026
+905,Uttar Pradesh,district_4,urban,50k-100k,2,seed_synthetic,2026
+906,West Bengal,district_5,urban,<10k,2,seed_synthetic,2026
+907,Uttar Pradesh,district_6,rural,25k-50k,4,seed_synthetic,2026
+908,Maharashtra,district_7,urban,10k-25k,7,seed_synthetic,2026
+909,Uttar Pradesh,district_8,rural,10k-25k,6,seed_synthetic,2026
+910,Karnataka,district_9,rural,50k-100k,4,seed_synthetic,2026
+911,West Bengal,district_10,rural,25k-50k,2,seed_synthetic,2026
+912,Maharashtra,district_11,rural,100k+,3,seed_synthetic,2026
+913,Uttar Pradesh,district_12,rural,10k-25k,5,seed_synthetic,2026
+914,Bihar,district_13,rural,10k-25k,2,seed_synthetic,2026
+915,Tamil Nadu,district_14,urban,10k-25k,4,seed_synthetic,2026
+916,Uttar Pradesh,district_15,rural,<10k,1,seed_synthetic,2026
+917,Tamil Nadu,district_16,rural,<10k,3,seed_synthetic,2026
+918,West Bengal,district_17,rural,10k-25k,2,seed_synthetic,2026
+919,Maharashtra,district_18,rural,<10k,5,seed_synthetic,2026
+920,Tamil Nadu,district_19,rural,50k-100k,7,seed_synthetic,2026
+921,Bihar,district_20,rural,<10k,2,seed_synthetic,2026
+922,Tamil Nadu,district_21,rural,<10k,6,seed_synthetic,2026
+923,Uttar Pradesh,district_22,rural,25k-50k,5,seed_synthetic,2026
+924,Karnataka,district_23,rural,<10k,7,seed_synthetic,2026
+925,Maharashtra,district_24,rural,50k-100k,7,seed_synthetic,2026
+926,Bihar,district_25,rural,25k-50k,1,seed_synthetic,2026
+927,Tamil Nadu,district_26,urban,<10k,6,seed_synthetic,2026
+928,Maharashtra,district_27,urban,25k-50k,5,seed_synthetic,2026
+929,Uttar Pradesh,district_28,rural,25k-50k,1,seed_synthetic,2026
+930,Tamil Nadu,district_29,rural,25k-50k,2,seed_synthetic,2026
+931,Tamil Nadu,district_30,rural,50k-100k,7,seed_synthetic,2026
+932,West Bengal,district_31,rural,25k-50k,4,seed_synthetic,2026
+933,Maharashtra,district_32,urban,25k-50k,3,seed_synthetic,2026
+934,Tamil Nadu,district_33,urban,10k-25k,3,seed_synthetic,2026
+935,Uttar Pradesh,district_34,urban,25k-50k,6,seed_synthetic,2026
+936,Bihar,district_35,rural,100k+,2,seed_synthetic,2026
+937,Karnataka,district_36,urban,25k-50k,2,seed_synthetic,2026
+938,Karnataka,district_37,rural,25k-50k,5,seed_synthetic,2026
+939,Uttar Pradesh,district_38,rural,10k-25k,7,seed_synthetic,2026
+940,Tamil Nadu,district_39,rural,25k-50k,2,seed_synthetic,2026
+941,West Bengal,district_40,urban,100k+,2,seed_synthetic,2026
+942,Uttar Pradesh,district_41,urban,<10k,4,seed_synthetic,2026
+943,Bihar,district_42,urban,<10k,2,seed_synthetic,2026
+944,Uttar Pradesh,district_43,urban,10k-25k,5,seed_synthetic,2026
+945,Karnataka,district_44,urban,10k-25k,2,seed_synthetic,2026
+946,Karnataka,district_45,rural,25k-50k,1,seed_synthetic,2026
+947,Bihar,district_46,rural,<10k,2,seed_synthetic,2026
+948,Karnataka,district_47,rural,10k-25k,7,seed_synthetic,2026
+949,Bihar,district_48,rural,25k-50k,7,seed_synthetic,2026
+950,Maharashtra,district_49,urban,25k-50k,4,seed_synthetic,2026
+951,Karnataka,district_0,rural,25k-50k,3,seed_synthetic,2026
+952,Maharashtra,district_1,rural,25k-50k,6,seed_synthetic,2026
+953,Tamil Nadu,district_2,rural,25k-50k,2,seed_synthetic,2026
+954,Uttar Pradesh,district_3,rural,25k-50k,5,seed_synthetic,2026
+955,West Bengal,district_4,urban,25k-50k,5,seed_synthetic,2026
+956,Tamil Nadu,district_5,urban,10k-25k,5,seed_synthetic,2026
+957,Uttar Pradesh,district_6,urban,25k-50k,2,seed_synthetic,2026
+958,Tamil Nadu,district_7,rural,<10k,6,seed_synthetic,2026
+959,Bihar,district_8,rural,10k-25k,5,seed_synthetic,2026
+960,Uttar Pradesh,district_9,rural,10k-25k,7,seed_synthetic,2026
+961,Karnataka,district_10,rural,50k-100k,2,seed_synthetic,2026
+962,Uttar Pradesh,district_11,rural,25k-50k,5,seed_synthetic,2026
+963,Bihar,district_12,urban,<10k,6,seed_synthetic,2026
+964,Maharashtra,district_13,urban,25k-50k,2,seed_synthetic,2026
+965,Bihar,district_14,rural,<10k,6,seed_synthetic,2026
+966,Tamil Nadu,district_15,rural,25k-50k,1,seed_synthetic,2026
+967,Tamil Nadu,district_16,rural,50k-100k,6,seed_synthetic,2026
+968,Maharashtra,district_17,urban,25k-50k,5,seed_synthetic,2026
+969,Bihar,district_18,rural,25k-50k,2,seed_synthetic,2026
+970,Karnataka,district_19,urban,10k-25k,1,seed_synthetic,2026
+971,Maharashtra,district_20,rural,10k-25k,6,seed_synthetic,2026
+972,Uttar Pradesh,district_21,urban,50k-100k,2,seed_synthetic,2026
+973,Uttar Pradesh,district_22,urban,25k-50k,4,seed_synthetic,2026
+974,Uttar Pradesh,district_23,rural,10k-25k,1,seed_synthetic,2026
+975,Karnataka,district_24,rural,10k-25k,7,seed_synthetic,2026
+976,Maharashtra,district_25,rural,<10k,4,seed_synthetic,2026
+977,Karnataka,district_26,rural,<10k,7,seed_synthetic,2026
+978,Tamil Nadu,district_27,rural,<10k,2,seed_synthetic,2026
+979,Uttar Pradesh,district_28,rural,10k-25k,2,seed_synthetic,2026
+980,Tamil Nadu,district_29,rural,50k-100k,5,seed_synthetic,2026
+981,Tamil Nadu,district_30,rural,10k-25k,5,seed_synthetic,2026
+982,West Bengal,district_31,urban,<10k,6,seed_synthetic,2026
+983,Tamil Nadu,district_32,rural,<10k,7,seed_synthetic,2026
+984,Tamil Nadu,district_33,urban,10k-25k,6,seed_synthetic,2026
+985,Tamil Nadu,district_34,rural,50k-100k,1,seed_synthetic,2026
+986,Tamil Nadu,district_35,urban,10k-25k,3,seed_synthetic,2026
+987,Tamil Nadu,district_36,rural,25k-50k,7,seed_synthetic,2026
+988,Maharashtra,district_37,rural,50k-100k,4,seed_synthetic,2026
+989,Maharashtra,district_38,rural,<10k,7,seed_synthetic,2026
+990,West Bengal,district_39,rural,25k-50k,4,seed_synthetic,2026
+991,Uttar Pradesh,district_40,urban,100k+,1,seed_synthetic,2026
+992,Tamil Nadu,district_41,rural,10k-25k,4,seed_synthetic,2026
+993,Maharashtra,district_42,rural,<10k,6,seed_synthetic,2026
+994,Uttar Pradesh,district_43,rural,50k-100k,5,seed_synthetic,2026
+995,Tamil Nadu,district_44,rural,50k-100k,1,seed_synthetic,2026
+996,Tamil Nadu,district_45,rural,10k-25k,2,seed_synthetic,2026
+997,Tamil Nadu,district_46,rural,25k-50k,6,seed_synthetic,2026
+998,Uttar Pradesh,district_47,rural,<10k,7,seed_synthetic,2026
+999,Bihar,district_48,urban,50k-100k,6,seed_synthetic,2026
+1000,Tamil Nadu,district_49,rural,10k-25k,1,seed_synthetic,2026

@@ -1,0 +1,15 @@
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.db
+*.sqlite3
+.env
+app/data/raw/*
+!app/data/raw/.gitkeep
+.DS_Store
+Thumbs.db

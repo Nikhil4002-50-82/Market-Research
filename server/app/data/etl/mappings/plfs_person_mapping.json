@@ -1,0 +1,96 @@
+{
+  "file_format": "fixed_width",
+  "colspecs": [
+    [0, 2], [2, 7], [7, 10], [10, 12], [12, 14], [14, 15], [15, 17], [17, 19],
+    [19, 22], [22, 24], [24, 26], [26, 27], [27, 31], [31, 36], [36, 37],
+    [37, 38], [38, 40], [40, 42], [42, 43], [43, 46], [46, 48], [48, 50],
+    [50, 52], [52, 55], [55, 58], [58, 61], [61, 71]
+  ],
+  "raw_column_names": [
+    "Panel", "File_Identification", "Schedule", "Quarter", "Visit", "Sector",
+    "State_UT_Code", "District_Code", "NSS_Region", "Stratum", "Sub_Stratum",
+    "Sub_Sample", "Fod_Sub_Region", "FSU", "Sample_Sg_Sb_No", "SSStratum_No",
+    "SHNumber", "Person_SerialNo", "Sex", "Age", "GeneralEducaionLevel", "CWS",
+    "Industry_Code", "Occupation_Code", "Ns_count_1", "Ns_count_2",
+    "Sub_Sample_Multiplier"
+  ],
+  "composite_lookups": [
+    {
+      "key_columns": ["State_UT_Code", "District_Code"],
+      "output_column": "district",
+      "lookup": {
+        "29": {
+          "01": "Belgaum", "02": "Bagalkot", "03": "Bijapur", "04": "Bidar",
+          "05": "Raichur", "06": "Koppal", "07": "Gadag", "08": "Dharwad",
+          "09": "Uttara Kannada", "10": "Haveri", "14": "Shimoga",
+          "15": "Udupi", "16": "Chikmagalur", "17": "Tumkur", "18": "Bangalore",
+          "19": "Mandya", "20": "Hassan", "21": "Dakshina Kannada",
+          "22": "Kodagu", "23": "Mysore", "24": "Chamarajanagar",
+          "27": "Kolar", "28": "Chikkaballapura", "29": "Bangalore Rural",
+          "30": "Ramanagara"
+        }
+      }
+    }
+  ],
+  "column_rename": {
+    "Sector": "urban_rural",
+    "State_UT_Code": "state",
+    "Sex": "gender",
+    "Age": "age",
+    "GeneralEducaionLevel": "education",
+    "Occupation_Code": "occupation"
+  },
+  "value_recodes": {
+    "urban_rural": {
+      "1": "rural",
+      "2": "urban"
+    },
+    "gender": {
+      "1": "male",
+      "2": "female",
+      "3": "transgender"
+    },
+    "state": {
+      "01": "Jammu and Kashmir", "02": "Himachal Pradesh", "03": "Punjab",
+      "04": "Chandigarh", "05": "Uttarakhand", "06": "Haryana", "07": "Delhi",
+      "08": "Rajasthan", "09": "Uttar Pradesh", "10": "Bihar", "11": "Sikkim",
+      "12": "Arunachal Pradesh", "13": "Nagaland", "14": "Manipur",
+      "15": "Mizoram", "16": "Tripura", "17": "Meghalaya", "18": "Assam",
+      "19": "West Bengal", "20": "Jharkhand", "21": "Odisha",
+      "22": "Chhattisgarh", "23": "Madhya Pradesh", "24": "Gujarat",
+      "25": "Daman and Diu", "26": "Dadra and Nagar Haveli", "27": "Maharashtra",
+      "28": "Andhra Pradesh", "29": "Karnataka", "30": "Goa",
+      "31": "Lakshadweep", "32": "Kerala", "33": "Tamil Nadu",
+      "34": "Puducherry", "35": "Andaman and Nicobar Islands",
+      "36": "Telangana", "37": "Andhra Pradesh"
+    },
+    "education": {
+      "01": "not_literate",
+      "02": "literate_no_formal_schooling",
+      "03": "below_primary",
+      "04": "primary",
+      "05": "middle",
+      "06": "secondary",
+      "07": "higher_secondary",
+      "08": "diploma",
+      "10": "graduate",
+      "11": "postgraduate_and_above"
+    },
+    "occupation": {
+      "001": "managers_professionals",
+      "002": "managers_professionals",
+      "003": "technicians_associates",
+      "004": "clerical_support",
+      "005": "service_sales",
+      "006": "agriculture_skilled",
+      "007": "craft_trade",
+      "008": "plant_machine_operators",
+      "009": "elementary_occupations"
+    }
+  },
+  "numeric_fields": ["age"],
+  "constant_fields": {
+    "source_dataset": "plfs",
+    "source_year": 2024
+  }
+}

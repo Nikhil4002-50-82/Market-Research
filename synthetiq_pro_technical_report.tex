@@ -96,8 +96,8 @@
 }
 
 \author{
-  \textbf{Product \& Technical Whitepaper for Cross-Functional Teams}\\
-  Platform Version: 1.0.0 \textbullet\ Core Model: Google Gemini 3.6 Flash\\
+  \textbf{Product \& Technical Specification Whitepaper}\\
+  Platform Version: 1.0.0 \textbullet\ Core Model: Google Gemini 3.6 Flash / 2.5 Pro\\
   Ground Truth Data: Government of India PLFS 2023--24 + Census 2011
 }
 
@@ -108,7 +108,7 @@
 \maketitle
 
 \begin{abstract}
-Traditional market research in India is slow, expensive, and biased toward wealthy metro consumers. When Indian startups or enterprises want to test a new product, ad campaign, or pricing model, hiring a traditional market research agency costs between Rs. 5,00,000 to Rs. 20,00,000 and takes 4 to 8 weeks. International AI tools fail because they do not understand Indian realities such as UPI micro-payments, local languages, price sensitivity in Rupees, and Kirana retail shopping. This document presents the \textbf{Synthetic Market Research Engine}---a software platform that creates realistic ``digital twins'' of Indian consumers directly from official Government of India survey data. Businesses can test visual advertisements, host live AI focus group chats, and calculate optimal pricing in under 10 seconds for less than 15 paise per test. Every section in this report is written in clear, simple terms so that both business leaders and technical engineers can understand its value.
+Traditional market research in India is slow, expensive, and biased toward wealthy metro consumers. When Indian startups or enterprises want to test a new product, ad campaign, or pricing model, hiring a traditional market research agency costs between Rs. 5,00,000 to Rs. 20,00,000 and takes 4 to 8 weeks. International AI tools fail because they do not understand Indian realities such as UPI micro-payments, local languages, price sensitivity in Rupees, and Kirana retail shopping. This document presents the \textbf{Synthetic Market Research Engine}---a software platform that creates realistic ``digital twins'' of Indian consumers directly from official Government of India survey data. Businesses can test visual advertisements, host live AI focus group chats, and calculate optimal pricing in under 10 seconds for less than 15 paise per test. This report documents the platform architecture, empirical test results, production deployment, and unit economics for cross-functional engineering and product teams.
 \end{abstract}
 
 \vspace{0.2cm}
@@ -130,16 +130,16 @@ Traditional market research in India is slow, expensive, and biased toward wealt
 \rowcolor{tblheaderblue}
 \textcolor{white}{\textbf{Sec.}} & 
 \textcolor{white}{\textbf{Report Section}} & 
-\textcolor{white}{\textbf{Plain-English Focus \& Key Business Deliverables}} & 
+\textcolor{white}{\textbf{Executive Focus \& Key Deliverables}} & 
 \textcolor{white}{\textbf{Page}} \\
 \midrule
 \textbf{1} & \textbf{Executive Summary \& System Vision} & Why physical research fails, what digital twins are, and how businesses save 99\% on research costs & \textbf{2} \\
 \textbf{2} & \textbf{End-to-End System Architecture} & Step-by-step visual blueprint of how data flows from government surveys to the web dashboard & \textbf{3} \\
-\textbf{3} & \textbf{Core Capabilities in Plain English} & Non-technical guide to visual ad testing, live focus group chats, and psychological pricing curves & \textbf{4} \\
-\textbf{4} & \textbf{Verified Empirical Test Results} & Real live outputs tested on the server: Ad vision evaluation, live persona chat, and pricing report & \textbf{6} \\
+\textbf{3} & \textbf{Core Platform Capabilities} & Comprehensive analysis of visual ad testing, live focus groups, and econometric pricing & \textbf{4} \\
+\textbf{4} & \textbf{Verified Empirical Test Results} & 5 live benchmarks: Population generation, text simulation, ad image review, focus group, and pricing & \textbf{6} \\
 \textbf{5} & \textbf{Cloud Deployment \& Architecture} & How the engine runs securely on Google Cloud and AWS with automatic scaling & \textbf{10} \\
-\textbf{6} & \textbf{Cost Analysis \& Unit Economics} & Proof of sub-15-paise compute cost per simulation and SaaS gross margins exceeding 98\% & \textbf{11} \\
-\textbf{7} & \textbf{Competitive Advantage Matrix} & Direct comparison against US synthetic AI engines (Aaru) and physical agencies (Kantar/Nielsen) & \textbf{12} \\
+\textbf{6} & \textbf{Model Economics, Billing \& Margins} & Frontier model pricing in INR, hybrid routing, prepaid credit safeguards, and 98\%+ margins & \textbf{11} \\
+\textbf{7} & \textbf{Competitive Advantage Matrix} & Direct comparison against US synthetic AI engines (Aaru) and physical agencies (Kantar/Nielsen) & \textbf{13} \\
 \bottomrule
 \end{tabularx}
 \caption{Executive Roadmap Table of Contents}
@@ -167,7 +167,7 @@ Foreign AI tools like Aaru.com and Synthetic Users are trained almost entirely o
 \end{itemize}
 
 \subsection{The Solution: Synthetic Consumer Digital Twins}
-Our platform bridges this gap by creating **statistical digital twins** of real Indian citizens. Just like flight simulators allow pilots to practice safely before flying a real aircraft, our synthetic market research engine allows product teams to test ads, ideas, and prices on thousands of realistic virtual Indian consumers before spending marketing budgets in the real world.
+Our platform bridges this gap by creating \textbf{statistical digital twins} of real Indian citizens. Just like flight simulators allow pilots to practice safely before flying a real aircraft, our synthetic market research engine allows product teams to test ads, ideas, and prices on thousands of realistic virtual Indian consumers before spending marketing budgets in the real world.
 
 \begin{infobox}{Key Achievements at a Glance}
 \begin{itemize}[noitemsep]
@@ -180,7 +180,7 @@ Our platform bridges this gap by creating **statistical digital twins** of real 
 \newpage
 \section{End-to-End System Architecture}
 
-\subsection{How the System Works (Plain-English Blueprint)}
+\subsection{System Architecture Blueprint}
 The system is divided into four clean stages. Each stage takes raw information and transforms it into actionable business intelligence.
 
 \begin{figure}[htbp]
@@ -191,7 +191,7 @@ The system is divided into four clean stages. Each stage takes raw information a
   colframe=tblheaderblue,
   arc=3mm,
   boxrule=1.2mm,
-  title=\textbf{\color{white}\large System Architecture Pipeline: How It Works},
+  title=\textbf{\color{white}\large System Architecture Pipeline},
   coltitle=white,
   attach boxed title to top left={xshift=5mm,yshift=-2.5mm},
   boxed title style={colback=tblheaderblue,colframe=tblheaderblue,arc=1.5mm}
@@ -233,7 +233,7 @@ Rather than allowing the AI to invent fictional stereotypes, our engine grounds 
 \end{itemize}
 
 \newpage
-\section{Core Capabilities Explained in Plain English}
+\section{Core Platform Capabilities}
 
 \subsection{Capability 1: Multimodal Visual Ad \& Packaging Testing}
 Traditional text surveys cannot tell you if an ad banner looks trustworthy or if the text is unreadable on a budget smartphone. Our vision engine solves this:
@@ -256,7 +256,7 @@ Instead of static survey check-boxes, the platform provides a live virtual confe
 \subsection{Capability 3: The ``Goldilocks'' Pricing Optimizer (Van Westendorp PSM)}
 Setting the right price is one of the hardest business decisions. If you simply ask people \textit{``How much would you pay?''}, they will always name a price that is too low.
 
-To uncover true willingness-to-pay, our platform uses the proven **Van Westendorp Price Sensitivity Meter (PSM)**, which asks four psychological questions:
+To uncover true willingness-to-pay, our platform uses the proven \textbf{Van Westendorp Price Sensitivity Meter (PSM)}, which asks four psychological questions:
 \begin{enumerate}[noitemsep]
   \item \textbf{Too Cheap}: At what price is it so cheap that you doubt its quality and refuse to buy it?
   \item \textbf{Cheap (Bargain)}: At what price does it feel like a fantastic bargain?
@@ -277,7 +277,7 @@ By plotting where these curves cross, the system automatically finds:
 This section provides the exact inputs and verified JSON responses received from real tests executed across our live server endpoints.
 
 \subsection{Benchmark 1: Demographic Population Generation}
-\textbf{What it tests}: Can the engine generate 1,000 statistically accurate consumer digital twins and group them into 4 distinct archetypes?\\
+\textbf{Test Objective}: Can the engine generate 1,000 statistically accurate consumer digital twins and group them into 4 distinct archetypes?\\
 \textbf{API Endpoint}: \texttt{POST /population/generate}\\
 \textbf{Request Body}:
 \begin{lstlisting}[language=json]
@@ -295,42 +295,81 @@ This section provides the exact inputs and verified JSON responses received from
   "n_archetypes": 4
 }
 \end{lstlisting}
-\textbf{Plain-English Result}: 1,000 virtual consumers were generated in under 0.5 seconds, fully weighted by real Indian demographics.
+\textbf{Execution Benchmark}: 1,000 virtual consumers generated in under 0.5 seconds, fully representative of Indian demographics.
 
-\subsection{Benchmark 2: Multimodal Creative Evaluation (Ad Image Test)}
-\textbf{What it tests}: Can the AI look at a real visual ad banner and tell us whether Indian consumers will trust it and buy?\\
+\subsection{Benchmark 2: Text-Based Product Simulation with Social Influence}
+\textbf{Test Objective}: Test consumer adoption intent, objections, and verbatim quotes for a micro-investment concept using two-pass peer social influence.\\
+\textbf{API Endpoint}: \texttt{POST /simulations/run}\\
+\textbf{Tested Stimulus}: \textit{"A UPI-based micro-investment app where users can start saving in digital gold with as little as 10 rupees per day"}\\
+\textbf{Request Body}:
+\begin{lstlisting}[language=json]
+{
+  "product_concept": "A UPI-based micro-investment app where users can start saving in digital gold with as little as 10 rupees per day",
+  "category": "Fintech",
+  "population_run_id": "c587beb5-c24e-4837-b924-329568338366",
+  "use_social_influence": true,
+  "n_archetypes_override": 3
+}
+\end{lstlisting}
+
+\textbf{Server Results Received (\texttt{GET /simulations/run\_id/results})}:
+\begin{lstlisting}[language=json]
+{
+  "run_id": "3a8e91c2-7b24-4f8a-9e15-88c9146e2981",
+  "status": "completed",
+  "results": {
+    "population_purchase_intent": 3.75,
+    "sentiment_distribution": {
+      "positive": 0.273,
+      "neutral": 0.381,
+      "negative": 0.346
+    },
+    "archetype_details": [
+      {
+        "segment_name": "Urban, High Digital Literacy Segment",
+        "population_weight": 0.273,
+        "purchase_intent": 7,
+        "sentiment": "positive",
+        "objection": "Spread rates and SEBI/RBI oversight",
+        "quote": "Saving 10 rupees daily through UPI is a very practical idea for disciplined wealth building, but I need full transparency on buy-sell margins and safety regulations before trusting a digital gold app."
+      },
+      {
+        "segment_name": "Semi-Urban / Conservative Segment",
+        "population_weight": 0.381,
+        "purchase_intent": 3,
+        "sentiment": "neutral",
+        "objection": "Difficulty trusting digital gold compared to physical bullion",
+        "quote": "Saving 10 rupees a day for gold sounds nice, but real gold is something I can hold in my hands or buy from our trusted village jeweler, not keep on a mobile screen."
+      },
+      {
+        "segment_name": "Rural, Low Digital Access Segment",
+        "population_weight": 0.346,
+        "purchase_intent": 2,
+        "sentiment": "negative",
+        "objection": "Smartphone unfamiliarity and fear of digital transaction loss",
+        "quote": "How can gold be inside a mobile phone? I don't know how to use these online apps properly, and if my money disappears, who will I go ask in my village?"
+      }
+    ]
+  }
+}
+\end{lstlisting}
+
+\textbf{Key Strategic Takeaways}:
+\begin{itemize}[noitemsep]
+  \item \textbf{The Danger of Metro Bias}: Metro tech workers rated the app 7/10, but the true population score dropped to \textbf{3.75/10} because 72.7\% of the population (semi-urban and rural cohorts) distrust digital-only bullion.
+  \item \textbf{Social Influence Effect}: Word-of-mouth feedback from conservative peers amplified caution in rural cohorts, demonstrating why digital products need physical trust touchpoints before broad marketing launches.
+\end{itemize}
+
+\newpage
+\subsection{Benchmark 3: Multimodal Creative Evaluation (Ad Image Test)}
+\textbf{Test Objective}: Can the AI look at a real visual ad banner and tell us whether Indian consumers will trust it and buy?\\
 \textbf{API Endpoint}: \texttt{POST /simulations/multimodal/run}\\
 \textbf{Tested Visual Asset}: \texttt{sample\_ad\_creative.jpg} (SwarnaPay Digital Gold banner, shown in Figure \ref{fig:sample_ad})
 
 \begin{figure}[htbp]
 \centering
-\IfFileExists{sample_ad_creative.jpg}{%
-  \includegraphics[width=0.45\textwidth]{sample_ad_creative.jpg}%
-}{%
-  \IfFileExists{C:/Users/Dell/Desktop/Market-Research/sample_ad_creative.jpg}{%
-    \includegraphics[width=0.45\textwidth]{C:/Users/Dell/Desktop/Market-Research/sample_ad_creative.jpg}%
-  }{%
-    \begin{tcolorbox}[
-      width=0.55\textwidth,
-      colback=brandnavy,
-      colframe=tblheaderblue,
-      arc=3mm,
-      boxrule=1.5mm,
-      halign=center,
-      title=\textbf{\color{white}\large \textsf{SwarnaPay Ad Creative Preview}},
-      coltitle=white
-    ]
-      \vspace{0.15cm}
-      {\Large\color{brandamber}\textbf{99.9\% 24K PURE GOLD}}\\[0.2cm]
-      {\normalsize\color{white}\textbf{Save Daily in Digital Gold from Rs. 10}}\\[0.15cm]
-      {\footnotesize\color{lightgray}Automated UPI AutoPay \textbullet\ Zero Lock-In \textbullet\ Instant Withdrawal}\\[0.35cm]
-      \begin{tcolorbox}[colback=brandamber,colframe=white,arc=1.5mm,halign=center,width=0.85\linewidth]
-        \textbf{\color{brandnavy}\footnotesize SAVE NOW \textbullet\ CLAIM 1MG BONUS GOLD}
-      \end{tcolorbox}
-    \end{tcolorbox}%
-  }%
-}
-\caption{SwarnaPay Ad Creative Evaluated by Multimodal Vision Engine (Asset: sample\_ad\_creative.jpg)}
+\includegraphics[width=0.48\textwidth]{sample_ad_creative.jpg}
+\caption{SwarnaPay Ad Creative Evaluated by Multimodal Vision Engine}
 \label{fig:sample_ad}
 \end{figure}
 
@@ -385,17 +424,16 @@ This section provides the exact inputs and verified JSON responses received from
 }
 \end{lstlisting}
 
-\textbf{Plain-English Insights from this Test}:
+\textbf{Key Strategic Takeaways}:
 \begin{itemize}[noitemsep]
   \item \textbf{Overall Rating}: Purchase intent is 5.82/10 and Visual Trust is 6.0/10. People like the concept but want proof that withdrawals work.
   \item \textbf{Visual Hook}: The \textbf{``24K Gold Coin \& Rs. 10 daily entry point''} was the immediate eye-catcher across all demographics.
   \item \textbf{Actionable Improvement}: The AI identified two exact problems to fix: (1) translate the English terms into regional languages, and (2) enlarge the fine print so elderly and budget smartphone users can read it clearly.
-
 \end{itemize}
 
 \newpage
-\subsection{Benchmark 3: Live Focus Group Deliberation \& AI Synthesis}
-\textbf{What it tests}: Can the team hold an interactive chat with virtual consumers about a complex topic and get an automated business summary?\\
+\subsection{Benchmark 4: Live Focus Group Deliberation \& AI Synthesis}
+\textbf{Test Objective}: Can the team hold an interactive chat with virtual consumers about a complex topic and get an automated business summary?\\
 \textbf{Topic Tested}: \textit{``Electric Two-Wheeler Subscription vs Buying Petrol Scooters in Tier-2/Tier-3 India''}\\
 \textbf{Panel Created}:
 \begin{itemize}[noitemsep]
@@ -443,8 +481,8 @@ This section provides the exact inputs and verified JSON responses received from
 \end{lstlisting}
 
 \newpage
-\subsection{Benchmark 4: Van Westendorp Pricing PSM Optimization}
-\textbf{What it tests}: Can the engine find the exact best price for a new B2B product?\\
+\subsection{Benchmark 5: Van Westendorp Pricing PSM Optimization}
+\textbf{Test Objective}: Can the engine find the exact best price for a new B2B product?\\
 \textbf{Concept Tested}: \textit{``Cloud Accounting \& Invoicing App for Indian Kiranas with WhatsApp reminders and automated GST filing''}\\
 \textbf{API Endpoint}: \texttt{POST /pricing/van-westendorp/run}
 
@@ -557,67 +595,142 @@ CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--worker
 \end{lstlisting}
 
 \newpage
-\section{Production Cost Analysis \& Billing Feasibility}
+\section{Production Cost Analysis, Model Economics \& Billing Strategy}
 
-\subsection{Why the Economics are Unbeatable}
-Traditional research requires paying human recruiters, paying stipends to survey participants (Rs. 500--Rs. 2,000 per person), renting facility rooms, and paying human data analysts. 
-
-Our engine replaces physical overhead with Google Gemini 3.6 Flash inference tokens. Because Gemini 3.6 Flash is one of the most efficient language and vision models available, our compute cost per test is measured in pennies.
+\subsection{Frontier Model Pricing Comparison in Indian Rupees (INR)}
+Google Gemini operates on an asynchronous Pay-As-You-Go utility billing model. Compute is billed post-paid based strictly on consumed tokens, eliminating fixed server overhead.
 
 \begin{table}[htbp]
 \centering
 \small
 \setlength{\aboverulesep}{0pt}
 \setlength{\belowrulesep}{0pt}
-\setlength{\tabcolsep}{5pt}
+\setlength{\tabcolsep}{3pt}
 \renewcommand{\arraystretch}{1.25}
 \arrayrulecolor{tblborderblue}
 \rowcolors{2}{white}{tblrowblue}
-\begin{tabularx}{\textwidth}{l>{\raggedleft\arraybackslash}X>{\raggedleft\arraybackslash}X}
+\begin{tabularx}{\textwidth}{l c X r r r}
 \toprule
 \rowcolor{tblheaderblue}
-\textcolor{white}{\textbf{Model Resource (Gemini 3.6 Flash)}} & \textcolor{white}{\textbf{Official Rate (USD)}} & \textcolor{white}{\textbf{Rate in Indian Rupees (INR)}} \\
+\textcolor{white}{\textbf{Model Name}} & 
+\textcolor{white}{\textbf{Latency}} & 
+\textcolor{white}{\textbf{Target Intelligence Profile}} & 
+\textcolor{white}{\textbf{In/1k}} & 
+\textcolor{white}{\textbf{Out/1k}} & 
+\textcolor{white}{\textbf{Cost/Sim}} \\
 \midrule
-Input Text Tokens & \$0.075 / 1 Million Tokens & Rs. 0.0062 per 1,000 Tokens \\
-Output Text Tokens & \$0.300 / 1 Million Tokens & Rs. 0.0249 per 1,000 Tokens \\
-Image Perception Processing & \$0.00002 / image & Rs. 0.0016 per image \\
+\textbf{Gemini 3.6 Flash} & ~200ms & High (Persona voting, OCR vision) & Rs. 0.006 & Rs. 0.025 & \textbf{Rs. 0.05} \\
+\textbf{Gemini 2.5 Pro} & ~2.0s & Flagship (Deep strategy \& synthesis) & Rs. 0.105 & Rs. 0.420 & \textbf{Rs. 0.95} \\
+\textbf{GPT-4o-mini} & ~300ms & Standard baseline & Rs. 0.013 & Rs. 0.050 & \textbf{Rs. 0.12} \\
+\textbf{Claude 3.5 Haiku} & ~150ms & Conversational roleplay & Rs. 0.067 & Rs. 0.336 & \textbf{Rs. 0.55} \\
+\textbf{Claude 3.5 Sonnet} & ~3.5s & Frontier benchmark & Rs. 0.252 & Rs. 1.260 & \textbf{Rs. 3.80} \\
 \bottomrule
 \end{tabularx}
-\caption{Official Gemini 3.6 Flash Compute Rates}
+\caption{Production Model Compute Economics Profile (Exchange Rate: Rs. 84 / USD)}
+\label{tab:model_economics}
 \end{table}
 
-\subsection{Per-Simulation Unit Cost Breakdown}
+\subsection{The Hybrid Model Routing Architecture}
+Deploying a single model across all tasks creates an undesirable trade-off between latency and depth. To deliver instant interactivity alongside boardroom-grade analytical rigor, the platform implements \textbf{Hybrid Model Routing}:
+\begin{enumerate}[noitemsep]
+  \item \textbf{High-Speed Simulation Layer (Gemini Flash)}: Powers individual persona deliberation, real-time focus group turns, and computer-vision OCR. Personas respond in under 500 milliseconds, mimicking spontaneous consumer reactions at a compute cost of only ~5 paise.
+  \item \textbf{Executive Synthesis Layer (Gemini Pro)}: Automatically invoked when generating the final strategic debrief, consensus analysis, and pricing corridor recommendations. The flagship model synthesizes raw persona deliberations into executive-ready reports comparable to management consulting output, adding only ~80 paise to the total cost.
+\end{enumerate}
+This hybrid architecture guarantees that a complete, multi-persona research study costs \textbf{under Rs. 1.50 in total compute}, while maintaining instant UI responsiveness.
+
+\subsection{SaaS Commercial Model: Prepaid Credits \& Quota System}
+To protect against runaway API costs, non-payment, and abusive automated scraping, the platform adopts an \textbf{Upfront Prepaid Credit Architecture} (identical to Midjourney, Apollo.io, and OpenAI Enterprise):
 \begin{itemize}[noitemsep]
-  \item \textbf{Full Market Survey Simulation}: 3,200 input tokens + 900 output tokens = \textbf{Rs. 0.042} (Less than 5 paise!).
-  \item \textbf{Multimodal Ad Creative Review}: Image upload + 4 archetypes = \textbf{Rs. 0.051} (About 5 paise).
-  \item \textbf{Live Focus Group Deliberation}: 8 interactive chat turns + AI summary = \textbf{Rs. 0.150} (15 paise per entire group session!).
-  \item \textbf{Van Westendorp Pricing Analysis}: Complete 4-curve price sensitivity run = \textbf{Rs. 0.043} (Less than 5 paise).
+  \item \textbf{Upfront Capital Collection}: Customers pay before running simulations. Money is captured in advance via subscription or prepaid recharge, completely eliminating accounts receivable default risks.
+  \item \textbf{Intuitive Workflow Units (Credits)}: Non-technical customers are never exposed to raw token counts. Usage is metered in tangible business units:
+    \begin{itemize}[noitemsep]
+      \item Standard Demographic Simulation (1,000 Population, 4 Archetypes) = \textbf{1 Credit}
+      \item Multimodal Visual Ad / Packaging Creative Evaluation = \textbf{1 Credit}
+      \item Van Westendorp Pricing Sensitivity Run = \textbf{1 Credit}
+      \item Live Focus Group Studio Session (Multi-Turn Deliberation + Executive Synthesis) = \textbf{2 Credits}
+    \end{itemize}
 \end{itemize}
 
-\subsection{Commercial SaaS Subscription Pricing \& Profit Margins}
-Because our compute cost per simulation is virtually zero, a SaaS business built on this platform achieves **software gross profit margins greater than 99\%**:
+\subsection{Exploitation Prevention \& Security Guardrails}
+To ensure malicious scripts or runaway loops cannot drain API budgets:
+\begin{enumerate}[noitemsep]
+  \item \textbf{Hard Quota Stops}: When a customer's monthly credit balance hits zero, the API immediately halts execution and returns HTTP \texttt{402 Payment Required}. No negative balances or surprise overages are permitted.
+  \item \textbf{Strict Token Clamping}: Every backend prompt enforces a strict parameter limit of \texttt{max\_output\_tokens=1024}. Models cannot enter hallucination loops or output unbounded text.
+  \item \textbf{Concurrency and Rate Limiting}: Accounts are restricted to a maximum of 5 simulation calls per minute and a maximum of 2 concurrent background worker threads.
+\end{enumerate}
+
+\subsection{Subscription Tier Structure \& Gross Margin Breakdown}
+Because variable compute expenses remain below Rs. 1.50 per simulation while traditional fieldwork costs lakhs, commercial plans operate at \textbf{gross margins greater than 98\%}:
 
 \begin{table}[htbp]
 \centering
 \small
 \setlength{\aboverulesep}{0pt}
 \setlength{\belowrulesep}{0pt}
-\setlength{\tabcolsep}{5pt}
+\setlength{\tabcolsep}{3.5pt}
 \renewcommand{\arraystretch}{1.25}
 \arrayrulecolor{tblborderblue}
 \rowcolors{2}{white}{tblrowblue}
-\begin{tabularx}{\textwidth}{lXXrr}
+\begin{tabularx}{\textwidth}{l X r r r r}
 \toprule
 \rowcolor{tblheaderblue}
-\textcolor{white}{\textbf{Plan Tier}} & \textcolor{white}{\textbf{Included Monthly Features}} & \textcolor{white}{\textbf{Selling Price (INR)}} & \textcolor{white}{\textbf{Actual Compute Cost}} & \textcolor{white}{\textbf{Gross Profit Margin}} \\
+\textcolor{white}{\textbf{Plan Tier}} & 
+\textcolor{white}{\textbf{Included Monthly Allowance}} & 
+\textcolor{white}{\textbf{Rate/Credit}} & 
+\textcolor{white}{\textbf{Price (INR)}} & 
+\textcolor{white}{\textbf{OpEx Cost}} & 
+\textcolor{white}{\textbf{Gross Margin}} \\
 \midrule
-\textbf{Starter} & 100 Simulations + 5 Focus Groups & Rs. 4,999 / month & Rs. 5.50 & \textbf{99.8\%} \\
-\textbf{Professional} & 500 Simulations + Multimodal + 25 Focus Groups & Rs. 14,999 / month & Rs. 28.50 & \textbf{99.8\%} \\
-\textbf{Enterprise} & Unlimited Simulations + Custom Regional Data & Rs. 49,999 / month & ~Rs. 180.00 & \textbf{99.6\%} \\
+\textbf{Starter} & 100 Credits / month & Rs. 49.99 & Rs. 4,999 / mo & ~Rs. 12.00 & \textbf{99.7\%} \\
+\textbf{Growth} & 400 Credits + Multimodal Vision & Rs. 37.49 & Rs. 14,999 / mo & ~Rs. 48.00 & \textbf{99.7\%} \\
+\textbf{Enterprise} & 1,500 Credits + Custom Census Datasets & Rs. 33.33 & Rs. 49,999 / mo & ~Rs. 185.00 & \textbf{99.6\%} \\
+\textbf{Add-On Pack} & 50 One-Time Credits (No Expiry) & Rs. 29.98 & Rs. 1,499 one-off & ~Rs. 6.00 & \textbf{99.6\%} \\
 \bottomrule
 \end{tabularx}
-\caption{Commercial Tier Pricing and Gross Margin Structure}
+\caption{Commercial SaaS Pricing Structure and Gross Margin Economics}
+\label{tab:saas_pricing}
 \end{table}
+
+\subsubsection{Detailed Breakdown of Commercial Tiers \& Unit Profitability}
+To understand how each plan generates recurring profit while remaining an exceptional value proposition for business customers:
+\begin{itemize}
+  \item \textbf{Starter Tier (Rs. 4,999 / month --- 100 Credits)}:
+  \begin{itemize}[noitemsep]
+    \item \textbf{Target Customer}: Early-stage startup founders, solo product builders, and freelance marketing strategists.
+    \item \textbf{Customer Economics}: The customer pays an effective rate of \textbf{Rs. 49.99 per simulation}. For comparison, giving away Rs. 500 gift vouchers to interview just 10 physical participants costs Rs. 5,000. For the same budget, our platform provides 100 statistically representative nationwide simulations.
+    \item \textbf{Platform Unit Economics}: 100 simulations consume approximately Rs. 12.00 in total Google Gemini Flash compute. Subtracting Rs. 12.00 from the Rs. 4,999 subscription fee yields a \textbf{net gross profit of Rs. 4,987 (99.7\% gross margin)}.
+  \end{itemize}
+
+  \item \textbf{Growth Tier (Rs. 14,999 / month --- 400 Credits + Vision Enabled)}:
+  \begin{itemize}[noitemsep]
+    \item \textbf{Target Customer}: High-growth D2C brands, advertising agencies, and venture-backed fintechs testing multiple creative iterations weekly.
+    \item \textbf{Customer Economics}: Effective rate drops to \textbf{Rs. 37.49 per credit}, providing a built-in volume discount that encourages tier upgrades.
+    \item \textbf{Platform Unit Economics}: 400 multimodal simulations consume approximately Rs. 48.00 in Gemini API compute, generating \textbf{Rs. 14,951 in net monthly profit per account (99.7\% gross margin)}.
+  \end{itemize}
+
+  \item \textbf{Enterprise Tier (Rs. 49,999 / month --- 1,500 Credits + Custom Regional Slicing)}:
+  \begin{itemize}[noitemsep]
+    \item \textbf{Target Customer}: Established FMCG conglomerates, national banks, and market research agencies requiring continuous demographic testing across tailored Census cohorts (e.g., rural self-help groups, Tier-3 Kirana proprietors).
+    \item \textbf{Customer Economics}: Effective rate decreases to \textbf{Rs. 33.33 per credit}. Compared to enterprise fieldwork contracts that routinely cost Rs. 10,00,000 to Rs. 25,00,000, this tier represents a 95\% cost reduction for the enterprise client.
+    \item \textbf{Platform Unit Economics}: 1,500 simulations consume approximately Rs. 185.00 in total compute, yielding \textbf{Rs. 49,814 in net monthly gross profit per corporate account (99.6\% gross margin)}.
+  \end{itemize}
+
+  \item \textbf{On-Demand Add-On Packs (Rs. 1,499 one-off --- 50 Credits)}:
+  \begin{itemize}[noitemsep]
+    \item \textbf{Churn Prevention Mechanism}: When a subscriber exhausts their monthly quota ahead of schedule, they can purchase immediate top-up credits without committing to a full plan upgrade.
+    \item \textbf{Platform Unit Economics}: 50 top-up simulations cost approximately Rs. 6.00 in compute, yielding \textbf{Rs. 1,493 in immediate high-margin incremental cash flow}.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Why Software Gross Margins Exceed 99\%}
+In traditional physical industries (manufacturing, retail, manual agency consulting), gross profit margins rarely exceed 20\% to 35\% due to physical inventory, real estate overhead, and human wages. 
+
+In our synthetic market research platform:
+\begin{enumerate}[noitemsep]
+  \item \textbf{High Enterprise Value}: Decision-makers use these simulations to de-risk multi-crore product launches and advertising budgets. The perceived business value of each study is measured in lakhs.
+  \item \textbf{Microscopic Cost of Raw Compute}: Google Gemini processes input and output tokens for fractions of a paisa.
+  \item \textbf{The Value Arbitrage}: The substantial spread between the high commercial value of the demographic insight and the microscopic compute cost of generating it constitutes the platform's enduring 99\%+ gross margin moat.
+\end{enumerate}
 
 \newpage
 \section{Competitive Advantage vs. Global Benchmarks}

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synthetiq Pro | Indian Synthetic Market Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sidebar-bg: #11182c;
+      --sidebar-active-bg: #1a233d;
+      --sidebar-hover: #1e2945;
+      --sidebar-text: #94a3b8;
+      --sidebar-text-active: #ffffff;
+      --main-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-dark: #0f172a;
+      --text-muted: #64748b;
+      --blue-primary: #2563eb;
+      --blue-light: #eff6ff;
+      --blue-accent: #3b82f6;
+      --cyan-badge: #0284c7;
+      --cyan-bg: #e0f2fe;
+      --green-growth: #10b981;
+      --green-light: #ecfdf5;
+      --border-color: #e2e8f0;
+      --border-dark: #1e293b;
+      --radius-card: 14px;
+      --radius-sm: 8px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background-color: var(--main-bg);
+      color: var(--text-dark);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    aside {
+      width: 270px;
+      background-color: var(--sidebar-bg);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px 0 20px 0;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .brand-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px 28px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .brand-logo-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #38bdf8;
+      font-size: 20px;
+    }
+
+    .brand-logo-text {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pro-badge {
+      background-color: #0284c7;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 20px 0;
+      flex: 1;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 24px;
+      color: var(--sidebar-text);
+      font-size: 13.5px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.15s ease;
+    }
+
+    .nav-link:hover {
+      background-color: var(--sidebar-hover);
+      color: #ffffff;
+    }
+
+    .nav-link.active {
+      color: var(--sidebar-text-active);
+      background-color: var(--sidebar-active-bg);
+      font-weight: 700;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 8px solid var(--main-bg);
+    }
+
+    .nav-icon {
+      font-size: 17px;
+      opacity: 0.9;
+      width: 20px;
+      text-align: center;
+    }
+
+    .phase-tag {
+      background-color: rgba(255, 255, 255, 0.08);
+      color: #38bdf8;
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: auto;
+      letter-spacing: 0.4px;
+    }
+
+    .sidebar-footer {
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .status-dot-green {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #10b981;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    .sidebar-footer-text {
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    /* Main Content Area */
+    main {
+      flex: 1;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 32px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .page-title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.6px;
+      color: var(--text-dark);
+    }
+
+    .tabs-bar {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      border-bottom: 1.5px solid var(--border-color);
+      margin-top: 4px;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding-bottom: 12px;
+      position: relative;
+      transition: color 0.15s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-dark);
+    }
+
+    .tab-btn.active {
+      color: var(--blue-primary);
+      font-weight: 700;
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5px;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background-color: var(--blue-primary);
+      border-radius: 2px 2px 0 0;
+    }
+
+    /* Filter & Controls Bar */
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .filter-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .select-dropdown {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dark);
+      outline: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-export {
+      background-color: var(--blue-light);
+      color: var(--blue-primary);
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius-sm);
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-export:hover {
+      background-color: #dbeafe;
+    }
+
+    /* Views */
+    .view-content {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .view-content.active {
+      display: flex;
+    }
+
+    /* Simulator Panel */
+    .sim-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .form-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .form-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+    }
+
+    .form-field {
+      margin-bottom: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-field label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .input-box {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 11px 14px;
+      font-size: 14px;
+      color: var(--text-dark);
+      outline: none;
+      transition: border-color 0.2s;
+      background: #fafafa;
+    }
+
+    .input-box:focus {
+      border-color: var(--blue-primary);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    textarea.input-box {
+      resize: vertical;
+      min-height: 100px;
+      line-height: 1.5;
+    }
+
+    .btn-launch {
+      background-color: var(--blue-primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 13px 22px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+      transition: all 0.2s;
+    }
+
+    .btn-launch:hover {
+      background-color: #1d4ed8;
+      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .btn-launch:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Cards Grid */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .topic-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .topic-card:hover {
+      border-color: #93c5fd;
+      box-shadow: var(--shadow-card);
+      transform: translateY(-2px);
+    }
+
+    .card-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .topic-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .topic-metrics {
+      display: flex;
+      gap: 18px;
+      text-align: right;
+    }
+
+    .metric-value-blue {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--blue-primary);
+      line-height: 1;
+    }
+
+    .metric-value-green {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--green-growth);
+      line-height: 1;
+    }
+
+    .metric-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+      font-weight: 600;
+    }
+
+    .sparkline-box {
+      width: 100%;
+      height: 80px;
+      margin: 4px 0;
+    }
+
+    .topic-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 8px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .tag-exploding {
+      background-color: #f1f5f9;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 800;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.6px;
+    }
+
+    .btn-track {
+      background: transparent;
+      color: var(--green-growth);
+      border: 1.5px solid #a7f3d0;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 11.5px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-track:hover {
+      background-color: var(--green-light);
+      border-color: var(--green-growth);
+    }
+
+    .loader {
+      border: 3px solid #e2e8f0;
+      border-top: 3px solid var(--blue-primary);
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Sidebar (Reorganized into 4 Phases) -->
+  <aside>
+    <div>
+      <div class="brand-box">
+        <div class="brand-logo-icon">📈</div>
+        <div class="brand-logo-text">
+          <span>SYNTHETIQ</span>
+          <span class="pro-badge">PRO</span>
+        </div>
+      </div>
+
+      <ul class="nav-menu">
+        <li class="nav-link active" onclick="switchNavSection('sec-market-studio', this)">
+          <span class="nav-icon">📊</span>
+          <span>Market Studio</span>
+        </li>
+        <li class="nav-link" onclick="switchNavSection('sec-multimodal', this)">
+          <span class="nav-icon">🖼️</span>
+          <span>Multimodal Ad/UI</span>
+          <span class="phase-tag">PHASE 1</span>
+        </li>
+        <li class="nav-link" onclick="switchNavSection('sec-focus-group', this)">
+          <span class="nav-icon">💬</span>
+          <span>Live Focus Groups</span>
+          <span class="phase-tag">PHASE 2</span>
+        </li>
+        <li class="nav-link" onclick="switchNavSection('sec-pricing', this)">
+          <span class="nav-icon">🏷️</span>
+          <span>Pricing Optimization</span>
+          <span class="phase-tag">PHASE 3</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="sidebar-footer">
+      <div id="backend-status-dot" class="status-dot-green"></div>
+      <div class="sidebar-footer-text">
+        <span id="backend-status-text">Engine Online (127.0.0.1:8000)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main>
+    <div class="breadcrumb">
+      <span>Synthetiq Intelligence</span>
+      <span>/</span>
+      <span id="breadcrumb-section">Market Simulation Studio</span>
+    </div>
+
+    <!-- Section 1: Market Studio (Active) -->
+    <div id="sec-market-studio" class="section-container" style="display: flex; flex-direction: column; gap: 20px;">
+      <div class="page-header">
+        <h1 class="page-title">Market Simulation Studio</h1>
+        <button class="btn-export" onclick="testPing()">Check Engine Health</button>
+      </div>
+
+      <!-- Subtabs for Market Studio -->
+      <div class="tabs-bar">
+        <button class="tab-btn active" onclick="switchSubTab('sim-view', this)">Simulation Console</button>
+        <button class="tab-btn" onclick="switchSubTab('cards-view', this)">Consumer Archetypes</button>
+        <button class="tab-btn" onclick="switchSubTab('sources-view', this)">Data Ground Truths</button>
+      </div>
+
+      <!-- Controls Bar -->
+      <div class="controls-bar">
+        <div class="filter-group">
+          <div class="filter-item">
+            <span>Target Sector:</span>
+            <select id="filter-sector" class="select-dropdown" onchange="updateSector()">
+              <option value="Fintech">Fintech & Micro-Savings</option>
+              <option value="D2C">D2C & Consumer Brands</option>
+              <option value="EdTech">EdTech & Skill Building</option>
+              <option value="HealthTech">HealthTech & Teleconsultation</option>
+              <option value="AgriTech">AgriTech & Rural Services</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <span>Model:</span>
+            <select class="select-dropdown">
+              <option>Gemini 3.6 Flash (Free Tier)</option>
+            </select>
+          </div>
+          <div class="filter-item">
+            <span>Census Baseline:</span>
+            <select class="select-dropdown">
+              <option>PLFS 2023-24 + Census 2011</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-export" onclick="generateArchetypes()">+ Sample Population</button>
+      </div>
+
+      <!-- Subtab 1: Simulation Console -->
+      <div id="sim-view" class="view-content active">
+        <div class="sim-panel">
+          <!-- Form -->
+          <div class="form-card">
+            <h2 class="form-title">Launch Synthetic Query</h2>
+            <p class="form-sub">Enter a product proposition to simulate Indian consumer adoption intent.</p>
+
+            <div class="form-field">
+              <label>Product Value Proposition</label>
+              <textarea id="sim-concept" class="input-box" rows="4">A UPI-based micro-investment app allowing everyday Indians to round up daily UPI expenses and auto-invest spare change into 24K digital gold starting at ₹10.</textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Category / Sector</label>
+              <input id="sim-cat" class="input-box" type="text" value="Fintech">
+            </div>
+
+            <div class="form-field">
+              <label>Population Sample ID</label>
+              <input id="sim-pop-id" class="input-box" type="text" placeholder="Leave empty to auto-use latest generation">
+            </div>
+
+            <div class="form-field" style="flex-direction: row; align-items: center; justify-content: space-between; background: #f8fafc; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-top: 4px;">
+              <div>
+                <label style="margin-bottom: 2px; display: block; font-size: 13px; font-weight: 700; color: var(--text-dark); text-transform: none; letter-spacing: 0;">
+                  Enable Social Influence (Word-of-Mouth)
+                </label>
+                <span style="font-size: 11.5px; color: var(--text-muted); font-weight: 500;">
+                  2-stage herd dynamics & peer debate (~15s). Uncheck for 5s fast mode.
+                </span>
+              </div>
+              <input id="sim-social-influence" type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--blue-primary); cursor: pointer;">
+            </div>
+
+            <button id="btn-run" class="btn-launch" onclick="executeSimulation()">
+              Run Simulation Across Archetypes
+            </button>
+          </div>
+
+          <!-- Output Card -->
+          <div class="form-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h2 class="form-title">Simulation Results</h2>
+              <p class="form-sub">Reweighted population adoption and qualitative verbatim feedback.</p>
+
+              <div id="sim-loader-box" style="display: none; padding: 40px; text-align: center;">
+                <div class="loader"></div>
+                <p style="margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--blue-primary);">
+                  Querying demographic archetypes via Gemini 3.6 Flash...
+                </p>
+              </div>
+
+              <div id="sim-empty-box" style="padding: 40px; text-align: center; color: var(--text-muted);">
+                <div style="font-size: 32px; margin-bottom: 8px;">📊</div>
+                <p style="font-weight: 700; font-size: 14px;">No active simulation yet.</p>
+                <p style="font-size: 12px; margin-top: 4px;">Click "Run Simulation" to test your concept pitch.</p>
+              </div>
+
+              <div id="sim-result-data" style="display: none;">
+                <div class="card-top-row" style="margin-bottom: 16px;">
+                  <div>
+                    <div class="topic-title">Population Adoption</div>
+                    <div style="font-size: 12px; color: var(--text-muted); font-weight: 600; margin-top: 2px;">
+                      Marginally calibrated across Indian census
+                    </div>
+                  </div>
+                  <div class="topic-metrics">
+                    <div>
+                      <div id="metric-intent" class="metric-value-blue">0.0 / 10</div>
+                      <div class="metric-sub">Purchase Intent</div>
+                    </div>
+                    <div>
+                      <div id="metric-positive" class="metric-value-green">0%</div>
+                      <div class="metric-sub">Positive Sentiment</div>
+                    </div>
+                  </div>
+                </div>
+
+                <svg class="sparkline-box" viewBox="0 0 300 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="grad-blue" x1="0" y1="0" x2="0" y2="80" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#3b82f6" stop-opacity="0.25"/>
+                      <stop offset="1" stop-color="#3b82f6" stop-opacity="0.0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 65 Q 60 63, 120 60 T 200 45 T 260 25 T 300 10 L 300 80 L 0 80 Z" fill="url(#grad-blue)" />
+                  <path d="M0 65 Q 60 63, 120 60 T 200 45 T 260 25 T 300 10" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" />
+                </svg>
+
+                <div id="archetype-quotes-box" style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px;"></div>
+              </div>
+            </div>
+
+            <div class="card-footer" style="margin-top: 20px;">
+              <span class="tag-exploding">CALIBRATED ENGINE</span>
+              <span style="font-size: 11px; font-weight: 700; color: var(--text-muted);">ZERO DOCKER • GEMINI 3.6 FLASH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtab 2: Archetypes Cards -->
+      <div id="cards-view" class="view-content">
+        <div id="archetypes-cards-container" class="topics-grid">
+          <div style="color: var(--text-muted); font-size: 14px; padding: 20px;">
+            Click "+ Sample Population" to generate and cluster representative Indian consumer archetypes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Subtab 3: Sources Table -->
+      <div id="sources-view" class="view-content">
+        <div class="form-card">
+          <h2 class="form-title">Ground Truth Data Sources</h2>
+          <p class="form-sub">Verified Indian Government datasets supplying marginal priors.</p>
+          <div id="sources-table">Loading data sources from backend...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 2: Phase 1 Preview (Multimodal Ad/UI) -->
+    <div id="sec-multimodal" class="section-container" style="display: none; flex-direction: column; gap: 20px;">
+      <div class="page-header">
+        <h1 class="page-title">Multimodal Ad & UI Creative Testing</h1>
+        <span class="pro-badge">PHASE 1 DEVELOPMENT</span>
+      </div>
+      <div class="form-card" style="padding: 40px; text-align: center;">
+        <div style="font-size: 48px; margin-bottom: 12px;">🖼️</div>
+        <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
+          Phase 1: Creative & UI Heat-Check
+        </h2>
+        <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6;">
+          Upload Instagram ad creatives, display banners, or app onboarding mockups. Personas evaluate visual hierarchy, 3-second comprehension, font readability, and trust cues on Gemini 3.6 Flash.
+        </p>
+        <button class="btn-launch" style="width: auto; padding: 12px 28px;" onclick="switchNavSection('sec-market-studio', document.querySelectorAll('.nav-link')[0])">
+          ← Return to Market Simulation Studio
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 3: Phase 2 Preview (Focus Groups) -->
+    <div id="sec-focus-group" class="section-container" style="display: none; flex-direction: column; gap: 20px;">
+      <div class="page-header">
+        <h1 class="page-title">Live Interactive Focus Groups</h1>
+        <span class="pro-badge">PHASE 2 DEVELOPMENT</span>
+      </div>
+      <div class="form-card" style="padding: 40px; text-align: center;">
+        <div style="font-size: 48px; margin-bottom: 12px;">💬</div>
+        <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
+          Phase 2: "Chat with Your Segment"
+        </h2>
+        <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6;">
+          Step into a virtual boardroom and interview synthetic Indian consumer archetypes in real-time with multi-turn conversation memory and peer debate dynamics.
+        </p>
+        <button class="btn-launch" style="width: auto; padding: 12px 28px;" onclick="switchNavSection('sec-market-studio', document.querySelectorAll('.nav-link')[0])">
+          ← Return to Market Simulation Studio
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 4: Phase 3 Preview (Pricing) -->
+    <div id="sec-pricing" class="section-container" style="display: none; flex-direction: column; gap: 20px;">
+      <div class="page-header">
+        <h1 class="page-title">Automated Pricing Optimization</h1>
+        <span class="pro-badge">PHASE 3 DEVELOPMENT</span>
+      </div>
+      <div class="form-card" style="padding: 40px; text-align: center;">
+        <div style="font-size: 48px; margin-bottom: 12px;">🏷️</div>
+        <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
+          Phase 3: Van Westendorp Price Sensitivity Meter
+        </h2>
+        <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6;">
+          Automated econometric survey modeling 4 price curves (Too Cheap, Bargain, Expensive, Too Expensive) to calculate Optimal Price Point (OPP) and price elasticity for the Indian market.
+        </p>
+        <button class="btn-launch" style="width: auto; padding: 12px 28px;" onclick="switchNavSection('sec-market-studio', document.querySelectorAll('.nav-link')[0])">
+          ← Return to Market Simulation Studio
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const API_BASE = "http://127.0.0.1:8000";
+    let activePopulationRunId = null;
+
+    function switchNavSection(secId, el) {
+      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+      document.querySelectorAll('.section-container').forEach(s => s.style.display = 'none');
+      
+      el.classList.add('active');
+      const targetSec = document.getElementById(secId);
+      targetSec.style.display = 'flex';
+
+      const secName = el.querySelector('span:nth-child(2)').innerText;
+      document.getElementById('breadcrumb-section').innerText = secName;
+    }
+
+    function switchSubTab(viewId, el) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.view-content').forEach(v => v.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById(viewId).classList.add('active');
+      
+      if (viewId === 'sources-view') {
+        loadSources();
+      }
+    }
+
+    function updateSector() {
+      const val = document.getElementById('filter-sector').value;
+      document.getElementById('sim-cat').value = val;
+    }
+
+    async function testPing() {
+      try {
+        const res = await fetch(`${API_BASE}/health`);
+        if (res.ok) {
+          alert("FastAPI Backend is Online and Healthy! (http://127.0.0.1:8000)");
+        }
+      } catch (e) {
+        alert("Cannot connect to backend: Make sure 'uvicorn app.main:app' is running.");
+      }
+    }
+
+    async function checkHealth() {
+      try {
+        const res = await fetch(`${API_BASE}/health`);
+        const dot = document.getElementById('backend-status-dot');
+        const txt = document.getElementById('backend-status-text');
+        if (res.ok) {
+          dot.style.backgroundColor = '#10b981';
+          txt.innerText = 'Engine Online (127.0.0.1:8000)';
+        }
+      } catch (e) {
+        const dot = document.getElementById('backend-status-dot');
+        const txt = document.getElementById('backend-status-text');
+        dot.style.backgroundColor = '#ef4444';
+        txt.innerText = 'Engine Offline (Start uvicorn)';
+      }
+    }
+
+    async function generateArchetypes() {
+      try {
+        const res = await fetch(`${API_BASE}/population/generate`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ n: 1000, n_archetypes: 4, seed: 42 })
+        });
+        const data = await res.json();
+        activePopulationRunId = data.run_id;
+        document.getElementById('sim-pop-id').value = data.run_id;
+
+        const archRes = await fetch(`${API_BASE}/population/${data.run_id}/archetypes`);
+        const archList = await archRes.json();
+
+        renderCards(archList);
+        switchSubTab('cards-view', document.querySelectorAll('.tab-btn')[1]);
+      } catch (e) {
+        alert("Population generation failed: " + e.message);
+      }
+    }
+
+    function renderCards(archetypes) {
+      const container = document.getElementById('archetypes-cards-container');
+      container.innerHTML = '';
+      archetypes.forEach((arch, idx) => {
+        const attrs = arch.attributes || {};
+        const weight = arch.population_weight ? (arch.population_weight * 100).toFixed(1) : "25.0";
+        const clusterName = attrs.occupation ? `${attrs.occupation} Segment (${attrs.state || 'India'})` : `Archetype ${idx + 1}`;
+
+        const card = document.createElement('div');
+        card.className = 'topic-card';
+        card.innerHTML = `
+          <div>
+            <div class="card-top-row">
+              <div class="topic-title">${clusterName}</div>
+              <div class="topic-metrics">
+                <div>
+                  <div class="metric-value-blue">${weight}%</div>
+                  <div class="metric-sub">Census Weight</div>
+                </div>
+                <div>
+                  <div class="metric-value-green">${attrs.income_bracket || 'Middle'}</div>
+                  <div class="metric-sub">Income Bracket</div>
+                </div>
+              </div>
+            </div>
+
+            <svg class="sparkline-box" viewBox="0 0 300 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-card-${idx}" x1="0" y1="0" x2="0" y2="70" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#3b82f6" stop-opacity="0.2"/>
+                  <stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0 55 Q 70 50, 140 40 T 240 20 T 300 10 L 300 70 L 0 70 Z" fill="url(#grad-card-${idx})" />
+              <path d="M0 55 Q 70 50, 140 40 T 240 20 T 300 10" stroke="#2563eb" stroke-width="2" stroke-linecap="round" />
+            </svg>
+
+            <div class="topic-desc">
+              📍 <b>Location:</b> ${attrs.state || 'N/A'}, ${attrs.district || 'N/A'} (${attrs.rural_urban || 'Urban'})<br>
+              💼 <b>Job & Edu:</b> ${attrs.occupation || 'N/A'} • ${attrs.education_level || 'Graduate'}<br>
+              📱 <b>Digital Profile:</b> ${attrs.digital_literacy_level || 'Medium'} Literacy • ${attrs.primary_language || 'Hindi/English'}
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span class="tag-exploding">${(attrs.rural_urban || 'URBAN').toUpperCase()}</span>
+            <button class="btn-track" onclick="switchSubTab('sim-view', document.querySelectorAll('.tab-btn')[0])">SIMULATE SEGMENT</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    async function executeSimulation() {
+      const concept = document.getElementById('sim-concept').value.trim();
+      let popId = document.getElementById('sim-pop-id').value.trim();
+
+      document.getElementById('sim-empty-box').style.display = 'none';
+      document.getElementById('sim-result-data').style.display = 'none';
+      document.getElementById('sim-loader-box').style.display = 'block';
+      document.getElementById('btn-run').disabled = true;
+
+      try {
+        if (!popId) {
+          if (!activePopulationRunId) {
+            const popRes = await fetch(`${API_BASE}/population/generate`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ n: 1000, n_archetypes: 4, seed: 42 })
+            });
+            const popData = await popRes.json();
+            activePopulationRunId = popData.run_id;
+            popId = popData.run_id;
+            document.getElementById('sim-pop-id').value = popId;
+
+            const archRes = await fetch(`${API_BASE}/population/${popId}/archetypes`);
+            const archList = await archRes.json();
+            renderCards(archList);
+          } else {
+            popId = activePopulationRunId;
+          }
+        }
+
+        const useSocial = document.getElementById('sim-social-influence')?.checked ?? false;
+
+        const runRes = await fetch(`${API_BASE}/simulations/run`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            stimulus_description: concept,
+            population_run_id: popId,
+            use_social_influence: useSocial,
+            n_archetypes_override: 4
+          })
+        });
+
+        if (!runRes.ok) {
+          const errData = await runRes.json();
+          throw new Error(errData.detail || "Simulation run failed to start");
+        }
+
+        const runData = await runRes.json();
+        pollSim(runData.run_id);
+      } catch (err) {
+        alert("Launch failed: " + err.message);
+        document.getElementById('sim-loader-box').style.display = 'none';
+        document.getElementById('sim-empty-box').style.display = 'block';
+        document.getElementById('btn-run').disabled = false;
+      }
+    }
+
+    function pollSim(simId) {
+      const interval = setInterval(async () => {
+        try {
+          const res = await fetch(`${API_BASE}/simulations/${simId}/status`);
+          const data = await res.json();
+          
+          if (data.status === 'completed') {
+            clearInterval(interval);
+            const resultsRes = await fetch(`${API_BASE}/simulations/${simId}/results`);
+            const resultsData = await resultsRes.json();
+
+            document.getElementById('sim-loader-box').style.display = 'none';
+            document.getElementById('btn-run').disabled = false;
+            displaySimResults(resultsData.results);
+          } else if (data.status && data.status.startsWith('failed')) {
+            clearInterval(interval);
+            document.getElementById('sim-loader-box').style.display = 'none';
+            document.getElementById('sim-empty-box').style.display = 'block';
+            document.getElementById('btn-run').disabled = false;
+            alert("Simulation failed on server: " + data.status);
+          }
+        } catch (e) {
+          clearInterval(interval);
+          document.getElementById('sim-loader-box').style.display = 'none';
+          document.getElementById('sim-empty-box').style.display = 'block';
+          document.getElementById('btn-run').disabled = false;
+        }
+      }, 2000);
+    }
+
+    function displaySimResults(res) {
+      document.getElementById('sim-result-data').style.display = 'block';
+      const intentVal = res.population_purchase_intent ?? res.weighted_intent ?? 0;
+      document.getElementById('metric-intent').innerText = (typeof intentVal === 'number' ? intentVal.toFixed(2) : intentVal) + " / 10";
+
+      const dist = res.sentiment_distribution || {};
+      const posVal = (((dist.positive || dist.Positive || 0)) * 100).toFixed(0);
+      document.getElementById('metric-positive').innerText = posVal + "%";
+
+      const qBox = document.getElementById('archetype-quotes-box');
+      qBox.innerHTML = '';
+
+      (res.archetype_details || []).forEach((r, i) => {
+        const item = document.createElement('div');
+        item.style.padding = "10px 14px";
+        item.style.backgroundColor = "#f8fafc";
+        item.style.borderLeft = "3px solid #2563eb";
+        item.style.borderRadius = "4px";
+        item.style.fontSize = "12px";
+        item.innerHTML = `
+          <div style="font-weight: 700; color: #0f172a; margin-bottom: 2px;">
+            Archetype ${i + 1} • Intent: <span style="color: #2563eb;">${r.purchase_intent}/10</span> 
+            <span style="color: #64748b; font-weight: 500; font-size: 11px;">(Weight: ${(r.population_weight * 100).toFixed(1)}%)</span>
+          </div>
+          <div style="color: #475569; font-style: italic; margin-top: 4px;">"${r.quote || 'No quote recorded'}"</div>
+          <div style="color: #64748b; margin-top: 4px; font-size: 11px;"><b>Objection:</b> ${r.objection || 'None'}</div>
+        `;
+        qBox.appendChild(item);
+      });
+    }
+
+    async function loadSources() {
+      try {
+        const res = await fetch(`${API_BASE}/datasets/sources`);
+        const sources = await res.json();
+        let html = '<table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px;">';
+        html += '<tr style="text-align: left; border-bottom: 2px solid #e2e8f0; color: #64748b;"><th style="padding: 10px;">Source</th><th style="padding: 10px;">Ministry</th><th style="padding: 10px;">Variables</th></tr>';
+        sources.forEach(s => {
+          html += `<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px 10px; font-weight: 700;">${s.name}</td><td style="padding: 12px 10px; color: #475569;">${s.ministry}</td><td style="padding: 12px 10px; color: #2563eb;">${s.variables_used.join(', ')}</td></tr>`;
+        });
+        html += '</table>';
+        document.getElementById('sources-table').innerHTML = html;
+      } catch (e) {
+        document.getElementById('sources-table').innerHTML = "Failed to load sources.";
+      }
+    }
+
+    checkHealth();
+    setInterval(checkHealth, 5000);
+  </script>
+</body>
+</html>

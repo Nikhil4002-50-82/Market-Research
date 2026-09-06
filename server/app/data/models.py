@@ -61,3 +61,27 @@ class ValidationResult(Base):
     run_id = Column(String, index=True)
     calibration_score = Column(Float)
     details = Column(JSON)
+
+
+class FocusGroupSession(Base):
+    __tablename__ = "focus_group_sessions"
+
+    id = Column(String, primary_key=True, index=True)
+    topic = Column(String)
+    population_run_id = Column(String, index=True)
+    status = Column(String, default="active")
+    personas = Column(JSON)
+    messages = Column(JSON, default=list)
+    synthesis = Column(JSON, nullable=True)
+
+
+class PricingOptimizationRun(Base):
+    __tablename__ = "pricing_optimization_runs"
+
+    id = Column(String, primary_key=True, index=True)
+    product_concept = Column(String)
+    category = Column(String)
+    population_run_id = Column(String, index=True)
+    currency = Column(String, default="INR")
+    status = Column(String, default="pending")
+    results = Column(JSON, nullable=True)

@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class SimulationRequest(BaseModel):
@@ -17,3 +17,14 @@ class SimulationResult(BaseModel):
     run_id: str
     status: str
     results: dict | None
+
+
+class MultimodalPersonaResponse(BaseModel):
+    purchase_intent: int = Field(ge=0, le=10)
+    visual_comprehension_score: int = Field(ge=0, le=10)
+    visual_trust_score: int = Field(ge=0, le=10)
+    first_visual_hook: str
+    ui_friction_points: list[str]
+    sentiment: str
+    objection: str
+    quote: str

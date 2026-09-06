@@ -764,63 +764,373 @@
       </div>
     </div>
 
-    <!-- Section 2: Phase 1 Preview (Multimodal Ad/UI) -->
+    <!-- Section 2: Phase 1 (Multimodal Ad & UI Testing) -->
     <div id="sec-multimodal" class="section-container" style="display: none; flex-direction: column; gap: 20px;">
       <div class="page-header">
         <h1 class="page-title">Multimodal Ad & UI Creative Testing</h1>
-        <span class="pro-badge">PHASE 1 DEVELOPMENT</span>
+        <span class="pro-badge">PHASE 1 LIVE</span>
       </div>
-      <div class="form-card" style="padding: 40px; text-align: center;">
-        <div style="font-size: 48px; margin-bottom: 12px;">🖼️</div>
-        <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
-          Phase 1: Creative & UI Heat-Check
-        </h2>
-        <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6;">
-          Upload Instagram ad creatives, display banners, or app onboarding mockups. Personas evaluate visual hierarchy, 3-second comprehension, font readability, and trust cues on Gemini 3.6 Flash.
-        </p>
-        <button class="btn-launch" style="width: auto; padding: 12px 28px;" onclick="switchNavSection('sec-market-studio', document.querySelectorAll('.nav-link')[0])">
-          ← Return to Market Simulation Studio
-        </button>
+
+      <div class="sim-panel">
+        <!-- Left: Upload & Concept Form -->
+        <div class="form-card">
+          <h2 class="form-title">Upload Creative or Mockup</h2>
+          <p class="form-sub">Test banner ads, Instagram creatives, or UI screenshots against Indian personas.</p>
+
+          <!-- Dropzone / File input -->
+          <div class="form-field">
+            <label>Ad Creative / UI Screenshot</label>
+            <div id="mm-dropzone" style="border: 2px dashed var(--border-color); border-radius: var(--radius-sm); padding: 20px; text-align: center; background: #f8fafc; cursor: pointer;" onclick="document.getElementById('mm-file-input').click()">
+              <input type="file" id="mm-file-input" accept="image/png, image/jpeg, image/webp" style="display: none;" onchange="handleImageSelected(event)">
+              <div id="mm-upload-prompt">
+                <div style="font-size: 28px; margin-bottom: 4px;">🖼️</div>
+                <div style="font-size: 13px; font-weight: 700; color: var(--blue-primary);">Click or drag & drop image</div>
+                <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">Supports PNG, JPEG, WebP</div>
+              </div>
+              <div id="mm-preview-box" style="display: none; margin-top: 8px;">
+                <img id="mm-preview-img" style="max-height: 140px; max-width: 100%; border-radius: 6px; box-shadow: var(--shadow-sm);">
+                <div id="mm-file-name" style="font-size: 11px; font-weight: 600; color: var(--text-dark); margin-top: 4px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>Product Value Proposition</label>
+            <textarea id="mm-concept" class="input-box" rows="3">A UPI-based micro-investment app allowing everyday Indians to round up daily UPI expenses and auto-invest spare change into 24K digital gold starting at ₹10.</textarea>
+          </div>
+
+          <div class="form-field">
+            <label>Category / Sector</label>
+            <input id="mm-cat" class="input-box" type="text" value="Fintech">
+          </div>
+
+          <div class="form-field">
+            <label>Population Sample ID</label>
+            <input id="mm-pop-id" class="input-box" type="text" placeholder="Leave empty to auto-use latest generation">
+          </div>
+
+          <div class="form-field" style="flex-direction: row; align-items: center; justify-content: space-between; background: #f8fafc; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin-top: 4px;">
+            <div>
+              <label style="margin-bottom: 2px; display: block; font-size: 13px; font-weight: 700; color: var(--text-dark); text-transform: none; letter-spacing: 0;">
+                Enable Social Influence (Word-of-Mouth)
+              </label>
+              <span style="font-size: 11.5px; color: var(--text-muted); font-weight: 500;">
+                2-stage social proof re-evaluation (~15s). Uncheck for 5s fast mode.
+              </span>
+            </div>
+            <input id="mm-social-influence" type="checkbox" style="width: 18px; height: 18px; accent-color: var(--blue-primary); cursor: pointer;">
+          </div>
+
+          <button id="btn-mm-run" class="btn-launch" onclick="executeMultimodalSimulation()">
+            Analyze Visual Creative Across Archetypes
+          </button>
+        </div>
+
+        <!-- Right: Multimodal Results Output -->
+        <div class="form-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h2 class="form-title">Visual Intelligence & Critique</h2>
+            <p class="form-sub">Comprehension speed, trust perception, and UI friction analysis.</p>
+
+            <div id="mm-loader-box" style="display: none; padding: 40px; text-align: center;">
+              <div class="loader"></div>
+              <p style="margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--blue-primary);">
+                Inspecting creative layout and running persona vision models...
+              </p>
+            </div>
+
+            <div id="mm-empty-box" style="padding: 40px; text-align: center; color: var(--text-muted);">
+              <div style="font-size: 32px; margin-bottom: 8px;">🎨</div>
+              <p style="font-weight: 700; font-size: 14px;">No visual creative tested yet.</p>
+              <p style="font-size: 12px; margin-top: 4px;">Upload an image on the left to see Indian consumer visual reactions.</p>
+            </div>
+
+            <div id="mm-result-data" style="display: none;">
+              <!-- Top Metrics (3 columns) -->
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px;">
+                <div style="background: #eff6ff; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #bfdbfe;">
+                  <div id="mm-metric-intent" class="metric-value-blue" style="font-size: 20px;">0.0 / 10</div>
+                  <div class="metric-sub" style="color: #1e40af;">Purchase Intent</div>
+                </div>
+                <div style="background: #ecfdf5; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #a7f3d0;">
+                  <div id="mm-metric-trust" class="metric-value-green" style="font-size: 20px;">0.0 / 10</div>
+                  <div class="metric-sub" style="color: #065f46;">Visual Trust</div>
+                </div>
+                <div style="background: #fdf4ff; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #f0abfc;">
+                  <div id="mm-metric-comp" style="font-size: 20px; font-weight: 800; color: #a21caf; line-height: 1;">0.0 / 10</div>
+                  <div class="metric-sub" style="color: #701a75;">3s Comprehension</div>
+                </div>
+              </div>
+
+              <!-- First Visual Hook -->
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin-bottom: 12px;">
+                <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">First Visual Hook</div>
+                <div id="mm-hook-text" style="font-size: 12.5px; font-weight: 700; color: #0f172a; margin-top: 2px;">None</div>
+              </div>
+
+              <!-- Friction Points -->
+              <div style="margin-bottom: 14px;">
+                <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 6px;">UI Friction & Trust Barriers</div>
+                <div id="mm-frictions-box" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+              </div>
+
+              <!-- Archetype Quotes -->
+              <div>
+                <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 6px;">Segment Breakdown</div>
+                <div id="mm-quotes-box" style="display: flex; flex-direction: column; gap: 8px; max-height: 180px; overflow-y: auto;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer" style="margin-top: 20px;">
+            <span class="tag-exploding">MULTIMODAL VISION</span>
+            <span style="font-size: 11px; font-weight: 700; color: var(--text-muted);">GEMINI 3.6 FLASH • 100% FREE TIER</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Section 3: Phase 2 Preview (Focus Groups) -->
+    <!-- Section 3: Live Interactive Focus Groups -->
     <div id="sec-focus-group" class="section-container" style="display: none; flex-direction: column; gap: 20px;">
       <div class="page-header">
-        <h1 class="page-title">Live Interactive Focus Groups</h1>
-        <span class="pro-badge">PHASE 2 DEVELOPMENT</span>
+        <div>
+          <h1 class="page-title">Live Focus Group Studio</h1>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px; font-weight: 500;">
+            Multi-turn conversation room with calibrated Indian consumer personas. Interview cohorts, probe price objections, and trigger real-time AI synthesis.
+          </p>
+        </div>
+        <span class="pro-badge" style="background: #10b981;">PHASE 2 LIVE</span>
       </div>
-      <div class="form-card" style="padding: 40px; text-align: center;">
-        <div style="font-size: 48px; margin-bottom: 12px;">💬</div>
-        <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
-          Phase 2: "Chat with Your Segment"
-        </h2>
-        <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6;">
-          Step into a virtual boardroom and interview synthetic Indian consumer archetypes in real-time with multi-turn conversation memory and peer debate dynamics.
-        </p>
-        <button class="btn-launch" style="width: auto; padding: 12px 28px;" onclick="switchNavSection('sec-market-studio', document.querySelectorAll('.nav-link')[0])">
-          ← Return to Market Simulation Studio
-        </button>
+
+      <div class="sim-panel" style="grid-template-columns: 360px 1fr; align-items: start;">
+        <!-- Left: Room Setup & Persona Roster -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="form-card">
+            <h2 class="form-title">Focus Room Configuration</h2>
+            <p class="form-sub">Launch a multi-turn panel discussion with diverse demographic archetypes.</p>
+
+            <div class="form-field">
+              <label>Discussion Topic / Concept</label>
+              <textarea id="fg-topic" class="input-box" rows="3">10-Minute Instant Grocery Delivery vs Traditional Kiranas in Tier-2/Tier-3 Indian Towns</textarea>
+            </div>
+
+            <div class="form-field">
+              <label>Population Sample ID</label>
+              <input id="fg-pop-id" class="input-box" type="text" placeholder="Auto-use latest population run">
+            </div>
+
+            <div class="form-field">
+              <label>Number of Persona Panelists</label>
+              <select id="fg-panelist-count" class="select-dropdown" style="width: 100%;">
+                <option value="4" selected>4 Archetypes (Cross-Demographic)</option>
+                <option value="3">3 Archetypes (Core Target)</option>
+                <option value="5">5 Archetypes (Broad Spectrum)</option>
+              </select>
+            </div>
+
+            <button id="btn-fg-start" class="btn-launch" onclick="startFocusGroupSession()">
+              Initialize Focus Group Room
+            </button>
+          </div>
+
+          <!-- Persona Roster in Room -->
+          <div class="form-card" id="fg-roster-card" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <h3 style="font-size: 13px; font-weight: 800; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.5px;">Panelists in Room</h3>
+              <span id="fg-participant-count-badge" class="tag-exploding">4 Active</span>
+            </div>
+            <div id="fg-roster-list" style="display: flex; flex-direction: column; gap: 10px;"></div>
+
+            <button id="btn-fg-synthesize" class="btn-export" style="width: 100%; margin-top: 16px; padding: 10px; text-align: center; border-color: #93c5fd;" onclick="synthesizeFocusGroup()">
+              ✨ Synthesize Room Insights (AI)
+            </button>
+          </div>
+
+          <!-- AI Synthesis Summary Box -->
+          <div class="form-card" id="fg-synthesis-card" style="display: none; border-left: 4px solid #2563eb;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+              <span style="font-size: 18px;">💡</span>
+              <h3 style="font-size: 15px; font-weight: 800; color: #0f172a;">Executive Room Takeaways</h3>
+            </div>
+            <div id="fg-synthesis-content" style="font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;"></div>
+          </div>
+        </div>
+
+        <!-- Right: Real-time Virtual Focus Room Messenger -->
+        <div class="form-card" style="display: flex; flex-direction: column; height: 680px; padding: 20px;">
+          <!-- Chat Header -->
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 14px; border-bottom: 1px solid var(--border-color);">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div id="fg-status-indicator" style="width: 10px; height: 10px; border-radius: 50%; background: #94a3b8;"></div>
+              <div>
+                <div id="fg-room-header-title" style="font-size: 14px; font-weight: 800; color: #0f172a;">Focus Room Offline</div>
+                <div id="fg-room-header-sub" style="font-size: 11.5px; color: var(--text-muted); font-weight: 600;">Start a session to open virtual focus room</div>
+              </div>
+            </div>
+            <div id="fg-room-target-tag" class="tag-exploding" style="display: none;">Speaking to: All</div>
+          </div>
+
+          <!-- Chat Stream Messages Area -->
+          <div id="fg-chat-stream" style="flex: 1; overflow-y: auto; padding: 16px 4px; display: flex; flex-direction: column; gap: 14px;">
+            <div id="fg-chat-empty" style="text-align: center; margin: auto; color: var(--text-muted);">
+              <div style="font-size: 38px; margin-bottom: 10px;">🎙️</div>
+              <p style="font-weight: 700; font-size: 14px;">Virtual Focus Room is Waiting</p>
+              <p style="font-size: 12px; margin-top: 4px; max-width: 320px; line-height: 1.5;">
+                Enter a topic on the left and click "Initialize Focus Group Room" to summon representative Indian consumer personas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Deliberation Spinner Indicator -->
+          <div id="fg-thinking-indicator" style="display: none; padding: 8px 12px; background: #f1f5f9; border-radius: 6px; font-size: 11.5px; font-weight: 700; color: var(--blue-primary); align-items: center; gap: 8px; margin-bottom: 8px;">
+            <div class="loader" style="width: 14px; height: 14px; border-width: 2px;"></div>
+            <span>Personas are deliberating and formulating authentic replies...</span>
+          </div>
+
+          <!-- Moderator Input Bar -->
+          <div style="padding-top: 14px; border-top: 1px solid var(--border-color); display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <select id="fg-msg-target" class="select-dropdown" style="font-size: 12px; padding: 6px 10px;">
+                <option value="">Direct to: Entire Room (All Personas)</option>
+              </select>
+              <span style="font-size: 11px; color: var(--text-muted); font-weight: 600;">Press Enter to send</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+              <input id="fg-user-input" type="text" class="input-box" placeholder="Ask a question or follow-up to the focus group..." disabled onkeydown="if(event.key==='Enter') sendFocusGroupMessage()">
+              <button id="btn-fg-send" class="btn-launch" style="width: auto; padding: 0 24px; white-space: nowrap;" disabled onclick="sendFocusGroupMessage()">
+                Send Question
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Section 4: Phase 3 Preview (Pricing) -->
+    <!-- Section 4: Automated Pricing Optimization (Van Westendorp PSM) -->
     <div id="sec-pricing" class="section-container" style="display: none; flex-direction: column; gap: 20px;">
       <div class="page-header">
-        <h1 class="page-title">Automated Pricing Optimization</h1>
-        <span class="pro-badge">PHASE 3 DEVELOPMENT</span>
+        <div>
+          <h1 class="page-title">Automated Pricing Optimization</h1>
+          <p style="font-size: 13.5px; color: var(--text-muted); margin-top: 4px; font-weight: 500;">
+            Van Westendorp Price Sensitivity Meter (PSM) calibrated for the Indian market. Generates 4 price sensitivity curves, optimal penetration points, and revenue-maximizing ceilings.
+          </p>
+        </div>
+        <span class="pro-badge" style="background: #2563eb;">PHASE 3 LIVE</span>
       </div>
-      <div class="form-card" style="padding: 40px; text-align: center;">
-        <div style="font-size: 48px; margin-bottom: 12px;">🏷️</div>
-        <h2 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">
-          Phase 3: Van Westendorp Price Sensitivity Meter
-        </h2>
-        <p style="color: #64748b; font-size: 14px; max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6;">
-          Automated econometric survey modeling 4 price curves (Too Cheap, Bargain, Expensive, Too Expensive) to calculate Optimal Price Point (OPP) and price elasticity for the Indian market.
-        </p>
-        <button class="btn-launch" style="width: auto; padding: 12px 28px;" onclick="switchNavSection('sec-market-studio', document.querySelectorAll('.nav-link')[0])">
-          ← Return to Market Simulation Studio
-        </button>
+
+      <div class="sim-panel">
+        <!-- Left: Product & Pricing Scenario Form -->
+        <div class="form-card">
+          <h2 class="form-title">Econometric Price Survey</h2>
+          <p class="form-sub">Define your product proposition to survey synthetic consumer willingness-to-pay.</p>
+
+          <div class="form-field">
+            <label>Product or Service Offering</label>
+            <textarea id="psm-concept" class="input-box" rows="4">All-in-one cloud accounting, invoicing, and GST compliance software for Indian retail shopkeepers with automated WhatsApp payment links and credit tracking (Udhar khata).</textarea>
+          </div>
+
+          <div class="form-field">
+            <label>Category / Sector</label>
+            <input id="psm-cat" class="input-box" type="text" value="B2B SaaS / Fintech">
+          </div>
+
+          <div class="form-field">
+            <label>Population Sample ID</label>
+            <input id="psm-pop-id" class="input-box" type="text" placeholder="Auto-use latest population run">
+          </div>
+
+          <div class="form-field">
+            <label>Billing Metric</label>
+            <select id="psm-currency" class="select-dropdown" style="width: 100%;">
+              <option value="INR" selected>INR (₹/month subscription)</option>
+              <option value="INR">INR (₹/annual plan)</option>
+              <option value="INR">INR (₹ per order fee)</option>
+            </select>
+          </div>
+
+          <button id="btn-psm-run" class="btn-launch" onclick="executePricingSimulation()">
+            Calculate Econometric PSM Pricing
+          </button>
+        </div>
+
+        <!-- Right: Econometric PSM Results -->
+        <div class="form-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <h2 class="form-title">Price Sensitivity Meter (PSM)</h2>
+            <p class="form-sub">Cumulative willingness-to-pay distributions and critical price boundaries.</p>
+
+            <div id="psm-loader-box" style="display: none; padding: 40px; text-align: center;">
+              <div class="loader"></div>
+              <p style="margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--blue-primary);">
+                Surveying demographic archetypes across 4 econometric price questions...
+              </p>
+            </div>
+
+            <div id="psm-empty-box" style="padding: 40px; text-align: center; color: var(--text-muted);">
+              <div style="font-size: 36px; margin-bottom: 8px;">🏷️</div>
+              <p style="font-weight: 700; font-size: 14px;">No Pricing Optimization Ran Yet.</p>
+              <p style="font-size: 12px; margin-top: 4px;">Click "Calculate Econometric PSM Pricing" to model consumer price thresholds.</p>
+            </div>
+
+            <div id="psm-result-data" style="display: none;">
+              <!-- 4 KPI Price Cards -->
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px;">
+                <div style="background: #eff6ff; padding: 12px 10px; border-radius: 8px; text-align: center; border: 1px solid #bfdbfe;">
+                  <div id="psm-opp" class="metric-value-blue" style="font-size: 19px;">₹0</div>
+                  <div class="metric-sub" style="color: #1e40af; font-size: 10px; font-weight: 800;">Optimal (OPP)</div>
+                  <div style="font-size: 9.5px; color: #64748b; margin-top: 2px;">Min resistance</div>
+                </div>
+                <div style="background: #ecfdf5; padding: 12px 10px; border-radius: 8px; text-align: center; border: 1px solid #a7f3d0;">
+                  <div id="psm-ipp" class="metric-value-green" style="font-size: 19px;">₹0</div>
+                  <div class="metric-sub" style="color: #065f46; font-size: 10px; font-weight: 800;">Indifference (IPP)</div>
+                  <div style="font-size: 9.5px; color: #64748b; margin-top: 2px;">Market median</div>
+                </div>
+                <div style="background: #fefce8; padding: 12px 10px; border-radius: 8px; text-align: center; border: 1px solid #fef08a;">
+                  <div id="psm-corridor" style="font-size: 15px; font-weight: 800; color: #ca8a04; line-height: 1.2;">₹0 - ₹0</div>
+                  <div class="metric-sub" style="color: #854d0e; font-size: 10px; font-weight: 800;">Acceptable Corridor</div>
+                  <div style="font-size: 9.5px; color: #64748b; margin-top: 2px;">PMC to PME</div>
+                </div>
+                <div style="background: #fdf4ff; padding: 12px 10px; border-radius: 8px; text-align: center; border: 1px solid #f0abfc;">
+                  <div id="psm-rev-max" style="font-size: 19px; font-weight: 800; color: #9333ea; line-height: 1.2;">₹0</div>
+                  <div class="metric-sub" style="color: #6b21a8; font-size: 10px; font-weight: 800;">Rev-Maximizing</div>
+                  <div style="font-size: 9.5px; color: #64748b; margin-top: 2px;">Highest yield</div>
+                </div>
+              </div>
+
+              <!-- SVG 4-Curve PSM Chart -->
+              <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; margin-bottom: 14px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Van Westendorp Sensitivity Curves</span>
+                  <div style="display: flex; gap: 12px; font-size: 10px; font-weight: 700;">
+                    <span style="color: #ef4444;">● Too Cheap</span>
+                    <span style="color: #10b981;">● Cheap (Bargain)</span>
+                    <span style="color: #f59e0b;">● Expensive</span>
+                    <span style="color: #881337;">● Too Expensive</span>
+                  </div>
+                </div>
+                <svg id="psm-svg-chart" viewBox="0 0 500 160" style="width: 100%; height: 160px; overflow: visible;" xmlns="http://www.w3.org/2000/svg">
+                </svg>
+              </div>
+
+              <!-- Strategic Monetization Recommendations -->
+              <div style="margin-bottom: 14px;">
+                <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 6px;">Strategic Recommendations</div>
+                <div id="psm-recommendations-box" style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;"></div>
+              </div>
+
+              <!-- Archetype Price Breakdown Accordion -->
+              <div>
+                <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 6px;">Archetype Thresholds</div>
+                <div id="psm-archetypes-box" style="display: flex; flex-direction: column; gap: 6px; max-height: 140px; overflow-y: auto;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer" style="margin-top: 20px;">
+            <span class="tag-exploding">ECONOMETRIC PSM</span>
+            <span style="font-size: 11px; font-weight: 700; color: var(--text-muted);">VAN WESTENDORP • WEIGHTED CENSUS</span>
+          </div>
+        </div>
       </div>
     </div>
   </main>
@@ -1078,14 +1388,610 @@
       });
     }
 
+    let selectedImageFile = null;
+
+    function handleImageSelected(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      selectedImageFile = file;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById('mm-preview-img').src = e.target.result;
+        document.getElementById('mm-preview-box').style.display = 'block';
+        document.getElementById('mm-upload-prompt').style.display = 'none';
+        document.getElementById('mm-file-name').innerText = file.name + ' (' + (file.size / 1024).toFixed(0) + ' KB)';
+      };
+      reader.readAsDataURL(file);
+    }
+
+    async function executeMultimodalSimulation() {
+      if (!selectedImageFile) {
+        alert("Please select or upload an image creative first.");
+        return;
+      }
+
+      const concept = document.getElementById('mm-concept').value.trim();
+      const sector = document.getElementById('mm-cat').value.trim();
+      let popId = document.getElementById('mm-pop-id').value.trim();
+      const useSocial = document.getElementById('mm-social-influence').checked;
+
+      document.getElementById('mm-empty-box').style.display = 'none';
+      document.getElementById('mm-result-data').style.display = 'none';
+      document.getElementById('mm-loader-box').style.display = 'block';
+      document.getElementById('btn-mm-run').disabled = true;
+
+      try {
+        if (!popId) {
+          if (!activePopulationRunId) {
+            const popRes = await fetch(`${API_BASE}/population/generate`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ n: 1000, n_archetypes: 4, seed: 42 })
+            });
+            const popData = await popRes.json();
+            activePopulationRunId = popData.run_id;
+            popId = popData.run_id;
+            document.getElementById('mm-pop-id').value = popId;
+          } else {
+            popId = activePopulationRunId;
+          }
+        }
+
+        const formData = new FormData();
+        formData.append('creative_image', selectedImageFile);
+        formData.append('stimulus_description', concept);
+        formData.append('category', sector);
+        formData.append('population_run_id', popId);
+        formData.append('use_social_influence', useSocial);
+        formData.append('n_archetypes_override', 4);
+
+        const res = await fetch(`${API_BASE}/simulations/multimodal/run`, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Multimodal simulation request failed");
+        }
+
+        const data = await res.json();
+        pollMultimodalSim(data.run_id);
+      } catch (err) {
+        alert("Launch failed: " + err.message);
+        document.getElementById('mm-loader-box').style.display = 'none';
+        document.getElementById('mm-empty-box').style.display = 'block';
+        document.getElementById('btn-mm-run').disabled = false;
+      }
+    }
+
+    function pollMultimodalSim(simId) {
+      const interval = setInterval(async () => {
+        try {
+          const res = await fetch(`${API_BASE}/simulations/${simId}/status`);
+          const data = await res.json();
+
+          if (data.status === 'completed') {
+            clearInterval(interval);
+            const resultsRes = await fetch(`${API_BASE}/simulations/${simId}/results`);
+            const resultsData = await resultsRes.json();
+
+            document.getElementById('mm-loader-box').style.display = 'none';
+            document.getElementById('btn-mm-run').disabled = false;
+            displayMultimodalResults(resultsData.results);
+          } else if (data.status && data.status.startsWith('failed')) {
+            clearInterval(interval);
+            document.getElementById('mm-loader-box').style.display = 'none';
+            document.getElementById('mm-empty-box').style.display = 'block';
+            document.getElementById('btn-mm-run').disabled = false;
+            alert("Simulation failed on server: " + data.status);
+          }
+        } catch (e) {
+          clearInterval(interval);
+          document.getElementById('mm-loader-box').style.display = 'none';
+          document.getElementById('mm-empty-box').style.display = 'block';
+          document.getElementById('btn-mm-run').disabled = false;
+        }
+      }, 2000);
+    }
+
+    function displayMultimodalResults(res) {
+      document.getElementById('mm-result-data').style.display = 'block';
+      const intent = res.population_purchase_intent ?? res.weighted_intent ?? 0;
+      document.getElementById('mm-metric-intent').innerText = (typeof intent === 'number' ? intent.toFixed(1) : intent) + " / 10";
+
+      const trust = res.visual_trust_score ?? 5.0;
+      document.getElementById('mm-metric-trust').innerText = (typeof trust === 'number' ? trust.toFixed(1) : trust) + " / 10";
+
+      const comp = res.visual_comprehension_score ?? 5.0;
+      document.getElementById('mm-metric-comp').innerText = (typeof comp === 'number' ? comp.toFixed(1) : comp) + " / 10";
+
+      const hooks = res.first_visual_hooks || [];
+      document.getElementById('mm-hook-text').innerText = hooks.length > 0 ? hooks.join(' • ') : "Visual Headline";
+
+      const fBox = document.getElementById('mm-frictions-box');
+      fBox.innerHTML = '';
+      const frictions = res.ui_friction_points || [];
+      if (frictions.length === 0) {
+        fBox.innerHTML = '<span style="font-size: 11.5px; color: #10b981; font-weight: 600;">✓ No major visual friction points detected.</span>';
+      } else {
+        frictions.forEach(f => {
+          const pill = document.createElement('span');
+          pill.style.backgroundColor = "#fee2e2";
+          pill.style.color = "#b91c1c";
+          pill.style.fontSize = "11px";
+          pill.style.fontWeight = "700";
+          pill.style.padding = "3px 8px";
+          pill.style.borderRadius = "4px";
+          pill.innerText = "⚠ " + f;
+          fBox.appendChild(pill);
+        });
+      }
+
+      const qBox = document.getElementById('mm-quotes-box');
+      qBox.innerHTML = '';
+      (res.archetype_details || []).forEach((r, i) => {
+        const item = document.createElement('div');
+        item.style.padding = "8px 12px";
+        item.style.backgroundColor = "#f8fafc";
+        item.style.borderLeft = "3px solid #0284c7";
+        item.style.borderRadius = "4px";
+        item.style.fontSize = "11.5px";
+        item.innerHTML = `
+          <div style="font-weight: 700; color: #0f172a; margin-bottom: 2px;">
+            Archetype ${i + 1} • Intent: <span style="color: #2563eb;">${r.purchase_intent}/10</span> | Trust: <span style="color: #10b981;">${r.visual_trust_score || 'N/A'}/10</span>
+          </div>
+          <div style="color: #475569; font-style: italic;">"${r.quote || 'No quote'}"</div>
+          <div style="color: #64748b; margin-top: 2px; font-size: 10.5px;"><b>Visual Objection:</b> ${r.objection || 'None'}</div>
+        `;
+        qBox.appendChild(item);
+      });
+    }
+
+    let activeFocusGroupId = null;
+    let focusGroupPersonas = [];
+
+    async function startFocusGroupSession() {
+      const topic = document.getElementById('fg-topic').value.trim();
+      if (!topic) {
+        alert("Please enter a discussion topic for the focus group.");
+        return;
+      }
+      let popId = document.getElementById('fg-pop-id').value.trim();
+      const nPersonas = parseInt(document.getElementById('fg-panelist-count').value) || 4;
+
+      document.getElementById('btn-fg-start').disabled = true;
+      document.getElementById('btn-fg-start').innerText = "Summoning Personas...";
+
+      try {
+        if (!popId) {
+          if (!activePopulationRunId) {
+            const popRes = await fetch(`${API_BASE}/population/generate`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ n: 1000, n_archetypes: 4, seed: 42 })
+            });
+            const popData = await popRes.json();
+            activePopulationRunId = popData.run_id;
+            popId = popData.run_id;
+            document.getElementById('fg-pop-id').value = popId;
+          } else {
+            popId = activePopulationRunId;
+          }
+        }
+
+        const res = await fetch(`${API_BASE}/focus-group/sessions`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            topic: topic,
+            population_run_id: popId,
+            n_personas: nPersonas
+          })
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Failed to create focus group session");
+        }
+
+        const session = await res.json();
+        activeFocusGroupId = session.id;
+        focusGroupPersonas = session.personas || [];
+
+        renderFocusGroupRoster(focusGroupPersonas);
+
+        document.getElementById('fg-status-indicator').style.background = '#10b981';
+        document.getElementById('fg-status-indicator').style.boxShadow = '0 0 8px #10b981';
+        document.getElementById('fg-room-header-title').innerText = "Live Session: " + (topic.length > 35 ? topic.substring(0, 35) + '...' : topic);
+        document.getElementById('fg-room-header-sub').innerText = `${focusGroupPersonas.length} calibrated personas present • Room ID: ${session.id.substring(0, 8)}`;
+
+        const stream = document.getElementById('fg-chat-stream');
+        stream.innerHTML = '';
+        (session.messages || []).forEach(m => appendChatMessage(m));
+
+        document.getElementById('fg-user-input').disabled = false;
+        document.getElementById('btn-fg-send').disabled = false;
+        document.getElementById('fg-user-input').focus();
+      } catch (err) {
+        alert("Focus Group Init Failed: " + err.message);
+      } finally {
+        document.getElementById('btn-fg-start').disabled = false;
+        document.getElementById('btn-fg-start').innerText = "Initialize Focus Group Room";
+      }
+    }
+
+    function renderFocusGroupRoster(personas) {
+      document.getElementById('fg-roster-card').style.display = 'block';
+      document.getElementById('fg-participant-count-badge').innerText = `${personas.length} Active`;
+
+      const list = document.getElementById('fg-roster-list');
+      list.innerHTML = '';
+
+      const targetSelect = document.getElementById('fg-msg-target');
+      targetSelect.innerHTML = '<option value="">Direct to: Entire Room (All Personas)</option>';
+
+      personas.forEach((p, idx) => {
+        const initials = p.name.split(' ').map(n => n[0]).join('').substring(0, 2);
+        const card = document.createElement('div');
+        card.style.display = 'flex';
+        card.style.alignItems = 'center';
+        card.style.gap = '10px';
+        card.style.padding = '8px 10px';
+        card.style.background = '#f8fafc';
+        card.style.borderRadius = '8px';
+        card.style.border = '1px solid #e2e8f0';
+
+        card.innerHTML = `
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: ${p.avatar_color}; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; flex-shrink: 0;">
+            ${initials}
+          </div>
+          <div style="flex: 1; min-width: 0;">
+            <div style="font-size: 12px; font-weight: 700; color: #0f172a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              ${p.name} <span style="font-weight: 500; color: #64748b; font-size: 11px;">(${p.age}y, ${p.gender})</span>
+            </div>
+            <div style="font-size: 11px; color: #475569; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+              ${p.occupation} • ${p.location}
+            </div>
+          </div>
+        `;
+        list.appendChild(card);
+
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.innerText = `Direct to: ${p.name} (${p.occupation})`;
+        targetSelect.appendChild(opt);
+      });
+    }
+
+    function appendChatMessage(msg) {
+      const stream = document.getElementById('fg-chat-stream');
+      const row = document.createElement('div');
+      row.style.display = 'flex';
+      row.style.gap = '10px';
+      row.style.maxWidth = '85%';
+
+      if (msg.sender_type === 'moderator') {
+        row.style.marginLeft = 'auto';
+        row.style.flexDirection = 'row-reverse';
+        row.innerHTML = `
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: #11182c; color: #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px; flex-shrink: 0;">
+            MOD
+          </div>
+          <div style="background: #11182c; color: #ffffff; padding: 12px 16px; border-radius: 12px 2px 12px 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
+            <div style="font-size: 10.5px; color: #94a3b8; font-weight: 700; margin-bottom: 4px; text-transform: uppercase;">You (Moderator)</div>
+            <div style="font-size: 13px; line-height: 1.5;">${msg.message}</div>
+          </div>
+        `;
+      } else if (msg.sender_type === 'system') {
+        row.style.margin = '0 auto';
+        row.style.maxWidth = '92%';
+        row.innerHTML = `
+          <div style="background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; padding: 8px 14px; border-radius: 8px; font-size: 12px; text-align: center; width: 100%;">
+            📢 <b>Host Announcement:</b> ${msg.message}
+          </div>
+        `;
+      } else {
+        const persona = focusGroupPersonas.find(p => p.id === msg.sender_id) || {};
+        const initials = (msg.sender_name || "P").split(' ').map(n => n[0]).join('').substring(0, 2);
+        const color = persona.avatar_color || "#3b82f6";
+        const sentimentColor = msg.sentiment === 'positive' ? '#10b981' : msg.sentiment === 'negative' ? '#ef4444' : '#64748b';
+
+        row.style.marginRight = 'auto';
+        row.innerHTML = `
+          <div style="width: 32px; height: 32px; border-radius: 50%; background: ${color}; color: #ffffff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11px; flex-shrink: 0;">
+            ${initials}
+          </div>
+          <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 3.5px solid ${color}; padding: 12px 16px; border-radius: 2px 12px 12px 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.04);">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 4px;">
+              <div style="font-size: 12px; font-weight: 700; color: #0f172a;">
+                ${msg.sender_name} <span style="font-weight: 500; color: #64748b; font-size: 11px;">(${persona.occupation || 'Consumer'}, ${persona.location || 'India'})</span>
+              </div>
+              <span style="font-size: 9.5px; font-weight: 800; color: ${sentimentColor}; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; text-transform: uppercase;">
+                ${msg.sentiment || 'neutral'}
+              </span>
+            </div>
+            <div style="font-size: 12.5px; color: #334155; line-height: 1.5;">${msg.message}</div>
+          </div>
+        `;
+      }
+
+      stream.appendChild(row);
+      stream.scrollTop = stream.scrollHeight;
+    }
+
+    async function sendFocusGroupMessage() {
+      if (!activeFocusGroupId) {
+        alert("Please initialize a focus group room first.");
+        return;
+      }
+      const input = document.getElementById('fg-user-input');
+      const text = input.value.trim();
+      if (!text) return;
+
+      const targetSelect = document.getElementById('fg-msg-target');
+      const targetId = targetSelect.value || null;
+
+      input.value = '';
+      input.disabled = true;
+      document.getElementById('btn-fg-send').disabled = true;
+      document.getElementById('fg-thinking-indicator').style.display = 'flex';
+
+      try {
+        const res = await fetch(`${API_BASE}/focus-group/sessions/${activeFocusGroupId}/message`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: text,
+            target_persona_id: targetId
+          })
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Failed to deliver message to focus group");
+        }
+
+        const newMessages = await res.json();
+        newMessages.forEach(m => appendChatMessage(m));
+      } catch (err) {
+        alert("Message send error: " + err.message);
+      } finally {
+        document.getElementById('fg-thinking-indicator').style.display = 'none';
+        input.disabled = false;
+        document.getElementById('btn-fg-send').disabled = false;
+        input.focus();
+      }
+    }
+
+    async function synthesizeFocusGroup() {
+      if (!activeFocusGroupId) {
+        alert("No active focus group session to synthesize.");
+        return;
+      }
+
+      const btn = document.getElementById('btn-fg-synthesize');
+      btn.disabled = true;
+      btn.innerText = "Synthesizing Insights...";
+
+      try {
+        const res = await fetch(`${API_BASE}/focus-group/sessions/${activeFocusGroupId}/synthesize`, {
+          method: 'POST'
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Failed to synthesize focus group");
+        }
+
+        const synth = await res.json();
+        const card = document.getElementById('fg-synthesis-card');
+        card.style.display = 'block';
+
+        const content = document.getElementById('fg-synthesis-content');
+        content.innerHTML = `
+          <div>
+            <b style="color: #1e40af;">📌 Key Takeaways:</b>
+            <ul style="margin-left: 18px; margin-top: 4px;">
+              ${(synth.key_takeaways || []).map(t => `<li>${t}</li>`).join('')}
+            </ul>
+          </div>
+          <div style="margin-top: 6px;">
+            <b style="color: #065f46;">🤝 Consensus Points:</b>
+            <ul style="margin-left: 18px; margin-top: 4px;">
+              ${(synth.consensus_points || []).map(c => `<li>${c}</li>`).join('')}
+            </ul>
+          </div>
+          <div style="margin-top: 6px;">
+            <b style="color: #b91c1c;">⚡ Demographic Divergence:</b>
+            <ul style="margin-left: 18px; margin-top: 4px;">
+              ${(synth.divergence_points || []).map(d => `<li>${d}</li>`).join('')}
+            </ul>
+          </div>
+          <div style="margin-top: 6px;">
+            <b style="color: #9333ea;">🎯 Strategic Recommendations:</b>
+            <ul style="margin-left: 18px; margin-top: 4px;">
+              ${(synth.strategic_recommendations || []).map(r => `<li>${r}</li>`).join('')}
+            </ul>
+          </div>
+        `;
+        card.scrollIntoView({ behavior: 'smooth' });
+      } catch (err) {
+        alert("Synthesis failed: " + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerText = "✨ Synthesize Room Insights (AI)";
+      }
+    }
+
+    async function executePricingSimulation() {
+      const concept = document.getElementById('psm-concept').value.trim();
+      const cat = document.getElementById('psm-cat').value.trim();
+      const currency = document.getElementById('psm-currency').value;
+      let popId = document.getElementById('psm-pop-id').value.trim();
+
+      document.getElementById('psm-empty-box').style.display = 'none';
+      document.getElementById('psm-result-data').style.display = 'none';
+      document.getElementById('psm-loader-box').style.display = 'block';
+      document.getElementById('btn-psm-run').disabled = true;
+
+      try {
+        if (!popId) {
+          if (!activePopulationRunId) {
+            const popRes = await fetch(`${API_BASE}/population/generate`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ n: 1000, n_archetypes: 4, seed: 42 })
+            });
+            const popData = await popRes.json();
+            activePopulationRunId = popData.run_id;
+            popId = popData.run_id;
+            document.getElementById('psm-pop-id').value = popId;
+          } else {
+            popId = activePopulationRunId;
+          }
+        }
+
+        const res = await fetch(`${API_BASE}/pricing/van-westendorp/run`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            product_concept: concept,
+            category: cat,
+            currency: currency,
+            population_run_id: popId,
+            n_archetypes_override: 4
+          })
+        });
+
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.detail || "Pricing simulation failed");
+        }
+
+        const pricingData = await res.json();
+        document.getElementById('psm-loader-box').style.display = 'none';
+        document.getElementById('btn-psm-run').disabled = false;
+        displayPricingResults(pricingData);
+      } catch (err) {
+        alert("Pricing calculation failed: " + err.message);
+        document.getElementById('psm-loader-box').style.display = 'none';
+        document.getElementById('psm-empty-box').style.display = 'block';
+        document.getElementById('btn-psm-run').disabled = false;
+      }
+    }
+
+    function displayPricingResults(data) {
+      document.getElementById('psm-result-data').style.display = 'block';
+      const summary = data.summary || {};
+
+      document.getElementById('psm-opp').innerText = `₹${(summary.optimal_price_point || 0).toLocaleString()}`;
+      document.getElementById('psm-ipp').innerText = `₹${(summary.indifference_price_point || 0).toLocaleString()}`;
+      document.getElementById('psm-corridor').innerText = `₹${(summary.point_of_marginal_cheapness || 0).toLocaleString()} - ₹${(summary.point_of_marginal_expensiveness || 0).toLocaleString()}`;
+      document.getElementById('psm-rev-max').innerText = `₹${(summary.revenue_maximizing_price || 0).toLocaleString()}`;
+
+      drawPsmSvgChart(data.curves || [], summary);
+
+      const recBox = document.getElementById('psm-recommendations-box');
+      recBox.innerHTML = '';
+      (data.strategic_recommendations || []).forEach(r => {
+        const item = document.createElement('div');
+        item.style.padding = '8px 12px';
+        item.style.background = '#f8fafc';
+        item.style.borderLeft = '3px solid #2563eb';
+        item.style.borderRadius = '4px';
+        item.style.color = '#1e293b';
+        item.innerText = r;
+        recBox.appendChild(item);
+      });
+
+      const archBox = document.getElementById('psm-archetypes-box');
+      archBox.innerHTML = '';
+      (data.archetype_responses || []).forEach(a => {
+        const row = document.createElement('div');
+        row.style.padding = '8px 10px';
+        row.style.background = '#f8fafc';
+        row.style.borderRadius = '6px';
+        row.style.border = '1px solid #e2e8f0';
+        row.innerHTML = `
+          <div style="display: flex; justify-content: space-between; font-weight: 700; color: #0f172a;">
+            <span>${a.demographic_summary}</span>
+            <span style="color: #2563eb;">Target: ₹${a.cheap} - ₹${a.expensive}</span>
+          </div>
+          <div style="font-size: 11px; color: #64748b; margin-top: 2px;">
+            Too Cheap: <b style="color: #ef4444;">₹${a.too_cheap}</b> | Cheap: <b style="color: #10b981;">₹${a.cheap}</b> | Expensive: <b style="color: #f59e0b;">₹${a.expensive}</b> | Too Exp: <b style="color: #881337;">₹${a.too_expensive}</b>
+          </div>
+          <div style="font-size: 10.5px; color: #475569; font-style: italic; margin-top: 2px;">"${a.rationale}"</div>
+        `;
+        archBox.appendChild(row);
+      });
+    }
+
+    function drawPsmSvgChart(curves, summary) {
+      const svg = document.getElementById('psm-svg-chart');
+      if (!curves || curves.length === 0) {
+        svg.innerHTML = '';
+        return;
+      }
+
+      const W = 500;
+      const H = 160;
+      const padL = 40;
+      const padR = 20;
+      const padT = 15;
+      const padB = 25;
+      const plotW = W - padL - padR;
+      const plotH = H - padT - padB;
+
+      const prices = curves.map(c => c.price);
+      const minP = Math.min(...prices);
+      const maxP = Math.max(...prices);
+      const pRange = maxP - minP || 1;
+
+      const toX = p => padL + ((p - minP) / pRange) * plotW;
+      const toY = pct => padT + (1.0 - (pct / 100.0)) * plotH;
+
+      const tooCheapPts = curves.map(c => `${toX(c.price).toFixed(1)},${toY(c.too_cheap_pct).toFixed(1)}`).join(' ');
+      const cheapPts = curves.map(c => `${toX(c.price).toFixed(1)},${toY(c.cheap_pct).toFixed(1)}`).join(' ');
+      const expPts = curves.map(c => `${toX(c.price).toFixed(1)},${toY(c.expensive_pct).toFixed(1)}`).join(' ');
+      const tooExpPts = curves.map(c => `${toX(c.price).toFixed(1)},${toY(c.too_expensive_pct).toFixed(1)}`).join(' ');
+
+      const oppX = toX(summary.optimal_price_point || minP);
+
+      svg.innerHTML = `
+        <line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H - padB}" stroke="#e2e8f0" stroke-width="1" />
+        <line x1="${padL}" y1="${H - padB}" x2="${W - padR}" y2="${H - padB}" stroke="#e2e8f0" stroke-width="1" />
+        
+        <text x="${padL - 6}" y="${padT + 8}" font-size="9" fill="#94a3b8" text-anchor="end" font-weight="700">100%</text>
+        <text x="${padL - 6}" y="${padT + plotH / 2 + 4}" font-size="9" fill="#94a3b8" text-anchor="end" font-weight="700">50%</text>
+        <text x="${padL - 6}" y="${H - padB}" font-size="9" fill="#94a3b8" text-anchor="end" font-weight="700">0%</text>
+
+        <text x="${padL}" y="${H - 8}" font-size="9" fill="#94a3b8" text-anchor="start" font-weight="700">₹${minP.toFixed(0)}</text>
+        <text x="${W - padR}" y="${H - 8}" font-size="9" fill="#94a3b8" text-anchor="end" font-weight="700">₹${maxP.toFixed(0)}</text>
+
+        <polyline fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="${tooCheapPts}" />
+        <polyline fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="${cheapPts}" />
+        <polyline fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="${expPts}" />
+        <polyline fill="none" stroke="#881337" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" points="${tooExpPts}" />
+
+        <line x1="${oppX.toFixed(1)}" y1="${padT}" x2="${oppX.toFixed(1)}" y2="${H - padB}" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3" />
+        <circle cx="${oppX.toFixed(1)}" cy="${(H - padB) / 2}" r="4" fill="#2563eb" />
+        <text x="${oppX.toFixed(1)}" y="${padT + 10}" font-size="9.5" fill="#2563eb" font-weight="800" text-anchor="middle">OPP ₹${(summary.optimal_price_point || 0).toFixed(0)}</text>
+      `;
+    }
+
     async function loadSources() {
       try {
         const res = await fetch(`${API_BASE}/datasets/sources`);
         const sources = await res.json();
         let html = '<table style="width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 14px;">';
         html += '<tr style="text-align: left; border-bottom: 2px solid #e2e8f0; color: #64748b;"><th style="padding: 10px;">Source</th><th style="padding: 10px;">Ministry</th><th style="padding: 10px;">Variables</th></tr>';
-        sources.forEach(s => {
-          html += `<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px 10px; font-weight: 700;">${s.name}</td><td style="padding: 12px 10px; color: #475569;">${s.ministry}</td><td style="padding: 12px 10px; color: #2563eb;">${s.variables_used.join(', ')}</td></tr>`;
+        (sources.supported_sources || sources || []).forEach(s => {
+          const name = typeof s === 'string' ? s : (s.name || 'Dataset');
+          const min = s.ministry || 'Government of India';
+          const vars = s.variables_used ? s.variables_used.join(', ') : 'Demographics, Income, Expenditure';
+          html += `<tr style="border-bottom: 1px solid #f1f5f9;"><td style="padding: 12px 10px; font-weight: 700;">${name.toUpperCase()}</td><td style="padding: 12px 10px; color: #475569;">${min}</td><td style="padding: 12px 10px; color: #2563eb;">${vars}</td></tr>`;
         });
         html += '</table>';
         document.getElementById('sources-table').innerHTML = html;

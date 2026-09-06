@@ -26,3 +26,36 @@ def aggregate_results(archetype_results: list[dict]) -> dict:
         "sentiment_distribution": normalized_sentiment_distribution,
         "n_archetypes": len(archetype_results),
     }
+
+
+def aggregate_multimodal_results(archetype_results: list[dict]) -> dict:
+    base_aggregation = aggregate_results(archetype_results)
+    total_weight = sum(item["population_weight"] for item in archetype_results)
+
+    weighted_comprehension = sum(
+        item["population_weight"] * item.get("visual_comprehension_score", 5.0)
+        for item in archetype_results
+    ) / total_weight
+
+    weighted_trust = sum(
+        item["population_weight"] * item.get("visual_trust_score", 5.0)
+        for item in archetype_results
+    ) / total_weight
+
+    aggregated_friction_points = []
+    first_visual_hooks = []
+    for item in archetype_results:
+        for friction in item.get("ui_friction_points", []):
+            if friction and friction not in aggregated_friction_points:
+                aggregated_friction_points.append(friction)
+        hook = item.get("first_visual_hook")
+        if hook and hook not in first_visual_hooks:
+            first_visual_hooks.append(hook)
+
+    return {
+        **base_aggregation,
+        "visual_comprehension_score": round(weighted_comprehension, 2),
+        "visual_trust_score": round(weighted_trust, 2),
+        "ui_friction_points": aggregated_friction_points,
+        "first_visual_hooks": first_visual_hooks,
+    }

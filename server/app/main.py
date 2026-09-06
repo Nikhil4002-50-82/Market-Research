@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.database import initialize_database
-from app.api.routers import datasets, population, simulations, validation
+from app.api.routers import datasets, population, simulations, validation, focus_group, pricing
 
 
 @asynccontextmanager
@@ -29,6 +29,8 @@ app.include_router(datasets.router)
 app.include_router(population.router)
 app.include_router(simulations.router)
 app.include_router(validation.router)
+app.include_router(focus_group.router)
+app.include_router(pricing.router)
 
 
 @app.get("/health")

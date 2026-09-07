@@ -13,3 +13,4 @@ app/data/raw/*
 !app/data/raw/.gitkeep
 .DS_Store
 Thumbs.db
+data/

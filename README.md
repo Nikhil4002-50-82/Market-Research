@@ -9,7 +9,7 @@ An AI-driven, statistically grounded consumer intelligence engine designed to si
 Traditional market research in India (field surveys, panels, focus groups) is slow (4 to 8 weeks), expensive (Rs. 5,00,000 to Rs. 25,00,000 per study), and difficult to run iteratively. Conversely, naive LLM prompting (*"Act as an Indian consumer"*) collapses into ungrounded stereotypes with no empirical correlation to real demographics.
 
 This platform bridges the gap with a **hybrid statistical sampling + machine learning + LLM architecture**:
-1. **Statistically Samples** millions of realistic synthetic Indian consumer profiles preserving empirical demographic correlations (Census of India, NSSO / PLFS microdata).
+1. **Statistically Samples** millions of realistic synthetic Indian consumer profiles preserving empirical demographic correlations directly from government microdata (**Census of India 2011** and **MoSPI PLFS 2025** microdata across all 36 States/UTs and 771 districts).
 2. **Compresses Personas** via machine learning (K-Means) into representative **archetypes**, each carrying an exact population frequency weight.
 3. **Simulates Grounded Decisions** using **Google Gemini** in-character across quantitative intent (0–10), sentiment, concrete objections, and authentic verbatim vernacular quotes.
 4. **Evaluates Visual Creatives** via multimodal computer vision, scoring visual comprehension, trust, visual hooks, and UI friction.
@@ -135,9 +135,17 @@ Market-Research/
 ├── dashboard.html                             # Interactive single-page web dashboard
 ├── sample_ad_creative.jpg                     # Sample multimodal ad banner for testing
 ├── synthetiq_pro_technical_report.tex         # Complete academic / enterprise technical report
+├── data/                                      # Official government microdata repositories
+│   ├── Census_2011/                           # Primary Census Abstract Table A-1 (640 districts)
+│   └── PLFS  NSSO (Periodic Labour Force Survey)/ # MoSPI 2025 microdata (771 districts, codes, CSVs)
+├── docs/                                      # Core backend subsystem technical specifications
+│   ├── market_simulation_studio.md            # Population sampling, K-Means clustering, Gemini & LangGraph
+│   ├── multimodal_ad_ui_studio.md             # Vision ad testing, visual trust, UI friction scoring
+│   ├── live_focus_group_studio.md             # Multi-turn focus rooms, context windowing, 4-pillar AI debrief
+│   └── pricing_optimization_studio.md         # Van Westendorp PSM corridors, IPP, OPP, revenue optimization
 └── server/                                    # Active, fully verified backend application
     ├── requirements.txt                       # Pinned Python package dependencies
-    ├── synth_research.db                      # Local SQLite operational database
+    ├── synth_research.db                      # Local SQLite operational database (real microdata primed)
     ├── app/
     │   ├── main.py                            # FastAPI application assembly with CORS & lifespan DB init
     │   ├── api/
@@ -154,6 +162,7 @@ Market-Research/
     │   ├── data/
     │   │   ├── models.py                      # SQLAlchemy ORM database models
     │   │   └── etl/
+    │   │       ├── ingest_real_plfs_and_census.py # Production ETL: ingests 50k households & 152k adults
     │   │       ├── ingest_census.py           # Census District Handbook parser
     │   │       ├── ingest_nsso.py             # PLFS/NSSO fixed-width microdata reader
     │   │       └── normalize_raw_dataset.py   # Code normalizer and district lookup resolver
@@ -278,7 +287,16 @@ LANGCHAIN_TRACING_V2=false
 # 50 passed in ~7 seconds
 ```
 
-### 4. Start the Backend API
+### 4. Ingest Demographic Microdata (PLFS 2025 & Census 2011)
+
+The repository comes with pre-extracted MoSPI PLFS 2025 and Census 2011 files in `data/`. Populate or refresh the local SQLite database with 50,000 balanced households and 152,000+ adult individuals across all 36 States/UTs:
+
+```powershell
+# From server/ directory
+.\venv\Scripts\python -m app.data.etl.ingest_real_plfs_and_census
+```
+
+### 5. Start the Backend API
 
 ```powershell
 uvicorn app.main:app --reload --port 8000

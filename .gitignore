@@ -13,4 +13,5 @@ app/data/raw/*
 !app/data/raw/.gitkeep
 .DS_Store
 Thumbs.db
-data/
+# Exclude extracted 350MB raw CSVs (the compressed Data_in_CSV.zip is tracked instead)
+data/**/extracted/
